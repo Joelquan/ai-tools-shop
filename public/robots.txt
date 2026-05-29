@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Priority pages
+Allow: /blog/
+Allow: /temperament.html
+Allow: /knowthyself.html
+Allow: /eq.html
+Allow: /moneymindset.html
+Allow: /relationshipstyle.html
+Allow: /leadership.html
+Allow: /career.html
+Allow: /entrepreneur.html
+Allow: /ideas.html
+Allow: /stress.html
+Allow: /marriage.html
+
+Sitemap: https://signaturewithin.com/sitemap.xml

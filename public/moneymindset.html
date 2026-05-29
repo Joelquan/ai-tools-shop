@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Money Mindset | SIGNATUREWITHIN</title>
+  <meta name="description" content="A 40-question money psychology assessment across 5 archetypes. Discover your Money Archetype — Builder, Guardian, Visionary, Savant, or Receiver — and a 30-day money mind rewire plan."/>
+  <link rel="canonical" href="https://signaturewithin.com/moneymindset.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#0a2e1a;color:#f5ece0;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+    header{background:rgba(13,5,0,0.95);border-bottom:1px solid rgba(255,255,255,0.07);height:64px;display:flex;align-items:center;position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px)}
+    .hi{max-width:1200px;margin:0 auto;padding:0 48px;width:100%;display:flex;align-items:center;justify-content:space-between}
+    #test-section{display:none;min-height:100vh;padding-top:64px;transition:background 0.8s ease}
+    #results-section{display:none;min-height:100vh;padding-top:64px}
+    .ldot{width:8px;height:8px;border-radius:50%;background:#F5A623;animation:lp 1.2s infinite}
+    .ldot:nth-child(2){animation-delay:0.2s}.ldot:nth-child(3){animation-delay:0.4s}
+    @keyframes lp{0%,100%{opacity:0.2;transform:scale(0.8)}50%{opacity:1;transform:scale(1)}}
+    @keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    .fade-up{animation:fu 0.5s ease forwards}
+    @media(max-width:768px){.hi{padding:0 20px}.hg{grid-template-columns:1fr!important;gap:40px!important;padding:120px 20px 60px!important}.sg{grid-template-columns:1fr 1fr!important}.rg{grid-template-columns:1fr!important}.ug{grid-template-columns:1fr!important}.hs{padding:40px 20px!important}.qw{padding:40px 20px!important}}
+  </style>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<header>
+  <div class="hi">
+    <a href="/" style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;text-decoration:none">SIGNATURE<em style="color:#F5A623;font-style:italic">WITHIN</em></a>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#4a7a4a;letter-spacing:1px">Free · $14.99 Full Report</div>
+    <a href="/" style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:#4a7a4a;text-decoration:none">← Back</a>
+  </div>
+</header>
+
+<div id="landing" style="min-height:100vh;background:linear-gradient(135deg,#0f3824 0%,#120900 100%);position:relative;overflow:hidden;display:flex;flex-direction:column">
+  <div style="position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,#F5A62308 0%,transparent 70%);pointer-events:none"></div>
+  <div class="hg" style="position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:140px 48px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;flex:1">
+    <div class="fade-up">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#F5A62312;border:1px solid #F5A62325;color:#F5A623;font-size:12px;font-weight:600;letter-spacing:2px;padding:6px 16px;border-radius:100px;margin-bottom:28px;text-transform:uppercase;font-family:'DM Mono',monospace">Money Psychology · 40 Questions · 5 Archetypes</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:56px;font-weight:700;line-height:1.05;color:#fff;margin-bottom:20px;letter-spacing:-1px">What is your<br/><em style="font-style:italic;color:#F5A623">relationship with money?</em></h1>
+      <p style="font-size:17px;color:#7a9a7a;line-height:1.7;margin-bottom:40px;font-weight:300;max-width:440px">A 40-question money psychology assessment across 5 archetypes. Discover your Money Archetype — Builder, Guardian, Visionary, Savant, or Receiver — and a 30-day money mind rewire plan.</p>
+      <div style="display:flex;gap:32px;margin-bottom:40px"><div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#fff;line-height:1">40</div><div style="font-size:11px;color:#3a6a3a;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;margin-top:4px">Questions</div></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#fff;line-height:1">5</div><div style="font-size:11px;color:#3a6a3a;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;margin-top:4px">Archetypes</div></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#fff;line-height:1">30</div><div style="font-size:11px;color:#3a6a3a;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;margin-top:4px">Day Plan</div></div></div>
+      <button onclick="startTest()" style="background:#F5A623;color:#0a2e1a;font-family:'DM Sans',sans-serif;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;font-style:italic;padding:20px 52px;border:none;border-radius:4px;cursor:pointer;letter-spacing:0.3px">Begin Assessment — Free →</button>
+    </div>
+    <div><div style="display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:10px"><span style="font-size:22px;flex-shrink:0">🔨</span><div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;margin-bottom:2px">Builder</div><div style="font-size:11px;color:#4a7a4a;font-family:'DM Mono',monospace">Money as a tool to create and multiply.</div></div></div><div style="display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:10px"><span style="font-size:22px;flex-shrink:0">🛡️</span><div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;margin-bottom:2px">Guardian</div><div style="font-size:11px;color:#4a7a4a;font-family:'DM Mono',monospace">Money as security and protection.</div></div></div><div style="display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:10px"><span style="font-size:22px;flex-shrink:0">🔭</span><div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;margin-bottom:2px">Visionary</div><div style="font-size:11px;color:#4a7a4a;font-family:'DM Mono',monospace">Money as a vehicle for impact and meaning.</div></div></div><div style="display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:10px"><span style="font-size:22px;flex-shrink:0">📊</span><div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;margin-bottom:2px">Savant</div><div style="font-size:11px;color:#4a7a4a;font-family:'DM Mono',monospace">Money as a system to analyze and optimize.</div></div></div><div style="display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:10px"><span style="font-size:22px;flex-shrink:0">🌊</span><div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;margin-bottom:2px">Receiver</div><div style="font-size:11px;color:#4a7a4a;font-family:'DM Mono',monospace">Money as something that flows to you naturally.</div></div></div></div>
+  </div>
+  <div class="hs" style="background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.06);padding:72px 48px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:#3a6a3a;text-transform:uppercase;margin-bottom:40px">How It Works</div>
+      <div class="sg" style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px"><div><div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:14px">01</div><div style="font-size:17px;font-weight:600;color:#fff;margin-bottom:8px">Answer 40 questions</div><div style="font-size:13px;color:#7a9a7a;line-height:1.6;font-weight:300">Honest questions about how you think, feel, and behave around money. ~8 minutes.</div></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:14px">02</div><div style="font-size:17px;font-weight:600;color:#fff;margin-bottom:8px">Discover your archetype</div><div style="font-size:13px;color:#7a9a7a;line-height:1.6;font-weight:300">Your primary Money Archetype revealed — and what it means for how you earn, save, spend, and grow.</div></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:14px">03</div><div style="font-size:17px;font-weight:600;color:#fff;margin-bottom:8px">Unlock your full report</div><div style="font-size:13px;color:#7a9a7a;line-height:1.6;font-weight:300">Pay $14.99 for your complete money psychology PDF with a 30-day mind rewire plan.</div></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:14px">04</div><div style="font-size:17px;font-weight:600;color:#fff;margin-bottom:8px">Rewire your money mind</div><div style="font-size:13px;color:#7a9a7a;line-height:1.6;font-weight:300">Your relationship with money was shaped. It can be reshaped. This report shows you exactly where and how.</div></div></div>
+    </div>
+  </div>
+  <div style="padding:56px 48px;text-align:center">
+    <button onclick="startTest()" style="background:#F5A623;color:#0a2e1a;font-family:'DM Sans',sans-serif;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;font-style:italic;padding:20px 52px;border:none;border-radius:4px;cursor:pointer;letter-spacing:0.3px">Begin Assessment — Free →</button>
+  </div>
+  <footer style="border-top:1px solid rgba(255,255,255,0.06);padding:32px 48px">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:#fff;font-weight:600">SIGNATUREWITHIN</div>
+      <div style="display:flex;gap:24px"><a href="/privacy.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Privacy</a><a href="/terms.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Terms</a><a href="/disclaimer.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Disclaimer</a></div>
+      <div style="font-size:12px;color:#3a6a3a">© 2026 SIGNATUREWITHIN</div>
+    </div>
+  </footer>
+</div>
+
+<div id="name-screen" style="display:none;min-height:100vh;background:linear-gradient(135deg,#1a0e00 0%,#2d1800 50%,#1a1000 100%);align-items:center;justify-content:center;padding:48px 24px;flex-direction:column">
+  <div style="max-width:480px;width:100%;text-align:center">
+    <div style="margin-bottom:24px;color:#F5A623;display:flex;align-items:center;justify-content:center;width:80px;height:80px;border-radius:50%;background:rgba(245,166,35,0.12);border:1px solid rgba(245,166,35,0.25);margin:0 auto 24px"><svg width="56" height="56" viewBox="0 0 48 48" fill="none">
+          <path d="M24 6 L40 20 L24 44 L8 20 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+          <path d="M8 20 L24 6 L40 20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+          <path d="M8 20 L24 28 L40 20" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round" opacity="0.6"/>
+          <line x1="24" y1="6" x2="24" y2="28" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+          <path d="M16 14 L24 28" stroke="currentColor" stroke-width="0.75" opacity="0.35"/>
+          <path d="M32 14 L24 28" stroke="currentColor" stroke-width="0.75" opacity="0.35"/>
+        </svg></div>
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:#F5A62388;text-transform:uppercase;margin-bottom:20px">Before We Begin</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-1px">What should we<br/>call you?</div>
+    <p style="font-size:15px;color:#7a9a7a;font-weight:300;line-height:1.6;margin-bottom:40px">Your name makes your report feel like yours — not a generic profile.</p>
+    <div style="background:#F5A62308;border:1px solid #F5A62320;border-radius:8px;padding:32px;margin-bottom:24px">
+      <input id="uni" type="text" placeholder="Your first name"
+        style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:16px 20px;font-size:20px;color:#fff;font-family:'Cormorant Garamond',serif;outline:none;text-align:center;margin-bottom:8px"
+        onkeydown="if(event.key==='Enter'&&this.value.trim())go()"
+        oninput="var v=this.value.trim();var b=document.getElementById('bb');b.style.background=v?'#F5A623':'rgba(255,255,255,0.08)';b.style.color=v?'#0a2e1a':'rgba(255,255,255,0.2)';b.style.cursor=v?'pointer':'not-allowed'"
+      />
+      <div style="font-size:11px;color:#3a6a3a;font-family:'DM Mono',monospace;letter-spacing:1px">First name only · No account needed</div>
+    </div>
+    <button id="bb" onclick="if(document.getElementById('uni').value.trim())go()"
+      style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.2);border:none;padding:18px;border-radius:4px;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;font-style:italic;cursor:not-allowed;width:100%">Begin Assessment →</button>
+    <br/><button onclick="uN='';document.getElementById('name-screen').style.display='none';document.getElementById('test-section').style.display='block';rQ()"
+      style="background:none;border:none;color:#3a6a3a;cursor:pointer;font-size:11px;font-family:'DM Mono',monospace;text-decoration:underline;margin-top:14px">Skip →</button>
+  </div>
+</div>
+
+<div id="test-section">
+  <div style="background:rgba(0,0,0,0.4);backdrop-filter:blur(20px);padding:16px 48px;position:sticky;top:64px;z-index:50;border-bottom:1px solid rgba(255,255,255,0.06)">
+    <div style="max-width:720px;margin:0 auto;display:flex;align-items:center;gap:20px">
+      <div id="tc" style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:1.5px;color:rgba(255,255,255,0.6);text-transform:uppercase;white-space:nowrap;min-width:160px">Assessment</div>
+      <div style="flex:1;height:2px;background:rgba(255,255,255,0.1);border-radius:1px;overflow:hidden"><div id="pf" style="height:100%;background:#F5A623;border-radius:1px;transition:width 0.4s ease;width:0%"></div></div>
+      <div id="pl" style="font-family:'DM Mono',monospace;font-size:13px;color:rgba(255,255,255,0.5);white-space:nowrap">1 / 40</div>
+    </div>
+  </div>
+  <div class="qw" id="qw" style="max-width:720px;margin:0 auto;padding:60px 48px"></div>
+</div>
+
+<div id="results-section">
+  <div id="rl" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;gap:20px;background:linear-gradient(135deg,#0f3824 0%,#120900 100%)">
+    <div style="display:flex;gap:8px"><div class="ldot"></div><div class="ldot"></div><div class="ldot"></div></div>
+    <div id="lt" style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#fff;font-weight:700">Analyzing your results...</div>
+    <div style="font-size:12px;color:#7a9a7a;font-family:'DM Mono',monospace;letter-spacing:1px">Building your personalized report</div>
+  </div>
+  <div id="rc" style="display:none"></div>
+</div>
+
+<script>
+const DIMS=[{"id": "b", "title": "Builder", "icon": "\ud83d\udd28", "accent": "#F5A623", "bg": "linear-gradient(135deg,#0f3824 0%,#251400 100%)"}, {"id": "g", "title": "Guardian", "icon": "\ud83d\udee1\ufe0f", "accent": "#4EE88A", "bg": "linear-gradient(135deg,#00101a 0%,#001825 100%)"}, {"id": "v", "title": "Visionary", "icon": "\ud83d\udd2d", "accent": "#E8447A", "bg": "linear-gradient(135deg,#0a2e1a 0%,#250018 100%)"}, {"id": "s", "title": "Savant", "icon": "\ud83d\udcca", "accent": "#2DC653", "bg": "linear-gradient(135deg,#0a2e1a 0%,#002510 100%)"}, {"id": "r", "title": "Receiver", "icon": "\ud83c\udf0a", "accent": "#B388FF", "bg": "linear-gradient(135deg,#0d0018 0%,#150022 100%)"}];
+const QS=[{"id": "mm_mon1", "dim": "b", "text": "I think of money primarily as a tool to build something meaningful.", "cat": "Builder"}, {"id": "mm_mon2", "dim": "b", "text": "I am energized by the idea of turning money into more money.", "cat": "Builder"}, {"id": "mm_mon3", "dim": "b", "text": "I regularly think about long-term financial goals and plans.", "cat": "Builder"}, {"id": "mm_mon4", "dim": "b", "text": "I am willing to sacrifice short-term comfort for long-term financial gain.", "cat": "Builder"}, {"id": "mm_mon5", "dim": "b", "text": "I feel a strong drive to create financial independence for myself.", "cat": "Builder"}, {"id": "mm_mon6", "dim": "b", "text": "I measure my progress in life partly by my financial growth.", "cat": "Builder"}, {"id": "mm_mon7", "dim": "b", "text": "I get excited about business ideas and ways to generate income.", "cat": "Builder"}, {"id": "mm_mon8", "dim": "b", "text": "I believe that disciplined effort will eventually produce financial success.", "cat": "Builder"}, {"id": "mm_mon9", "dim": "g", "text": "I feel most at peace when I have a significant financial cushion.", "cat": "Guardian"}, {"id": "mm_mon10", "dim": "g", "text": "I prefer to save money rather than spend it, even on things I enjoy.", "cat": "Guardian"}, {"id": "mm_mon11", "dim": "g", "text": "The thought of financial instability makes me deeply anxious.", "cat": "Guardian"}, {"id": "mm_mon12", "dim": "g", "text": "I tend to avoid financial risks even when the potential reward is significant.", "cat": "Guardian"}, {"id": "mm_mon13", "dim": "g", "text": "I check my accounts regularly to make sure everything is in order.", "cat": "Guardian"}, {"id": "mm_mon14", "dim": "g", "text": "I often worry about money even when my financial situation is stable.", "cat": "Guardian"}, {"id": "mm_mon15", "dim": "g", "text": "I find it hard to spend money on luxuries without feeling guilty.", "cat": "Guardian"}, {"id": "mm_mon16", "dim": "g", "text": "Financial security is one of my top priorities in life.", "cat": "Guardian"}, {"id": "mm_mon17", "dim": "v", "text": "I experience genuine joy when I am able to give money to others.", "cat": "Giver"}, {"id": "mm_mon18", "dim": "v", "text": "I often find myself spending money on others more than on myself.", "cat": "Giver"}, {"id": "mm_mon19", "dim": "v", "text": "It is difficult for me to say no when someone I care about needs financial help.", "cat": "Giver"}, {"id": "mm_mon20", "dim": "v", "text": "I feel guilty spending money on myself when others around me have less.", "cat": "Giver"}, {"id": "mm_mon21", "dim": "v", "text": "My relationships are more important to me than my financial security.", "cat": "Giver"}, {"id": "mm_mon22", "dim": "v", "text": "I would rather give someone money than lend it and expect repayment.", "cat": "Giver"}, {"id": "mm_mon23", "dim": "v", "text": "Generosity is one of my core values regardless of my financial situation.", "cat": "Giver"}, {"id": "mm_mon24", "dim": "v", "text": "I sometimes feel resentful after giving money, but give anyway.", "cat": "Giver"}, {"id": "mm_mon25", "dim": "s", "text": "I spend freely on experiences, travel, and things that make me feel alive.", "cat": "Seeker"}, {"id": "mm_mon26", "dim": "s", "text": "I find detailed financial planning restricting and prefer to stay flexible.", "cat": "Seeker"}, {"id": "mm_mon27", "dim": "s", "text": "I believe money is best used to create memories and experiences.", "cat": "Seeker"}, {"id": "mm_mon28", "dim": "s", "text": "I sometimes avoid looking at my bank account because it creates anxiety.", "cat": "Seeker"}, {"id": "mm_mon29", "dim": "s", "text": "I would rather have an amazing life with less savings than a boring life with more.", "cat": "Seeker"}, {"id": "mm_mon30", "dim": "s", "text": "Financial freedom \u2014 the ability to do what I want when I want \u2014 motivates me most.", "cat": "Seeker"}, {"id": "mm_mon31", "dim": "s", "text": "I live in the present and trust I will figure out the future when it comes.", "cat": "Seeker"}, {"id": "mm_mon32", "dim": "s", "text": "I often make impulsive purchases because something felt right in the moment.", "cat": "Seeker"}, {"id": "mm_mon33", "dim": "r", "text": "I am drawn to understanding how money and financial systems work.", "cat": "Ruler"}, {"id": "mm_mon34", "dim": "r", "text": "I want to be at the top financially \u2014 not just comfortable but dominant.", "cat": "Ruler"}, {"id": "mm_mon35", "dim": "r", "text": "I pay close attention to who has money and how they got it.", "cat": "Ruler"}, {"id": "mm_mon36", "dim": "r", "text": "Financial success is tied to my sense of status and respect.", "cat": "Ruler"}, {"id": "mm_mon37", "dim": "r", "text": "I like to be the one in control of financial decisions in my relationships.", "cat": "Ruler"}, {"id": "mm_mon38", "dim": "r", "text": "I am highly strategic about money and rarely make random financial decisions.", "cat": "Ruler"}, {"id": "mm_mon39", "dim": "r", "text": "The idea of financial mastery \u2014 knowing every move \u2014 excites me.", "cat": "Ruler"}, {"id": "mm_mon40", "dim": "r", "text": "I believe that financial power gives you options that others simply do not have.", "cat": "Ruler"}];
+const LBLS=["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
+const LVLS=[{"min": 75, "label": "Strong Money Clarity", "desc": "You have a clear, healthy relationship with money and a strong primary archetype. Your money decisions are largely aligned with your values and long-term goals."}, {"min": 55, "label": "Developing Money Clarity", "desc": "You have a recognizable money archetype with areas of conflict. Understanding your pattern will give you the clarity to make more intentional financial decisions."}, {"min": 0, "label": "Money Rewire Needed", "desc": "Your money beliefs and behaviors need intentional examination. The patterns running your financial life were mostly formed before you could examine them. This report is where that examination begins."}];
+const CLR='#F5A623';
+const TID='moneymindset';
+const TQ=QS.length;
+let cQ=0,ans={},uN='',tR=null;
+
+function startTest(){document.getElementById('landing').style.display='none';document.getElementById('name-screen').style.display='flex';window.scrollTo(0,0);}
+function go(){uN=document.getElementById('uni').value.trim();document.getElementById('name-screen').style.display='none';document.getElementById('test-section').style.display='block';window.scrollTo(0,0);rQ();}
+
+function rQ(){
+  const q=QS[cQ];const d=DIMS.find(x=>x.id===q.dim);
+  const ac=d?d.accent:CLR;const bg=d?d.bg:'linear-gradient(135deg,#0f3824 0%,#120900 100%)';
+  document.getElementById('pf').style.width=(cQ/TQ*100)+'%';
+  document.getElementById('pl').textContent=(cQ+1)+' / '+TQ;
+  document.getElementById('tc').textContent=d?d.title:q.cat||'Assessment';
+  document.getElementById('test-section').style.background=bg;
+  const sel=ans[q.id];
+  const opts=LBLS.map((l,i)=>{const v=i+1,s=sel===v;return `<button onclick="pick('${q.id}',${v})" style="background:${s?ac+'15':'rgba(255,255,255,0.03)'};border:1px solid ${s?ac:'rgba(255,255,255,0.08)'};border-radius:8px;padding:14px 20px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:16px;width:100%;margin-bottom:10px;text-align:left"><div style="width:32px;height:32px;border-radius:50%;background:${s?ac:'rgba(255,255,255,0.05)'};display:flex;align-items:center;justify-content:center;font-size:12px;color:${s?'#0a2e1a':'rgba(255,255,255,0.4)'};font-family:'DM Mono',monospace;flex-shrink:0;font-weight:600">${v}</div><div style="font-size:18px;color:rgba(255,255,255,0.9);font-family:'Cormorant Garamond',serif">${l}</div></button>`;
+  }).join('');
+  document.getElementById('qw').innerHTML=`<div class="fade-up"><div style="display:flex;align-items:center;gap:16px;margin-bottom:32px"><div style="width:48px;height:48px;border-radius:50%;background:${ac}18;border:1px solid ${ac}30;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">${d?d.icon:'📊'}</div><div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:${ac};text-transform:uppercase">${d?d.title:q.cat||'Assessment'}</div><div style="font-size:11px;color:rgba(255,255,255,0.25);font-family:'DM Mono',monospace;margin-top:2px">Question ${cQ+1} of ${TQ}</div></div></div><div style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.45;color:#fff;margin-bottom:10px;font-weight:600;font-style:italic">"${q.text}"</div><div style="font-size:14px;color:rgba(255,255,255,0.4);font-family:'DM Mono',monospace;margin-bottom:36px">Rate how true this is of you right now</div>${opts}<div style="display:flex;align-items:center;justify-content:space-between;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06)"><button onclick="pQ()" ${cQ===0?'style="visibility:hidden"':''} style="background:none;border:1px solid rgba(255,255,255,0.1);color:#7a9a7a;padding:12px 24px;border-radius:4px;cursor:pointer;font-size:13px;font-family:'DM Sans',sans-serif">← Back</button><button onclick="nQ()" ${sel?'':'disabled'} style="background:${sel?ac:'rgba(255,255,255,0.08)'};color:${sel?'#0a2e1a':'rgba(255,255,255,0.2)'};border:none;padding:14px 36px;border-radius:4px;cursor:${sel?'pointer':'not-allowed'};font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;font-style:italic">${cQ===TQ-1?'See My Results →':'Next →'}</button></div></div>`;
+}
+
+function pick(id,v){ans[id]=v;rQ();}
+function nQ(){if(!ans[QS[cQ].id])return;if(cQ<TQ-1){cQ++;window.scrollTo(0,0);rQ();}else sR();}
+function pQ(){if(cQ>0){cQ--;window.scrollTo(0,0);rQ();}}
+
+function calcS(){
+  const ds={};
+  DIMS.forEach(d=>{const qs=QS.filter(q=>q.dim===d.id);const vs=qs.map(q=>ans[q.id]||0);ds[d.id]=vs.length?Math.round((vs.reduce((a,b)=>a+b,0)/(vs.length*5))*100):0;});
+  return{ds,overall:Math.round(Object.values(ds).reduce((a,b)=>a+b,0)/Object.keys(ds).length)};
+}
+function gL(o){return LVLS.find(l=>o>=l.min)||LVLS[LVLS.length-1];}
+
+function sR(){
+  document.getElementById('test-section').style.display='none';
+  document.getElementById('results-section').style.display='block';
+  document.getElementById('rl').style.display='flex';
+  document.getElementById('rc').style.display='none';
+  window.scrollTo(0,0);
+  const{ds,overall}=calcS();const level=gL(overall);
+  tR={ds,overall,level,uN};
+  setTimeout(()=>{document.getElementById('rl').style.display='none';rRs(tR);document.getElementById('rc').style.display='block';},2200);
+}
+
+function rRs({ds,overall,level}){
+  
+  const rows=Object.entries(ds).sort((a,b)=>b[1]-a[1]).map(([id,pct])=>{const d=DIMS.find(x=>x.id===id);return `<div style="margin-bottom:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:16px 20px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:#fff;display:flex;align-items:center;gap:10px"><span>${d?d.icon:''}</span>${d?d.title:id}</div><div style="font-family:'DM Mono',monospace;font-size:13px;color:${d?d.accent:CLR}">${pct}%</div></div><div style="height:5px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden"><div style="height:100%;border-radius:3px;background:${d?d.accent:CLR};width:${pct}%;transition:width 1.4s ease"></div></div></div>`;}).join('');
+  const p4=Object.entries(ds).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([id,pct])=>{const d=DIMS.find(x=>x.id===id);return `<div style="border:1px solid ${d?d.accent+'20':'rgba(255,255,255,0.08)'};border-radius:8px;padding:24px;background:rgba(255,255,255,0.02)"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:#3a6a3a;text-transform:uppercase;margin-bottom:8px">${d?d.icon:''} ${d?d.title:id} · ${pct}%</div><div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;font-weight:700;margin-bottom:8px">${pct>=65?'A strength':'Growth area'}</div><div style="font-size:13px;color:#7a9a7a;line-height:1.5">Unlock for detailed insights and action steps.</div></div>`;}).join('');
+  document.getElementById('rc').innerHTML=`
+    <div style="background:linear-gradient(135deg,#0f3824 0%,#120900 100%);padding:80px 48px;position:relative;overflow:hidden">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 70% 40%,#F5A62306 0%,transparent 70%);pointer-events:none"></div>
+      <div class="rg" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;position:relative;z-index:2">
+        <div class="fade-up">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:#7a9a7a;text-transform:uppercase;margin-bottom:16px">${uN?uN+"'s Results":"Your Results"}</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:700;color:#F5A623;line-height:1;letter-spacing:-3px;margin-bottom:8px">${overall}</div>
+          <div style="font-family:'DM Mono',monospace;font-size:12px;color:#7a9a7a;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px">${level.label}</div>
+          <div style="font-size:16px;color:rgba(255,255,255,0.65);line-height:1.8;font-weight:300">${level.desc}</div>
+        </div>
+        <div>${rows}</div>
+      </div>
+    </div>
+    <div style="background:#0a2e1a;border-top:1px solid rgba(255,255,255,0.07);padding:60px 48px">
+      <div style="max-width:1200px;margin:0 auto">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">Your Report — <em style="font-style:italic;color:#F5A623">Preview</em></div>
+        <p style="font-size:14px;color:#7a9a7a;margin-bottom:32px">Unlock the full PDF for your complete profile, AI insights, and personalized action plan.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">${p4}</div>
+      </div>
+    </div>
+    <div style="background:linear-gradient(135deg,#0f3824 0%,#120900 100%);padding:60px 48px">
+      <div class="ug" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;font-weight:700;letter-spacing:-1px;margin-bottom:12px">Get Your Full Report</div>
+          <p style="font-size:15px;color:#7a9a7a;line-height:1.7;font-weight:300;margin-bottom:24px">A beautifully designed 10-page PDF with your complete profile, AI insights, and a personalized growth plan.</p>
+          <div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>Your primary Money Archetype and what it means</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>Your scores across all 5 money archetypes</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>How your archetype shapes earning, saving, spending, and investing</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>Your money blind spots and the patterns holding you back</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>A 30-day money mind rewire plan — one practice per day</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>Recommended books matched to your archetype</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>Beautifully designed PDF in deep gold and black</div>
+        </div>
+        <div style="text-align:center;background:#F5A62308;border:1px solid #F5A62325;border-radius:8px;padding:40px 32px;min-width:240px">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:56px;color:#F5A623;letter-spacing:-2px;line-height:1;font-weight:700">$14.99</div>
+          <div style="font-size:11px;color:#3a6a3a;font-family:'DM Mono',monospace;letter-spacing:1px;margin-top:4px;margin-bottom:24px">One payment · Instant PDF</div>
+          <button id="ub" onclick="buy()" style="background:#F5A623;color:#0a2e1a;font-family:'DM Sans',sans-serif;font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;font-style:italic;padding:20px 40px;border:none;border-radius:4px;cursor:pointer;width:100%">Unlock Full Report · $14.99</button>
+          <div style="font-size:11px;color:#3a6a3a;margin-top:10px;font-family:'DM Mono',monospace">Secure payment via Stripe</div>
+        </div>
+      </div>
+    </div>
+    <footer style="border-top:1px solid rgba(255,255,255,0.07);padding:32px 48px;background:#0a2e1a">
+      <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:#fff;font-weight:600">SIGNATUREWITHIN</div>
+        <div style="display:flex;gap:24px"><a href="/privacy.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Privacy</a><a href="/terms.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Terms</a><a href="/disclaimer.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Disclaimer</a></div>
+        <div style="font-size:12px;color:#3a6a3a">© 2026 SIGNATUREWITHIN</div>
+      </div>
+    </footer>`;
+  
+}
+
+async function buy(){
+  const b=document.getElementById('ub');b.disabled=true;b.textContent='Loading...';
+  if(tR)sessionStorage.setItem(TID+'_r',JSON.stringify({...tR,uN}));
+  try{const r=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({toolId:TID})});const d=await r.json();if(d.url)window.location.href=d.url;else{b.disabled=false;b.textContent='Unlock Full Report · $14.99';alert('Error. Try again.');}}catch(e){b.disabled=false;b.textContent='Unlock Full Report · $14.99';}
+}
+
+window.addEventListener('load',async()=>{
+  const p=new URLSearchParams(window.location.search);
+  if(p.get('success')==='true'&&p.get('tool')===TID){
+    const sv=sessionStorage.getItem(TID+'_r');
+    if(sv){window.history.replaceState({},'','/moneymindset.html');const r=JSON.parse(sv);uN=r.uN||'';tR=r;document.getElementById('landing').style.display='none';document.getElementById('results-section').style.display='block';document.getElementById('rl').style.display='flex';document.getElementById('lt').textContent='Generating your report...';await genPDF(r);}
+  }
+});
+
+async function genPDF(result){
+  const{ds,overall,level,uN:name}=result;let ins=null;
+  const prompt=`You are a financial psychologist and money coach. Generate a personalized money mindset report for NAME. Score: OVERALL/100 — LEVEL_LABEL. LEVEL_DESC. Archetype scores: DIM_SCORES. Return ONLY valid JSON: {"opening":"Warm, specific 2-sentence opening making NAME feel seen about their money story","overall_insight":"3 sentences on their money archetype pattern","b_strength":"if >=65","g_strength":"if >=65","v_strength":"if >=65","s_strength":"if >=65","r_strength":"if >=65","b_growth":"specific action if <65","g_growth":"specific action if <65","v_growth":"specific action if <65","s_growth":"specific action if <65","r_growth":"specific action if <65","month1":"30-day money awareness practices","month2":"30-60 day money habit installation","month3":"60-90 day integration and measurement","key_action":"Single most important money action for NAME this week","quote":"Powerful money wisdom quote","quote_author":"Full name"}`.replace(/NAME/g,name||'the person').replace(/OVERALL/g,overall).replace(/LEVEL_LABEL/g,level.label).replace(/LEVEL_DESC/g,level.desc).replace(/DIM_SCORES/g,JSON.stringify(ds));
+  try{const r=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({system:'You are a financial psychologist and money coach. Return only valid JSON, no markdown.',messages:[{role:'user',content:prompt}]})});const d=await r.json();ins=JSON.parse(d.content?.[0]?.text?.replace(/```json|```/g,'').trim()||'{}');}catch(e){console.error(e);}
+  const html=mkPDF(result,ins);const w=window.open('','_blank');w.document.write(html);w.document.close();
+  document.getElementById('rl').style.display='none';rRs(result);document.getElementById('rc').style.display='block';
+}
+
+function mkPDF(result,ins){
+  const{ds,overall,level,uN:name}=result;
+  const date=new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  const srows=Object.entries(ds).sort((a,b)=>b[1]-a[1]).map(([id,pct])=>{const d=DIMS.find(x=>x.id===id);return `<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:14px;color:rgba(255,255,255,0.85);font-family:'Cormorant Garamond',serif;font-weight:600">${d?d.icon:''} ${d?d.title:id}</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:${d?d.accent:'#F5A623'}">${pct}%</span></div><div style="height:5px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden"><div style="height:100%;border-radius:3px;background:${d?d.accent:'#F5A623'};width:${pct}%"></div></div></div>`;}).join('');
+  const trows=Object.entries(ds).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([id,pct])=>{const d=DIMS.find(x=>x.id===id);const k=id;const txt=ins?.[k+'_strength']||`Your score of ${pct}% in ${d?d.title:id} represents a genuine strength. Build on it intentionally.`;return `<div style="border-left:3px solid ${d?d.accent:'#F5A623'};padding:14px 20px;margin-bottom:14px;background:rgba(255,255,255,0.02)"><div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:6px">${d?d.icon:''} ${d?d.title:id} · ${pct}%</div><div style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6">${txt}</div></div>`;}).join('');
+  const grows=Object.entries(ds).sort((a,b)=>a[1]-b[1]).slice(0,3).map(([id,pct])=>{const d=DIMS.find(x=>x.id===id);const k=id;const txt=ins?.[k+'_growth']||`Your score of ${pct}% in ${d?d.title:id} is your most significant growth opportunity.`;return `<div style="border-left:3px solid rgba(255,255,255,0.15);padding:14px 20px;margin-bottom:14px;background:rgba(255,255,255,0.02)"><div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:6px">${d?d.icon:''} ${d?d.title:id} · ${pct}%</div><div style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6">${txt}</div></div>`;}).join('');
+  return `<!DOCTYPE html><html><head><meta charset="UTF-8"/><title>${name||'Your'} — Money Mindset</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;color:#fff;background:#0a2e1a;-webkit-print-color-adjust:exact;print-color-adjust:exact}.pg{padding:60px;page-break-after:always;min-height:100vh;display:flex;flex-direction:column;background:#0a2e1a}.bt{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.8;font-weight:300}.sl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:12px;margin-top:24px}#dlb{position:fixed;top:0;left:0;right:0;z-index:9999;background:#1a1a1a;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}@media print{#dlb{display:none!important}body{margin-top:0!important}}@media screen{body{margin-top:56px}}</style></head><body>
+<div id="dlb"><div style="font-family:sans-serif;font-size:14px;color:#fff;font-weight:500">Your report is ready</div><div style="display:flex;gap:12px;align-items:center"><span style="font-family:monospace;font-size:12px;color:#888">File → Print → Save as PDF &nbsp;or&nbsp;</span><button onclick="window.print()" style="background:#fff;color:#1a1a1a;border:none;padding:10px 24px;border-radius:4px;font-size:14px;font-weight:700;cursor:pointer">⬇ Download PDF</button></div></div>
+<div style="min-height:100vh;background:linear-gradient(135deg,#0f3824 0%,#120900 100%);display:flex;flex-direction:column;justify-content:space-between;padding:60px;page-break-after:always"><div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase">${name||'Your'} Report · SIGNATUREWITHIN · ${date}</div><div><div style="font-size:60px;margin-bottom:20px"><span style="color:#F5A623;display:inline-flex;align-items:center"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><path d="M24 6 L40 20 L24 44 L8 20 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M8 20 L24 6 L40 20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M8 20 L24 28 L40 20" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round" opacity="0.6"/><line x1="24" y1="6" x2="24" y2="28" stroke="currentColor" stroke-width="1" opacity="0.4"/><path d="M16 14 L24 28" stroke="currentColor" stroke-width="0.75" opacity="0.35"/><path d="M32 14 L24 28" stroke="currentColor" stroke-width="0.75" opacity="0.35"/></svg></span></div><div style="font-family:'DM Mono',monospace;font-size:10px;color:#F5A62388;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px">Money Mindset</div><div style="font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:700;color:#F5A623;line-height:1;letter-spacing:-3px;margin-bottom:8px">${overall}</div><div style="font-family:'DM Mono',monospace;font-size:13px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px">${level.label}</div><div style="font-size:17px;color:rgba(255,255,255,0.65);line-height:1.7;font-weight:300;max-width:560px">${ins?.opening||level.desc}</div></div><div style="font-size:11px;color:rgba(255,255,255,0.15);font-family:'DM Mono',monospace;max-width:340px;line-height:1.5">Self-discovery tool. Not financial advice or professional counseling.</div></div>
+<div class="pg"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)">Your Complete Profile</div><div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">Your Scores<br/><em style="font-style:italic;color:#F5A623">Across All Dimensions</em></div><div style="font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.7;margin-bottom:32px">Your scores reveal where you are strong and where your greatest growth lies.</div>${srows}${ins?.overall_insight?`<div class="sl">What This Means</div><div class="bt">${ins.overall_insight}</div>`:''}</div>
+<div class="pg"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)">Your Strengths</div><div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">What You Do<br/><em style="font-style:italic;color:#F5A623">Naturally Well</em></div><div style="font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.7;margin-bottom:32px">Build on these intentionally.</div>${trows}</div>
+<div class="pg"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)">Growth Areas</div><div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">Where to<br/><em style="font-style:italic;color:#F5A623">Focus Next</em></div><div style="font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.7;margin-bottom:32px">Targeted effort here creates your greatest measurable change.</div>${grows}</div>
+<div class="pg"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)">Your Growth Plan</div><div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">Your Next<br/><em style="font-style:italic;color:#F5A623">90 Days</em></div><div style="font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.7;margin-bottom:32px">Three intentional phases. Start Month 1 today.</div><div style="border-left:3px solid #F5A623;padding:20px 24px;margin-bottom:16px;background:rgba(255,255,255,0.02)"><div style="font-family:'DM Mono',monospace;font-size:10px;color:#F5A62388;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Month 1 — Awareness</div><div class="bt">${ins?.month1||'Deep audit of your lowest 3 dimensions. Honest conversations. Set a weekly review habit.'}</div></div><div style="border-left:3px solid rgba(255,255,255,0.2);padding:20px 24px;margin-bottom:16px;background:rgba(255,255,255,0.02)"><div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Month 2 — Installation</div><div class="bt">${ins?.month2||'Install one new habit per week. Practice deliberately. Journal what is working.'}</div></div><div style="border-left:3px solid rgba(255,255,255,0.1);padding:20px 24px;margin-bottom:24px;background:rgba(255,255,255,0.02)"><div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Month 3 — Integration</div><div class="bt">${ins?.month3||'Reassess your lowest dimensions. Measure improvement. Set your next 90-day targets.'}</div></div>${ins?.key_action?`<div class="sl">Your Single Most Important Action Right Now</div><div style="font-size:17px;color:#F5A62388;border-left:3px solid #F5A62340;padding-left:20px;font-style:italic;font-family:'Cormorant Garamond',serif;line-height:1.7">${ins.key_action}</div>`:''}
+</div>
+<div style="min-height:100vh;background:linear-gradient(135deg,#0f3824 0%,#120900 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px"><div style="font-size:60px;margin-bottom:32px"><span style="color:#F5A623;display:inline-flex;align-items:center"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><path d="M24 6 L40 20 L24 44 L8 20 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M8 20 L24 6 L40 20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M8 20 L24 28 L40 20" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round" opacity="0.6"/><line x1="24" y1="6" x2="24" y2="28" stroke="currentColor" stroke-width="1" opacity="0.4"/><path d="M16 14 L24 28" stroke="currentColor" stroke-width="0.75" opacity="0.35"/><path d="M32 14 L24 28" stroke="currentColor" stroke-width="0.75" opacity="0.35"/></svg></span></div><div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-style:italic;line-height:1.4;margin-bottom:24px;max-width:600px;font-weight:600">"${ins?.quote||'It is not how much money you make, but how much money you keep, how hard it works for you, and how many generations you keep it for.'}"</div><div style="font-size:13px;color:rgba(255,255,255,0.35);font-family:'DM Mono',monospace;letter-spacing:1px">— ${ins?.quote_author||'Unknown'}</div></div>
+</body></html>`;
+}
+</script>
+</body>
+</html>

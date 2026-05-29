@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "buildCommand": "npm install",
+  "outputDirectory": "public",
+  "crons": [
+    {
+      "path": "/api/publish-daily",
+      "schedule": "0 8 * * *"
+    }
+  ],
+  "functions": {
+    "api/checkout.js": {
+      "memory": 128,
+      "maxDuration": 10
+    },
+    "api/verify.js": {
+      "memory": 128,
+      "maxDuration": 10
+    },
+    "api/quote.js": {
+      "memory": 128,
+      "maxDuration": 15
+    },
+    "api/analyze.js": {
+      "memory": 256,
+      "maxDuration": 30
+    },
+    "api/capture.js": {
+      "memory": 128,
+      "maxDuration": 10
+    },
+    "api/publish-daily.js": {
+      "memory": 128,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/blog/",
+      "dest": "/blog/index.html"
+    },
+    {
+      "src": "/blog/([^/]+)\\.html",
+      "dest": "/blog/$1.html"
+    },
+    {
+      "src": "/blog/([^/]+)",
+      "dest": "/blog/$1.html"
+    },
+    {
+      "src": "/([^/]+)\\.html",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/([^/]+)",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    }
+  ]
+}

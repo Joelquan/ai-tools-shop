@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- HOMEPAGE -->
+  <url>
+    <loc>https://signaturewithin.com/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- CORE TOOL PAGES -->
+  <url><loc>https://signaturewithin.com/temperament.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://signaturewithin.com/knowthyself.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://signaturewithin.com/eq.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://signaturewithin.com/moneymindset.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://signaturewithin.com/relationshipstyle.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://signaturewithin.com/leadership.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://signaturewithin.com/career.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://signaturewithin.com/entrepreneur.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://signaturewithin.com/ideas.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://signaturewithin.com/stress.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://signaturewithin.com/marriage.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- BLOG INDEX -->
+  <url><loc>https://signaturewithin.com/blog/</loc><lastmod>2026-05-27</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- BLOG — UNSTUCK SERIES -->
+  <url><loc>https://signaturewithin.com/blog/you-are-not-lazy-you-are-afraid.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://signaturewithin.com/blog/smart-people-wrong-jobs.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://signaturewithin.com/blog/the-job-is-not-the-problem.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://signaturewithin.com/blog/fear-of-starting-over.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://signaturewithin.com/blog/you-have-been-meaning-to-leave.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- BLOG — TEMPERAMENT -->
+  <url><loc>https://signaturewithin.com/blog/sanguine-temperament-meaning.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- BLOG — PERSONALITY -->
+  <url><loc>https://signaturewithin.com/blog/conviction-dimension-explained.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- BLOG — EQ -->
+  <url><loc>https://signaturewithin.com/blog/what-is-a-good-eq-score.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- BLOG — MONEY -->
+  <url><loc>https://signaturewithin.com/blog/guardian-money-archetype.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- BLOG — RELATIONSHIPS -->
+  <url><loc>https://signaturewithin.com/blog/anxious-attachment-score-meaning.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- BLOG — LEADERSHIP -->
+  <url><loc>https://signaturewithin.com/blog/low-delegation-score.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- BLOG — MARRIAGE -->
+  <url><loc>https://signaturewithin.com/blog/marriage-score-interpretation.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- SUPPORT PAGES -->
+  <url><loc>https://signaturewithin.com/faq.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://signaturewithin.com/privacy.html</loc><lastmod>2026-05-27</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://signaturewithin.com/terms.html</loc><lastmod>2026-05-27</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://signaturewithin.com/disclaimer.html</loc><lastmod>2026-05-27</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+
+  <!-- BLOG — SEO TARGETED -->
+  <url><loc>https://signaturewithin.com/blog/stuck-in-wrong-job.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://signaturewithin.com/blog/temperament-test-free.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://signaturewithin.com/blog/emotional-intelligence-test-free.html</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <url>
+    <loc>https://signaturewithin.com/blog/attachment-style-test-free.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://signaturewithin.com/blog/marriage-health-check-quiz.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://signaturewithin.com/blog/leadership-assessment-free.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://signaturewithin.com/blog/what-is-my-money-mindset.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://signaturewithin.com/blog/how-to-know-your-personality-type.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://signaturewithin.com/blog/sanguine-choleric-temperament-meaning.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://signaturewithin.com/blog/anxious-avoidant-relationship-pattern.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://signaturewithin.com/blog/why-smart-people-feel-empty.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://signaturewithin.com/blog/fear-of-being-seen.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://signaturewithin.com/blog/low-stress-tolerance-signs.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

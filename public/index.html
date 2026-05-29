@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIGNATUREWITHIN — Discover the Signature Within You</title>
+  <meta name="description" content="11 deep-dive assessments across personality, EQ, money mindset, relationships, leadership, career, marriage, and resilience. Free to take. $14.99 for your full AI-generated personal report."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://signaturewithin.com"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="SIGNATUREWITHIN — Discover the Signature Within You"/>
+  <meta property="og:description" content="11 deep-dive self-discovery assessments. Free to take. $14.99 for your full AI-generated personal report."/>
+  <meta property="og:url" content="https://signaturewithin.com"/>
+  <meta property="og:site_name" content="SIGNATUREWITHIN"/>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"SIGNATUREWITHIN","url":"https://signaturewithin.com","description":"Self-discovery assessments for personality, EQ, money mindset, relationships, leadership, career, and marriage."}
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── PALETTE ──────────────────────────────────────── */
+    :root {
+      --navy:    #0a2e1a;
+      --navy2:   #0f3d24;
+      --navy3:   #165c35;
+      --coral:   #4EE88A;
+      --coral2:  #38d474;
+      --coral3:  #7fffb0;
+      --steel:   #3a9e50;
+      --steel2:  #2e8040;
+      --steel3:  #a8e063;
+      --text:    #F5F0E8;
+      --muted:   #b8d4b0;
+      --dim:     #3a6a3a;
+      --border:  rgba(78,232,138,0.15);
+      --border2: rgba(78,232,138,0.28);
+    }
+
+    /* ── RESET ────────────────────────────────────────── */
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      background:var(--navy);
+      color:var(--text);
+      font-family:'DM Sans',sans-serif;
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+
+    /* ── GRAIN ────────────────────────────────────────── */
+    body::before{
+      content:'';position:fixed;inset:0;z-index:999;pointer-events:none;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      opacity:0.4;
+    }
+
+    /* ── HEADER ───────────────────────────────────────── */
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:200;
+      height:68px;
+      background:rgba(10,46,26,0.88);
+      border-bottom:1px solid var(--border);
+      backdrop-filter:blur(24px) saturate(1.6);
+      display:flex;align-items:center;
+      transition:background 0.3s;
+    }
+    header.scrolled{background:rgba(2,23,18,0.97)}
+    .nav{
+      max-width:1280px;margin:0 auto;
+      padding:0 40px;width:100%;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .nav-logo{
+      font-family:'Cormorant Garamond',serif;
+      font-size:20px;font-weight:700;color:#fff;
+      display:flex;align-items:baseline;
+    }
+    .nav-logo em{color:var(--coral);font-style:italic}
+    .nav-links{display:flex;align-items:center;gap:32px}
+    .nav-link{
+      font-family:'DM Mono',monospace;
+      font-size:12px;letter-spacing:1.5px;
+      color:var(--muted);text-transform:uppercase;
+      transition:color 0.2s;
+    }
+    .nav-link:hover{color:#fff}
+    .nav-cta{
+      background:var(--coral);color:#0a2e1a;
+      font-family:'Cormorant Garamond',serif;
+      font-size:17px;font-weight:700;
+      font-style:italic;
+      padding:10px 24px;border-radius:3px;
+      letter-spacing:0.3px;transition:all 0.2s;
+    }
+    .nav-cta:hover{background:var(--coral3)}
+
+    /* ── HERO ─────────────────────────────────────────── */
+    .hero{
+      min-height:100vh;position:relative;
+      display:flex;flex-direction:column;
+      justify-content:center;overflow:hidden;
+    }
+    /* layered botanical-inspired background */
+    .hero-bg{
+      position:absolute;inset:0;
+      background-image:url('https://images.unsplash.com/photo-1762770646073-baca6760670f?w=1600&q=75&fit=crop&crop=center');
+      background-size:cover;
+      background-position:center 30%;
+      pointer-events:none;
+    }
+    .hero-bg::after{
+      content:'';
+      position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 20%, rgba(78,232,138,0.04) 0%, transparent 60%),
+        linear-gradient(160deg, rgba(10,46,26,0.55) 0%, rgba(15,61,36,0.48) 45%, rgba(22,92,53,0.42) 100%);
+    }
+    /* subtle organic lines suggesting leaves */
+    .hero-organic{
+      position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:2;
+    }
+    .hero-organic svg{
+      position:absolute;width:100%;height:100%;opacity:0.04;
+    }
+    .hero-inner{
+      position:relative;z-index:3;
+      max-width:1280px;margin:0 auto;
+      padding:140px 40px 80px;
+      display:grid;grid-template-columns:1.15fr 0.85fr;
+      gap:80px;align-items:center;
+    }
+
+    /* HERO LEFT */
+    .hero-eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      font-family:'DM Mono',monospace;
+      font-size:12px;font-weight:500;letter-spacing:2px;
+      color:var(--coral);text-transform:uppercase;
+      margin-bottom:32px;
+    }
+    .hero-eyebrow::before{
+      content:'';width:24px;height:1px;
+      background:var(--coral);opacity:0.7;flex-shrink:0;
+    }
+    .hero-h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(54px,6.5vw,90px);
+      font-weight:700;line-height:1.0;
+      letter-spacing:-2px;color:#fff;
+      margin-bottom:28px;
+    }
+    .hero-h1 .l2{
+      font-style:italic;color:var(--coral);display:block;
+    }
+    .hero-h1 .l3{
+      display:block;font-weight:400;
+      font-size:0.7em;color:rgba(255,255,255,0.45);
+      letter-spacing:-1px;margin-top:6px;
+    }
+    .hero-p{
+      font-size:19px;color:var(--muted);
+      line-height:1.8;font-weight:300;
+      max-width:480px;margin-bottom:48px;
+    }
+    .hero-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .btn-primary{
+      background:var(--coral);color:#0a2e1a;
+      font-family:'Cormorant Garamond',serif;
+      font-size:20px;font-weight:700;
+      padding:18px 48px;border-radius:3px;
+      transition:all 0.2s;letter-spacing:0.3px;
+      display:inline-flex;align-items:center;gap:10px;
+      font-style:italic;
+    }
+    .btn-primary:hover{background:#ffb060;transform:translateY(-1px)}
+    .btn-ghost{
+      font-family:'DM Mono',monospace;
+      font-size:12px;letter-spacing:2px;
+      color:var(--muted);text-transform:uppercase;
+      padding:18px 0;
+      border-bottom:1px solid var(--border2);
+      transition:all 0.2s;
+    }
+    .btn-ghost:hover{color:#fff;border-color:rgba(96,145,176,0.5)}
+
+    /* HERO STATS */
+    .hero-stats{
+      display:flex;gap:40px;margin-top:56px;
+      padding-top:36px;
+      border-top:1px solid var(--border);
+    }
+    .stat-n{
+      font-family:'Cormorant Garamond',serif;
+      font-size:44px;font-weight:700;color:#fff;line-height:1;
+    }
+    .stat-n span{color:var(--coral);font-style:italic}
+    .stat-l{
+      font-size:13px;color:var(--muted);
+      font-family:'DM Mono',monospace;
+      letter-spacing:1px;text-transform:uppercase;margin-top:5px;
+    }
+
+    /* HERO RIGHT — featured cards */
+    .hero-cards{display:flex;flex-direction:column;gap:10px}
+    .hc{
+      background:rgba(15,61,36,0.55);
+      border:1px solid var(--border);
+      border-radius:10px;padding:18px 20px;
+      transition:all 0.25s;cursor:pointer;
+      display:flex;align-items:center;gap:16px;
+      position:relative;overflow:hidden;
+    }
+    .hc::before{
+      content:'';position:absolute;
+      left:0;top:0;bottom:0;width:2px;
+      background:var(--coral);
+      opacity:0;transition:opacity 0.2s;
+    }
+    .hc:hover{
+      background:rgba(22,92,53,0.75);
+      border-color:var(--border2);
+      transform:translateX(4px);
+    }
+    .hc:hover::before{opacity:1}
+    .hc.featured{
+      background:rgba(220,93,70,0.06);
+      border-color:rgba(78,232,138,0.25);
+    }
+    .hc-icon{width:44px;height:44px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+    .hc-name{
+      font-family:'Cormorant Garamond',serif;
+      font-size:19px;font-weight:700;color:#fff;margin-bottom:4px;
+    }
+    .hc-desc{
+      font-size:12px;color:var(--muted);
+      font-family:'DM Mono',monospace;letter-spacing:0.3px;
+    }
+    .hc-arrow{
+      margin-left:auto;font-size:13px;
+      color:var(--dim);transition:all 0.2s;flex-shrink:0;
+    }
+    .hc:hover .hc-arrow{color:var(--coral);transform:translateX(3px)}
+
+    /* ── MARQUEE ──────────────────────────────────────── */
+    .marquee-wrap{
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      overflow:hidden;padding:13px 0;
+      background:rgba(3,42,82,0.3);
+    }
+    .marquee-track{
+      display:flex;animation:mq 32s linear infinite;
+      white-space:nowrap;width:max-content;
+    }
+    .marquee-track:hover{animation-play-state:paused}
+    @keyframes mq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .mqi{
+      font-family:'DM Mono',monospace;
+      font-size:11px;letter-spacing:2px;text-transform:uppercase;
+      color:var(--muted);padding:0 28px;
+      display:flex;align-items:center;gap:10px;flex-shrink:0;
+    }
+    .mqdot{
+      width:3px;height:3px;border-radius:50%;
+      background:var(--coral);opacity:0.6;flex-shrink:0;
+    }
+
+    /* ── MANIFESTO ────────────────────────────────────── */
+    .manifesto{
+      padding:120px 40px;
+      background:linear-gradient(160deg, var(--navy2) 0%, var(--navy) 100%);
+      position:relative;overflow:hidden;
+    }
+    .manifesto::before{
+      content:'';position:absolute;
+      top:-200px;right:-100px;
+      width:600px;height:600px;
+      background:radial-gradient(circle, rgba(78,232,138,0.06) 0%, transparent 65%);
+      pointer-events:none;
+    }
+    .manifesto-inner{
+      max-width:1280px;margin:0 auto;
+      display:grid;grid-template-columns:1fr 1.6fr;
+      gap:80px;align-items:start;
+      position:relative;z-index:2;
+    }
+    .section-eyebrow{
+      font-family:'DM Mono',monospace;
+      font-size:12px;letter-spacing:2px;
+      color:var(--coral);text-transform:uppercase;margin-bottom:20px;
+    }
+    .manifesto-h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(36px,4vw,54px);
+      font-weight:700;color:#fff;
+      line-height:1.1;letter-spacing:-1px;
+      position:sticky;top:100px;
+    }
+    .manifesto-h2 em{font-style:italic;color:var(--coral)}
+    .manifesto-body p{
+      font-size:19px;color:rgba(240,236,230,0.72);
+      line-height:1.85;font-weight:300;margin-bottom:28px;
+    }
+    .manifesto-body p strong{color:var(--text);font-weight:500}
+    .manifesto-body blockquote{
+      border-left:2px solid var(--steel);
+      padding:16px 24px;margin:36px 0;
+      background:rgba(96,145,176,0.05);
+      border-radius:0 6px 6px 0;
+    }
+    .manifesto-body blockquote p{
+      font-family:'Cormorant Garamond',serif;
+      font-size:22px;font-style:italic;
+      color:rgba(240,236,230,0.85);margin:0;line-height:1.5;
+    }
+
+    /* ── TOOLS SECTION ────────────────────────────────── */
+    .tools-section{padding:0 40px 100px}
+    .section-header{
+      max-width:1280px;margin:0 auto;
+      padding-bottom:48px;
+      display:flex;align-items:flex-end;justify-content:space-between;
+      border-bottom:1px solid var(--border);margin-bottom:48px;
+    }
+    .section-h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(36px,4vw,52px);
+      font-weight:700;color:#fff;
+      letter-spacing:-1px;line-height:1.1;margin-top:12px;
+    }
+    .section-h2 em{font-style:italic;color:var(--coral)}
+    .section-link{
+      font-family:'Cormorant Garamond',serif;
+      font-size:18px;font-weight:600;font-style:italic;
+      color:var(--muted);
+      padding-bottom:4px;
+      border-bottom:1px solid rgba(255,154,60,0.3);
+      transition:all 0.2s;white-space:nowrap;
+    }
+    .section-link:hover{color:#FF9A3C;border-color:rgba(255,154,60,0.6)}
+
+    .cat-row{max-width:1280px;margin:0 auto 52px}
+    .cat-label{
+      font-family:'DM Mono',monospace;
+      font-size:12px;letter-spacing:2px;
+      color:var(--muted);text-transform:uppercase;
+      margin-bottom:16px;padding-left:2px;
+    }
+    .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .tgrid.two{grid-template-columns:repeat(2,1fr)}
+
+    /* TOOL CARD */
+    .tc{
+      border-radius:10px;overflow:hidden;cursor:pointer;
+      position:relative;transition:transform 0.3s,box-shadow 0.3s;
+      background:rgba(22,80,44,0.45);
+      border:1px solid var(--border);
+    }
+    .tc:hover{
+      transform:translateY(-5px);
+      box-shadow:0 20px 50px rgba(10,46,26,0.5);
+      border-color:var(--border2);
+    }
+    .tc-accent{height:2px;width:100%}
+    .tc-body{padding:26px 22px 22px;display:flex;flex-direction:column}
+    .tc-icon{width:44px;height:44px;margin-bottom:14px;display:flex;align-items:center;justify-content:center}
+    .tc-tag{
+      font-family:'DM Mono',monospace;font-size:11px;
+      letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;font-weight:500;
+    }
+    .tc-name{
+      font-family:'Cormorant Garamond',serif;
+      font-size:28px;font-weight:700;color:#fff;
+      letter-spacing:-0.3px;line-height:1.15;margin-bottom:10px;
+    }
+    .tc-desc{
+      font-size:15px;color:rgba(240,236,230,0.65);
+      line-height:1.7;font-weight:300;margin-bottom:20px;flex:1;
+    }
+    .tc-pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+    .tc-pill{
+      font-family:'DM Mono',monospace;font-size:8px;
+      letter-spacing:1px;text-transform:uppercase;
+      padding:3px 8px;border-radius:100px;
+      border:1px solid rgba(58,158,80,0.2);
+      color:rgba(245,240,232,0.4);
+    }
+    .tc-bottom{
+      display:flex;align-items:center;justify-content:space-between;
+      padding-top:14px;border-top:1px solid rgba(58,158,80,0.1);margin-top:auto;
+    }
+    .tc-price{
+      font-family:'Cormorant Garamond',serif;
+      font-size:24px;font-weight:700;color:#fff;
+    }
+    .tc-note{
+      font-size:12px;color:var(--muted);
+      font-family:'DM Mono',monospace;letter-spacing:0.5px;margin-top:2px;
+    }
+    .tc-btn{
+      font-family:'Cormorant Garamond',serif;
+      font-size:17px;font-weight:700;
+      font-style:italic;
+      padding:11px 22px;border-radius:3px;transition:all 0.15s;
+      letter-spacing:0.3px;
+    }
+    .tc.wide{grid-column:span 2}
+    .tc.wide .tc-body{
+      display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;
+    }
+    .tc-dims-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px;
+    }
+    .tc-dim-chip{
+      padding:8px 10px;border-radius:6px;
+      border:1px solid rgba(58,158,80,0.1);
+      font-family:'Cormorant Garamond',serif;
+      font-size:11px;color:rgba(240,236,230,0.7);
+      background:rgba(15,61,36,0.5);
+    }
+
+    /* ── PROCESS ──────────────────────────────────────── */
+    .process{
+      padding:100px 40px;
+      background:rgba(22,80,44,0.35);
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+    }
+    .process-inner{max-width:1280px;margin:0 auto}
+    .process-steps{
+      display:grid;grid-template-columns:repeat(4,1fr);
+      gap:0;margin-top:56px;
+    }
+    .ps{
+      padding:0 40px 0 0;
+      border-right:1px solid var(--border);
+    }
+    .ps:last-child{border:none;padding-right:0}
+    .ps-num{
+      font-family:'Cormorant Garamond',serif;
+      font-size:60px;font-weight:700;
+      color:var(--coral);line-height:1;margin-bottom:18px;
+      opacity:0.75;
+    }
+    .ps-title{font-size:17px;font-weight:600;color:#fff;margin-bottom:10px}
+    .ps-desc{font-size:16px;color:var(--muted);line-height:1.75;font-weight:300}
+
+    /* ── BLOG STRIP ───────────────────────────────────── */
+    .blog-section{padding:100px 40px}
+    .blog-grid{
+      max-width:1280px;margin:0 auto;
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:18px;margin-top:48px;
+    }
+    .bc{
+      border:1px solid var(--border);border-radius:10px;overflow:hidden;
+      transition:all 0.25s;cursor:pointer;display:flex;flex-direction:column;
+      background:rgba(22,80,44,0.35);
+    }
+    .bc:hover{
+      border-color:var(--border2);transform:translateY(-3px);
+      background:rgba(15,61,36,0.5);
+      box-shadow:0 12px 32px rgba(10,46,26,0.4);
+    }
+    .bc-accent{height:2px}
+    .bc-body{padding:22px 20px;flex:1;display:flex;flex-direction:column}
+    .bc-cat{
+      font-family:'DM Mono',monospace;font-size:11px;
+      letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;
+    }
+    .bc-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:22px;font-weight:700;color:#fff;
+      line-height:1.25;margin-bottom:8px;flex:1;letter-spacing:-0.2px;
+    }
+    .bc-excerpt{
+      font-size:15px;color:rgba(240,236,230,0.6);
+      line-height:1.7;font-weight:300;margin-bottom:16px;
+    }
+    .bc-meta{
+      display:flex;align-items:center;justify-content:space-between;
+      padding-top:12px;border-top:1px solid var(--border);
+    }
+    .bc-read{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--muted);text-transform:uppercase}
+    .bc-arrow{font-size:12px;color:var(--coral);opacity:0.8}
+
+    /* ── EMAIL CAPTURE ────────────────────────────────── */
+    .email-section{
+      padding:80px 40px;
+      background:linear-gradient(135deg, var(--navy2) 0%, var(--navy3) 100%);
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      position:relative;overflow:hidden;
+    }
+    .email-section::before{
+      content:'';position:absolute;
+      bottom:-200px;left:-100px;
+      width:500px;height:500px;
+      background:radial-gradient(circle, rgba(220,93,70,0.07) 0%, transparent 65%);
+      pointer-events:none;
+    }
+    .email-inner{
+      max-width:640px;margin:0 auto;
+      text-align:center;position:relative;z-index:2;
+    }
+    .email-eyebrow{
+      font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;
+      color:var(--coral);text-transform:uppercase;margin-bottom:20px;
+    }
+    .email-h2{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(30px,4vw,46px);
+      font-weight:700;color:#fff;
+      letter-spacing:-1px;line-height:1.1;margin-bottom:14px;
+    }
+    .email-h2 em{font-style:italic;color:var(--steel3)}
+    .email-p{
+      font-size:15px;color:var(--muted);line-height:1.7;
+      font-weight:300;margin-bottom:36px;
+    }
+    .email-form{display:flex;gap:10px;max-width:460px;margin:0 auto}
+    .email-input{
+      flex:1;background:rgba(15,61,36,0.55);
+      border:1px solid var(--border2);border-radius:3px;
+      padding:14px 18px;font-size:15px;color:#fff;
+      font-family:'DM Sans',sans-serif;outline:none;
+      transition:border 0.2s;
+    }
+    .email-input:focus{border-color:rgba(96,145,176,0.5)}
+    .email-input::placeholder{color:var(--dim);font-size:14px}
+    .email-submit{
+      background:var(--coral);color:#0a2e1a;
+      font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;
+      padding:14px 28px;border:none;border-radius:3px;
+      cursor:pointer;transition:all 0.2s;white-space:nowrap;
+    }
+    .email-submit:hover{background:var(--coral3)}
+    .email-note{
+      font-size:11px;color:var(--dim);font-family:'DM Mono',monospace;
+      letter-spacing:0.5px;margin-top:14px;
+    }
+
+    /* ── FOOTER ───────────────────────────────────────── */
+    footer{
+      padding:64px 40px 40px;
+      border-top:1px solid var(--border);
+      background:var(--navy2);
+    }
+    .footer-inner{max-width:1280px;margin:0 auto}
+    .footer-top{
+      display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+      gap:60px;margin-bottom:52px;
+    }
+    .f-logo{
+      font-family:'Cormorant Garamond',serif;
+      font-size:21px;font-weight:700;color:#fff;margin-bottom:14px;
+    }
+    .f-logo em{color:var(--coral);font-style:italic}
+    .footer-brand p{
+      font-size:13px;color:var(--muted);line-height:1.7;
+      font-weight:300;max-width:280px;
+    }
+    .f-col-title{
+      font-family:'DM Mono',monospace;font-size:12px;
+      letter-spacing:2px;color:var(--muted);
+      text-transform:uppercase;margin-bottom:18px;
+    }
+    .f-links{display:flex;flex-direction:column;gap:10px}
+    .f-link{font-size:15px;color:var(--muted);transition:color 0.2s}
+    .f-link:hover{color:#fff}
+    .footer-bottom{
+      display:flex;align-items:center;justify-content:space-between;
+      padding-top:28px;border-top:1px solid var(--border);
+      flex-wrap:wrap;gap:12px;
+    }
+    .f-copy{
+      font-size:13px;color:var(--muted);
+      font-family:'DM Mono',monospace;letter-spacing:0.3px;
+    }
+    .f-legal{display:flex;gap:20px}
+    .f-legal a{
+      font-size:11px;color:var(--dim);
+      font-family:'DM Mono',monospace;letter-spacing:0.5px;
+      transition:color 0.2s;
+    }
+    .f-legal a:hover{color:var(--muted)}
+
+    /* ── ANIMATIONS ───────────────────────────────────── */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    .fu{animation:fadeUp 0.7s ease both}
+    .fu2{animation:fadeUp 0.7s ease 0.12s both}
+    .fu3{animation:fadeUp 0.7s ease 0.24s both}
+    .fu4{animation:fadeUp 0.7s ease 0.36s both}
+
+    /* ── RESPONSIVE ───────────────────────────────────── */
+    @media(max-width:1024px){
+      .hero-inner,.manifesto-inner,.footer-top{grid-template-columns:1fr;gap:48px}
+      .process-steps{grid-template-columns:1fr 1fr;gap:32px}
+      .ps{border:none;padding:0}
+      .tgrid{grid-template-columns:1fr 1fr}
+      .tc.wide{grid-column:span 2}
+      .tc.wide .tc-body{grid-template-columns:1fr}
+      .blog-grid{grid-template-columns:1fr 1fr}
+      .footer-top{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){
+      .nav,.hero-inner,.manifesto,.tools-section,.process,.blog-section,.email-section,footer{padding-left:20px;padding-right:20px}
+      .nav-links{display:none}
+      .tgrid,.tgrid.two,.blog-grid{grid-template-columns:1fr}
+      .tc.wide{grid-column:span 1}
+      .tc.wide .tc-body{grid-template-columns:1fr}
+      .hero-stats{gap:24px;flex-wrap:wrap}
+      .process-steps{grid-template-columns:1fr}
+      .footer-top{grid-template-columns:1fr}
+      .email-form{flex-direction:column}
+    }
+  
+    /* ── ASSESSMENT FINDER ─────────────────────────────── */
+    .af-wrap{
+      margin-top:48px;
+      max-width:600px;
+    }
+    .af-label{
+      font-family:'DM Mono',monospace;
+      font-size:11px;letter-spacing:3px;
+      color:rgba(255,255,255,0.65);
+      text-transform:uppercase;margin-bottom:12px;
+    }
+    .af-box{
+      display:flex;align-items:center;
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:6px;overflow:hidden;
+      transition:border-color 0.2s;
+    }
+    .af-box:focus-within{
+      border-color:rgba(78,232,138,0.5);
+      background:rgba(255,255,255,0.08);
+    }
+    .af-input{
+      flex:1;background:transparent;border:none;
+      padding:16px 20px;
+      font-family:'Cormorant Garamond',serif;
+      font-size:19px;font-style:italic;
+      color:#F5F0E8;outline:none;
+      letter-spacing:0.2px;
+    }
+    .af-input::placeholder{
+      color:rgba(245,240,232,0.35);
+      font-style:italic;
+    }
+    .af-btn{
+      background:transparent;border:none;
+      padding:0 18px;cursor:pointer;
+      color:rgba(78,232,138,0.7);
+      transition:color 0.2s;
+      display:flex;align-items:center;
+    }
+    .af-btn:hover{color:#4EE88A}
+    .af-result{
+      margin-top:16px;min-height:0;
+      transition:all 0.3s;
+    }
+    .af-card{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.12);
+      border-radius:8px;padding:20px 24px;
+      display:flex;align-items:center;
+      gap:18px;animation:afSlide 0.3s ease;
+    }
+    @keyframes afSlide{
+      from{opacity:0;transform:translateY(8px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+    .af-card-icon{
+      width:48px;height:48px;flex-shrink:0;
+      display:flex;align-items:center;justify-content:center;
+      border-radius:8px;
+    }
+    .af-card-body{flex:1}
+    .af-card-tag{
+      font-family:'DM Mono',monospace;
+      font-size:11px;letter-spacing:2px;
+      text-transform:uppercase;margin-bottom:6px;
+      font-weight:500;
+    }
+    .af-card-name{
+      font-family:'Cormorant Garamond',serif;
+      font-size:24px;font-weight:700;color:#F5F0E8;
+      margin-bottom:6px;letter-spacing:-0.2px;
+    }
+    .af-card-desc{
+      font-size:16px;color:rgba(245,240,232,0.82);
+      line-height:1.65;font-weight:300;
+    }
+    .af-card-btn{
+      font-family:'Cormorant Garamond',serif;
+      font-size:16px;font-weight:700;font-style:italic;
+      padding:10px 20px;border-radius:4px;
+      text-decoration:none;white-space:nowrap;
+      border:none;cursor:pointer;transition:all 0.2s;
+      display:inline-block;
+    }
+    .af-thinking{
+      font-family:'DM Mono',monospace;
+      font-size:11px;letter-spacing:2px;
+      color:rgba(78,232,138,0.5);
+      text-transform:uppercase;padding:12px 0;
+      animation:afPulse 1s ease infinite;
+    }
+    @keyframes afPulse{
+      0%,100%{opacity:0.4}50%{opacity:1}
+    }
+    .af-hints{
+      display:flex;flex-wrap:wrap;gap:8px;
+      margin-top:14px;
+    }
+    .af-hint{
+      font-family:'DM Mono',monospace;
+      font-size:11px;letter-spacing:0.5px;
+      color:rgba(245,240,232,0.65);
+      border:1px solid rgba(255,255,255,0.2);
+      padding:6px 12px;border-radius:100px;
+      cursor:pointer;transition:all 0.2s;
+    }
+    .af-hint:hover{
+      color:rgba(245,240,232,0.95);
+      border-color:rgba(255,255,255,0.4);
+    }
+
+    </style>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header id="site-header">
+  <div class="nav">
+    <div class="nav-logo">SIGNATURE<em>WITHIN</em></div>
+    <div class="nav-links">
+      <a href="#tools" class="nav-link">Assessments</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/faq.html" class="nav-link">FAQ</a>
+    </div>
+    <a href="#tools" class="nav-cta">Begin Free →</a>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-organic">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <!-- organic leaf-inspired curved paths -->
+      <path d="M-100,400 C200,100 600,600 900,200 S1300,500 1600,300" stroke="#4EE88A" stroke-width="1" fill="none"/>
+      <path d="M-200,600 C100,300 500,700 800,350 S1200,600 1700,400" stroke="#3a9e50" stroke-width="1" fill="none"/>
+      <path d="M200,900 C400,500 700,800 1000,450 S1400,700 1600,500" stroke="#4EE88A" stroke-width="0.5" fill="none"/>
+      <path d="M0,200 C300,500 600,100 900,400 S1300,200 1440,350" stroke="#3a9e50" stroke-width="0.5" fill="none"/>
+      <!-- subtle leaf shapes -->
+      <ellipse cx="1100" cy="150" rx="180" ry="90" transform="rotate(-25 1100 150)" stroke="#3a9e50" stroke-width="0.5" fill="none"/>
+      <ellipse cx="200" cy="700" rx="140" ry="70" transform="rotate(15 200 700)" stroke="#4EE88A" stroke-width="0.5" fill="none"/>
+      <ellipse cx="800" cy="80" rx="120" ry="55" transform="rotate(-10 800 80)" stroke="#3a9e50" stroke-width="0.3" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="hero-inner">
+    <!-- LEFT -->
+    <div>
+      <div class="hero-eyebrow fu">Self-Discovery Platform · 11 Assessments</div>
+      <h1 class="hero-h1 fu2">
+        Discover the
+        <em class="l2">Signature</em>
+        <span class="l3">Within You.</span>
+      </h1>
+      <p class="hero-p fu3">Most people spend their lives adapting to environments never built for who they are. SIGNATUREWITHIN gives you the self-knowledge to stop adapting — and start building.</p>
+      <div class="hero-actions fu4">
+        <a href="#tools" class="btn-primary">
+          Explore All Assessments
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="/blog/" class="btn-ghost">Read the Blog</a>
+
+    <!-- ── ASSESSMENT FINDER ────────────────────────────── -->
+    <div class="af-wrap">
+      <div class="af-label">FIND YOUR ASSESSMENT</div>
+      <div class="af-box">
+        <input
+          id="af-input"
+          class="af-input"
+          type="text"
+          placeholder="What are you trying to understand about yourself?"
+          autocomplete="off"
+          onkeydown="if(event.key==='Enter')afFind()"
+        />
+        <button class="af-btn" onclick="afFind()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M16.5 16.5 L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div id="af-result" class="af-result"></div>
+      <div class="af-hints">
+        <span class="af-hint" onclick="afSet('I feel stuck in my career')">I feel stuck in my career</span>
+        <span class="af-hint" onclick="afSet('my marriage needs help')">my marriage needs help</span>
+        <span class="af-hint" onclick="afSet('I want to know my personality')">I want to know my personality</span>
+        <span class="af-hint" onclick="afSet('I struggle with money')">I struggle with money</span>
+      </div>
+    </div>
+
+      </div>
+      <div class="hero-stats fu4">
+        <div>
+          <div class="stat-n">11<span>+</span></div>
+          <div class="stat-l">Assessments</div>
+        </div>
+        <div>
+          <div class="stat-n">590</div>
+          <div class="stat-l">Questions</div>
+        </div>
+        <div>
+          <div class="stat-n">$0</div>
+          <div class="stat-l">To Start</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="hero-cards fu3">
+      <a href="/temperament.html" class="hc">
+        <div class="hc-icon" style="color:#FF9A3C"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1" opacity="0.2"/><path d="M24 24 C24 24 14 20 14 12 C14 4 20 2 24 8 C28 2 34 4 34 12 C34 20 24 24 24 24Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M24 24 C24 24 28 34 20 38 C12 42 8 36 14 32 C8 28 8 22 14 20 C20 18 24 24 24 24Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M24 24 C24 24 34 28 34 36 C34 44 28 46 24 40 C20 46 14 44 14 36 C14 28 24 24 24 24Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M24 24 C24 24 20 14 28 10 C36 6 40 12 34 16 C40 20 40 26 34 28 C28 30 24 24 24 24Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><circle cx="24" cy="24" r="2.5" fill="currentColor"/></svg></div>
+        <div>
+          <div class="hc-name">Temperament Profile</div>
+          <div class="hc-desc">Sanguine · Choleric · Melancholic · Phlegmatic</div>
+        </div>
+        <div class="hc-arrow">→</div>
+      </a>
+      <a href="/knowthyself.html" class="hc">
+        <div class="hc-icon" style="color:#D4A853"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 24 C6 24 14 10 24 10 C34 10 42 24 42 24 C42 24 34 38 24 38 C14 38 6 24 6 24Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="2" fill="currentColor"/><path d="M8 22 C8 22 16 10 24 10 C32 10 40 22 40 22" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.4"/></svg></div>
+        <div>
+          <div class="hc-name">Know Thy Self</div>
+          <div class="hc-desc">6 Dimensions · 16 Types · Including Conviction</div>
+        </div>
+        <div class="hc-arrow">→</div>
+      </a>
+      <a href="/marriage.html" class="hc">
+        <div class="hc-icon" style="color:#C77DFF"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="24" r="12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M22 13.5 C25 16 26.5 20 26.5 24 C26.5 28 25 32 22 34.5" stroke="#0a2e1a" stroke-width="4" fill="none"/><path d="M22 13.5 C19 16 16 20 16 24 C16 28 19 32 22 34.5" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
+        <div>
+          <div class="hc-name">Marriage Metrics</div>
+          <div class="hc-desc">Husband & Wife versions · 10 Dimensions</div>
+        </div>
+        <div class="hc-arrow">→</div>
+      </a>
+      <a href="/leadership.html" class="hc">
+        <div class="hc-icon" style="color:#C9933A"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 34 L8 28 L16 18 L24 26 L32 14 L40 28 L40 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="8" y1="34" x2="40" y2="34" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="28" r="2" fill="currentColor" opacity="0.6"/><circle cx="24" cy="26" r="2" fill="currentColor" opacity="0.6"/><circle cx="32" cy="14" r="2.5" fill="currentColor"/><circle cx="40" cy="28" r="2" fill="currentColor" opacity="0.6"/><line x1="24" y1="8" x2="24" y2="14" stroke="currentColor" stroke-width="1" opacity="0.4"/><line x1="20" y1="10" x2="22" y2="15" stroke="currentColor" stroke-width="1" opacity="0.3"/><line x1="28" y1="10" x2="26" y2="15" stroke="currentColor" stroke-width="1" opacity="0.3"/></svg></div>
+        <div>
+          <div class="hc-name">Leadership Profile</div>
+          <div class="hc-desc">50 Questions · 10 Dimensions · 4 Archetypes</div>
+        </div>
+        <div class="hc-arrow">→</div>
+      </a>
+      <a href="/blog/you-are-not-lazy-you-are-afraid.html" class="hc featured">
+        <div class="hc-icon" style="color:var(--coral)"><svg width="44" height="44" viewBox="0 0 48 48" fill="none"><path d="M8 38 L14 32 L34 12 C36 10 39 10 41 12 C43 14 43 17 41 19 L21 39 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M30 16 L36 22" stroke="currentColor" stroke-width="1.5"/><path d="M8 38 L10 32 L16 38 Z" stroke="currentColor" stroke-width="1.2" fill="currentColor" fill-opacity="0.5" stroke-linejoin="round"/></svg></div>
+        <div>
+          <div class="hc-name" style="color:var(--coral)">New on the Blog</div>
+          <div class="hc-desc">You Are Not Lazy. You Are Afraid of Something Specific.</div>
+        </div>
+        <div class="hc-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MARQUEE ═══ -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="mqi"><div class="mqdot"></div>Temperament Profile</div>
+    <div class="mqi"><div class="mqdot"></div>Know Thy Self</div>
+    <div class="mqi"><div class="mqdot"></div>EQ Report</div>
+    <div class="mqi"><div class="mqdot"></div>Money Mindset</div>
+    <div class="mqi"><div class="mqdot"></div>Relationship Style</div>
+    <div class="mqi"><div class="mqdot"></div>Leadership Profile</div>
+    <div class="mqi"><div class="mqdot"></div>Career Metrics</div>
+    <div class="mqi"><div class="mqdot"></div>Entrepreneur Metrics</div>
+    <div class="mqi"><div class="mqdot"></div>Ideas Validator</div>
+    <div class="mqi"><div class="mqdot"></div>Stress Pattern Analysis</div>
+    <div class="mqi"><div class="mqdot"></div>Marriage Metrics</div>
+    <div class="mqi"><div class="mqdot"></div>Unstuck Series</div>
+    <div class="mqi"><div class="mqdot"></div>Temperament Profile</div>
+    <div class="mqi"><div class="mqdot"></div>Know Thy Self</div>
+    <div class="mqi"><div class="mqdot"></div>EQ Report</div>
+    <div class="mqi"><div class="mqdot"></div>Money Mindset</div>
+    <div class="mqi"><div class="mqdot"></div>Relationship Style</div>
+    <div class="mqi"><div class="mqdot"></div>Leadership Profile</div>
+    <div class="mqi"><div class="mqdot"></div>Career Metrics</div>
+    <div class="mqi"><div class="mqdot"></div>Entrepreneur Metrics</div>
+    <div class="mqi"><div class="mqdot"></div>Ideas Validator</div>
+    <div class="mqi"><div class="mqdot"></div>Stress Pattern Analysis</div>
+    <div class="mqi"><div class="mqdot"></div>Marriage Metrics</div>
+    <div class="mqi"><div class="mqdot"></div>Unstuck Series</div>
+  </div>
+</div>
+
+<!-- ═══ MANIFESTO ═══ -->
+<section class="manifesto">
+  <div class="manifesto-inner">
+    <div>
+      <div class="section-eyebrow">Why SIGNATUREWITHIN</div>
+      <h2 class="manifesto-h2">Books give you<br/>frameworks.<br/>We give you<br/><em>you.</em></h2>
+    </div>
+    <div class="manifesto-body">
+      <p>Self-help books are written for everyone — which means they are written for no one specifically. You read a chapter on temperament and spend twenty minutes wondering which type applies to you. You read about emotional intelligence and still do not know whether you need the chapter on self-awareness or the one on empathy.</p>
+      <p><strong>SIGNATUREWITHIN skips that step.</strong> Every assessment diagnoses your specific profile first. Everything that follows is built around that profile. The insights are not generic. The growth plan is not a template. The report is written for the person who answered those specific questions.</p>
+      <blockquote><p>"Know thyself" is not advice. It is the foundation of every other wisdom. Without self-knowledge, all growth is guesswork.</p></blockquote>
+      <p>The 590+ questions across 11 assessments are not a quiz. They are a mirror — one that shows you the wiring that was there before you started performing, adapting, and managing how you appear to the world.</p>
+      <p><strong>Free to take. $14.99 for the full personalized report.</strong> No subscription. No account. No friction between you and self-knowledge.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TOOLS ═══ -->
+<section class="tools-section" id="tools">
+  <div class="section-header">
+    <div>
+      <div class="section-eyebrow">The Assessments</div>
+      <h2 class="section-h2">11 Tools.<br/><em>One Direction.</em></h2>
+    </div>
+    <a href="#tools" class="section-link">All free to take →</a>
+  </div>
+
+  <!-- PSYCHOLOGY -->
+  <div class="cat-row">
+    <div class="cat-label">Psychology & Self-Knowledge</div>
+    <div class="tgrid">
+      <a href="/temperament.html" class="tc">
+        <div class="tc-accent" style="background:var(--coral)"></div>
+        <div class="tc-body">
+          <div class="tc-icon" style="color:#FF9A3C"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1" opacity="0.2"/><path d="M24 24 C24 24 14 20 14 12 C14 4 20 2 24 8 C28 2 34 4 34 12 C34 20 24 24 24 24Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M24 24 C24 24 28 34 20 38 C12 42 8 36 14 32 C8 28 8 22 14 20 C20 18 24 24 24 24Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M24 24 C24 24 34 28 34 36 C34 44 28 46 24 40 C20 46 14 44 14 36 C14 28 24 24 24 24Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M24 24 C24 24 20 14 28 10 C36 6 40 12 34 16 C40 20 40 26 34 28 C28 30 24 24 24 24Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><circle cx="24" cy="24" r="2.5" fill="currentColor"/></svg></div>
+          <div class="tc-tag" style="color:var(--coral)">Temperament · 60 Questions</div>
+          <div class="tc-name">Temperament<br/>Profile</div>
+          <div class="tc-desc">Discover your classical temperament blend — Sanguine, Choleric, Melancholic, or Phlegmatic — and the 30-day practice plan built for your specific wiring.</div>
+          <div class="tc-pills"><span class="tc-pill">4 Types</span><span class="tc-pill">12 Blends</span><span class="tc-pill">30-Day Plan</span></div>
+          <div class="tc-bottom">
+            <div><div class="tc-price" style="color:var(--coral)">$14.99</div><div class="tc-note">Full PDF · Instant</div></div>
+            <div class="tc-btn" style="background:var(--coral);color:#fff">Free →</div>
+          </div>
+        </div>
+      </a>
+      <a href="/knowthyself.html" class="tc">
+        <div class="tc-accent" style="background:var(--steel)"></div>
+        <div class="tc-body">
+          <div class="tc-icon" style="color:#3a9e50"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 24 C6 24 14 10 24 10 C34 10 42 24 42 24 C42 24 34 38 24 38 C14 38 6 24 6 24Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="2" fill="currentColor"/><path d="M8 22 C8 22 16 10 24 10 C32 10 40 22 40 22" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.4"/></svg></div>
+          <div class="tc-tag" style="color:var(--steel3)">Personality · 60 Questions · 16 Types</div>
+          <div class="tc-name">Know<br/>Thy Self</div>
+          <div class="tc-desc">6-dimension personality assessment including the unique Conviction dimension found nowhere else. Discover your type and what it means for how you live, lead, and love.</div>
+          <div class="tc-pills"><span class="tc-pill">6 Dimensions</span><span class="tc-pill">16 Types</span><span class="tc-pill">90-Day Plan</span></div>
+          <div class="tc-bottom">
+            <div><div class="tc-price" style="color:var(--steel3)">$14.99</div><div class="tc-note">Full PDF · Instant</div></div>
+            <div class="tc-btn" style="background:var(--steel);color:#fff">Free →</div>
+          </div>
+        </div>
+      </a>
+      <a href="/eq.html" class="tc">
+        <div class="tc-accent" style="background:#3DAA6A"></div>
+        <div class="tc-body">
+          <div class="tc-icon" style="color:#3DAA6A"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 40 C24 40 6 28 6 18 C6 11 11 8 16 8 C19 8 22 10 24 13 C26 10 29 8 32 8 C37 8 42 11 42 18 C42 28 24 40 24 40Z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M24 32 C24 32 12 24 12 18 C12 14 15 12 18 12 C20.5 12 22.5 13.5 24 15.5 C25.5 13.5 27.5 12 30 12 C33 12 36 14 36 18 C36 24 24 32 24 32Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6"/><circle cx="24" cy="22" r="2.5" fill="currentColor" opacity="0.8"/></svg></div>
+          <div class="tc-tag" style="color:#52B788">Emotional Intelligence · 60 Questions</div>
+          <div class="tc-name">EQ<br/>Report</div>
+          <div class="tc-desc">Measure your emotional intelligence across Self-Awareness, Self-Regulation, Empathy, and Social Skills. The most developable form of intelligence.</div>
+          <div class="tc-pills"><span class="tc-pill">4 Dimensions</span><span class="tc-pill">4 Profiles</span><span class="tc-pill">30-Day Plan</span></div>
+          <div class="tc-bottom">
+            <div><div class="tc-price" style="color:#52B788">$14.99</div><div class="tc-note">Full PDF · Instant</div></div>
+            <div class="tc-btn" style="background:#52B788;color:#0a2e1a">Free →</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- MONEY & RELATIONSHIPS -->
+  <div class="cat-row">
+    <div class="cat-label">Money, Relationships & Resilience</div>
+    <div class="tgrid">
+      <a href="/moneymindset.html" class="tc">
+        <div class="tc-accent" style="background:#C8943A"></div>
+        <div class="tc-body">
+          <div class="tc-icon" style="color:#C8943A"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6 L40 20 L24 44 L8 20 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M8 20 L24 6 L40 20" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><path d="M8 20 L24 28 L40 20" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round" opacity="0.6"/><line x1="24" y1="6" x2="24" y2="28" stroke="currentColor" stroke-width="1" opacity="0.4"/><path d="M16 14 L24 28" stroke="currentColor" stroke-width="0.75" opacity="0.35"/><path d="M32 14 L24 28" stroke="currentColor" stroke-width="0.75" opacity="0.35"/></svg></div>
+          <div class="tc-tag" style="color:#F5A623">Money Psychology · 40 Questions</div>
+          <div class="tc-name">Money<br/>Mindset</div>
+          <div class="tc-desc">Discover your Money Archetype — Builder, Guardian, Visionary, Savant, or Receiver — and the beliefs shaping every financial decision you make.</div>
+          <div class="tc-pills"><span class="tc-pill">5 Archetypes</span><span class="tc-pill">30-Day Plan</span></div>
+          <div class="tc-bottom">
+            <div><div class="tc-price" style="color:#F5A623">$14.99</div><div class="tc-note">Full PDF · Instant</div></div>
+            <div class="tc-btn" style="background:#F5A623;color:#0a2e1a">Free →</div>
+          </div>
+        </div>
+      </a>
+      <a href="/relationshipstyle.html" class="tc">
+        <div class="tc-accent" style="background:#B85470"></div>
+        <div class="tc-body">
+          <div class="tc-icon" style="color:#B85470"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="24" r="12" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="30" cy="24" r="12" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M24 13.6 C27.4 16.4 29.4 20 29.4 24 C29.4 28 27.4 31.6 24 34.4 C20.6 31.6 18.6 28 18.6 24 C18.6 20 20.6 16.4 24 13.6Z" stroke="currentColor" stroke-width="1" fill="currentColor" fill-opacity="0.15"/></svg></div>
+          <div class="tc-tag" style="color:#E8447A">Relationship Blueprint · 60 Questions</div>
+          <div class="tc-name">Relationship<br/>Style</div>
+          <div class="tc-desc">Your complete relationship blueprint — Love Language, Attachment Style, Conflict Style, and Connection Style.</div>
+          <div class="tc-pills"><span class="tc-pill">4 Dimensions</span><span class="tc-pill">30-Day Plan</span></div>
+          <div class="tc-bottom">
+            <div><div class="tc-price" style="color:#E8447A">$14.99</div><div class="tc-note">Full PDF · Instant</div></div>
+            <div class="tc-btn" style="background:#E8447A;color:#fff">Free →</div>
+          </div>
+        </div>
+      </a>
+      <a href="/stress.html" class="tc">
+        <div class="tc-accent" style="background:var(--coral)"></div>
+        <div class="tc-body">
+          <div class="tc-icon" style="color:#FF6B6B"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M5 24 C5 24 9 15 13 15 C17 15 17 33 21 33 C25 33 25 15 29 15 C33 15 33 33 37 33 C41 33 43 24 43 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" clip-path="url(#sc)"/><clipPath id="sc"><circle cx="24" cy="24" r="19"/></clipPath><circle cx="24" cy="24" r="2" fill="currentColor" opacity="0.6"/></svg></div>
+          <div class="tc-tag" style="color:var(--coral3)">Stress & Resilience · 60 Questions</div>
+          <div class="tc-name">Stress Pattern<br/>Analysis</div>
+          <div class="tc-desc">Understand how stress operates in you — triggers, physical response, cognitive patterns, coping strategies, and your path to genuine resilience.</div>
+          <div class="tc-pills"><span class="tc-pill">10 Dimensions</span><span class="tc-pill">4 Profiles</span><span class="tc-pill">30-Day Plan</span></div>
+          <div class="tc-bottom">
+            <div><div class="tc-price" style="color:var(--coral3)">$14.99</div><div class="tc-note">Full PDF · Instant</div></div>
+            <div class="tc-btn" style="background:var(--coral);color:#fff">Free →</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- LEADERSHIP & CAREER -->
+  <div class="cat-row">
+    <div class="cat-label">Leadership & Career</div>
+    <div class="tgrid">
+      <a href="/leadership.html" class="tc">
+        <div class="tc-accent" style="background:#A07830"></div>
+        <div class="tc-body">
+          <div class="tc-icon" style="color:#A07830"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 34 L8 28 L16 18 L24 26 L32 14 L40 28 L40 34 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="8" y1="34" x2="40" y2="34" stroke="currentColor" stroke-width="1.5"/><circle cx="8" cy="28" r="2" fill="currentColor" opacity="0.6"/><circle cx="24" cy="26" r="2" fill="currentColor" opacity="0.6"/><circle cx="32" cy="14" r="2.5" fill="currentColor"/><circle cx="40" cy="28" r="2" fill="currentColor" opacity="0.6"/><line x1="24" y1="8" x2="24" y2="14" stroke="currentColor" stroke-width="1" opacity="0.4"/><line x1="20" y1="10" x2="22" y2="15" stroke="currentColor" stroke-width="1" opacity="0.3"/><line x1="28" y1="10" x2="26" y2="15" stroke="currentColor" stroke-width="1" opacity="0.3"/></svg></div>
+          <div class="tc-tag" style="color:#C9933A">Leadership · 50 Questions · 10 Dims</div>
+          <div class="tc-name">Leadership<br/>Profile</div>
+          <div class="tc-desc">Discover your leadership archetype — Transformational, Growth, Developing, or Emerging — and your 90-day development plan across 10 dimensions.</div>
+          <div class="tc-pills"><span class="tc-pill">10 Dimensions</span><span class="tc-pill">4 Archetypes</span><span class="tc-pill">90-Day Plan</span></div>
+          <div class="tc-bottom">
+            <div><div class="tc-price" style="color:#C9933A">$14.99</div><div class="tc-note">Full PDF · Instant</div></div>
+            <div class="tc-btn" style="background:#C9933A;color:#0a2e1a">Free →</div>
+          </div>
+        </div>
+      </a>
+      <a href="/career.html" class="tc">
+        <div class="tc-accent" style="background:var(--steel)"></div>
+        <div class="tc-body">
+          <div class="tc-icon" style="color:#3a9e50"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="24" cy="24" r="3" fill="currentColor"/><path d="M24 24 L20 10 L24 14 L28 10 Z" stroke="currentColor" stroke-width="1.2" fill="currentColor" fill-opacity="0.9" stroke-linejoin="round"/><path d="M24 24 L20 38 L24 34 L28 38 Z" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round" opacity="0.4"/><line x1="24" y1="4" x2="24" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="24" y1="40" x2="24" y2="44" stroke="currentColor" stroke-width="1" opacity="0.4"/><line x1="4" y1="24" x2="8" y2="24" stroke="currentColor" stroke-width="1" opacity="0.4"/><line x1="40" y1="24" x2="44" y2="24" stroke="currentColor" stroke-width="1" opacity="0.4"/></svg></div>
+          <div class="tc-tag" style="color:var(--steel3)">Career Readiness · 50 Questions</div>
+          <div class="tc-name">Career<br/>Metrics</div>
+          <div class="tc-desc">Discover exactly where your career is aligned and where it is not — clarity, strengths, brand, network, courage — and a 90-day plan to build with intention.</div>
+          <div class="tc-pills"><span class="tc-pill">10 Dimensions</span><span class="tc-pill">4 Archetypes</span><span class="tc-pill">90-Day Plan</span></div>
+          <div class="tc-bottom">
+            <div><div class="tc-price" style="color:var(--steel3)">$14.99</div><div class="tc-note">Full PDF · Instant</div></div>
+            <div class="tc-btn" style="background:var(--steel);color:#fff">Free →</div>
+          </div>
+        </div>
+      </a>
+      <a href="/entrepreneur.html" class="tc">
+        <div class="tc-accent" style="background:var(--steel2)"></div>
+        <div class="tc-body">
+          <div class="tc-icon" style="color:#4A7A99"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 6 C24 6 30 10 32 20 L32 32 L24 38 L16 32 L16 20 C18 10 24 6 24 6Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><circle cx="24" cy="20" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M16 28 L10 36 L16 34" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round" opacity="0.7"/><path d="M32 28 L38 36 L32 34" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linejoin="round" opacity="0.7"/><path d="M20 38 C20 38 22 44 24 42 C26 44 28 38 28 38" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.5"/></svg></div>
+          <div class="tc-tag" style="color:var(--steel3)">Entrepreneur · 40 Questions</div>
+          <div class="tc-name">Entrepreneur<br/>Metrics</div>
+          <div class="tc-desc">How strong is your entrepreneur DNA? 40 questions across Vision, Sales, Marketing, Finance, Execution, and Resilience.</div>
+          <div class="tc-pills"><span class="tc-pill">8 Dimensions</span><span class="tc-pill">4 Archetypes</span><span class="tc-pill">90-Day Plan</span></div>
+          <div class="tc-bottom">
+            <div><div class="tc-price" style="color:var(--steel3)">$14.99</div><div class="tc-note">Full PDF · Instant</div></div>
+            <div class="tc-btn" style="background:var(--steel2);color:#fff">Free →</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- IDEAS & MARRIAGE -->
+  <div class="cat-row">
+    <div class="cat-label">Ideas & Marriage</div>
+    <div class="tgrid two">
+      <a href="/ideas.html" class="tc">
+        <div class="tc-accent" style="background:#3DAA6A"></div>
+        <div class="tc-body">
+          <div class="tc-icon" style="color:#3DAA6A"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 28 C12 24 12 16 16 12 C20 8 28 8 32 12 C36 16 36 24 32 28 L32 32 L16 32 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="16" y1="34" x2="32" y2="34" stroke="currentColor" stroke-width="1.5"/><line x1="17" y1="37" x2="31" y2="37" stroke="currentColor" stroke-width="1.5" opacity="0.7"/><line x1="19" y1="40" x2="29" y2="40" stroke="currentColor" stroke-width="1.5" opacity="0.4"/><path d="M20 28 L20 22 L24 18 L28 22 L28 28" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round" opacity="0.6"/><line x1="24" y1="6" x2="24" y2="8" stroke="currentColor" stroke-width="1.5"/><line x1="16" y1="8" x2="18" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.6"/><line x1="32" y1="8" x2="30" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.6"/></svg></div>
+          <div class="tc-tag" style="color:#FFE66D">Idea Validation · 50 Questions</div>
+          <div class="tc-name">Ideas<br/>Validator</div>
+          <div class="tc-desc">Score your business idea honestly across Problem Clarity, Market Demand, Founder Fit, Revenue Model, and more. Grades A through D before you invest months building.</div>
+          <div class="tc-pills"><span class="tc-pill">10 Dimensions</span><span class="tc-pill">Grades A–D</span><span class="tc-pill">90-Day Roadmap</span></div>
+          <div class="tc-bottom">
+            <div><div class="tc-price" style="color:#FFE66D">$14.99</div><div class="tc-note">Full PDF · Instant</div></div>
+            <div class="tc-btn" style="background:#FFE66D;color:#0a2e1a">Free →</div>
+          </div>
+        </div>
+      </a>
+      <a href="/marriage.html" class="tc wide">
+        <div class="tc-accent" style="background:#B85470"></div>
+        <div class="tc-body">
+          <div>
+            <div class="tc-icon" style="color:#B85470"><svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="24" r="12" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="32" cy="24" r="12" stroke="currentColor" stroke-width="2" fill="none"/><path d="M22 13.5 C25 16 26.5 20 26.5 24 C26.5 28 25 32 22 34.5" stroke="#0a2e1a" stroke-width="4" fill="none"/><path d="M22 13.5 C19 16 16 20 16 24 C16 28 19 32 22 34.5" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
+            <div class="tc-tag" style="color:#C77DFF">Marriage Health · 60 Questions · Husband & Wife</div>
+            <div class="tc-name" style="font-size:26px">Marriage<br/>Metrics</div>
+            <div class="tc-desc">Separate gender-specific question sets for husband and wife. Each spouse takes their own version and receives their own personalized report.</div>
+            <div class="tc-pills"><span class="tc-pill">60 Qs Each</span><span class="tc-pill">Husband Version</span><span class="tc-pill">Wife Version</span><span class="tc-pill">30-Day Plan</span></div>
+            <div class="tc-bottom" style="max-width:300px">
+              <div><div class="tc-price" style="color:#C77DFF">$14.99</div><div class="tc-note">Per spouse · Separate reports</div></div>
+              <div class="tc-btn" style="background:#C77DFF;color:#0a2e1a">Free →</div>
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:var(--dim);text-transform:uppercase;margin-bottom:12px">10 Dimensions</div>
+            <div class="tc-dims-grid">
+              <div class="tc-dim-chip">🗣️ Communication</div>
+              <div class="tc-dim-chip">❤️ Emotional Connection</div>
+              <div class="tc-dim-chip">⚡ Conflict Resolution</div>
+              <div class="tc-dim-chip">🛡️ Trust & Security</div>
+              <div class="tc-dim-chip">🌹 Physical Intimacy</div>
+              <div class="tc-dim-chip">⚖️ Roles & Expectations</div>
+              <div class="tc-dim-chip">✨ Spiritual Alignment</div>
+              <div class="tc-dim-chip">💰 Financial Unity</div>
+              <div class="tc-dim-chip">👨‍👩‍👧 Parenting Partnership</div>
+              <div class="tc-dim-chip">🌱 Growth & Investment</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section class="process">
+  <div class="process-inner">
+    <div class="section-eyebrow">How It Works</div>
+    <h2 class="section-h2" style="margin-top:12px">Simple. Honest.<br/><em>Personal.</em></h2>
+    <div class="process-steps">
+      <div class="ps">
+        <div class="ps-num">01</div>
+        <div class="ps-title">Take the assessment — free</div>
+        <div class="ps-desc">No account. No email. Answer honestly. Every question surfaces the truth, not the idealized version. Takes 8–12 minutes.</div>
+      </div>
+      <div class="ps">
+        <div class="ps-num">02</div>
+        <div class="ps-title">See your results instantly</div>
+        <div class="ps-desc">Your scores across every dimension, your archetype or type, and a preview of your full report. Free. No payment required.</div>
+      </div>
+      <div class="ps">
+        <div class="ps-num">03</div>
+        <div class="ps-title">Unlock your PDF — $14.99</div>
+        <div class="ps-desc">Pay once. Your AI-generated 10-page personalized report opens immediately. Print or save it. No subscription. Yours to keep.</div>
+      </div>
+      <div class="ps">
+        <div class="ps-num">04</div>
+        <div class="ps-title">Grow with intention</div>
+        <div class="ps-desc">Every report includes a 30 or 90-day growth plan — daily practices designed for exactly who you are, not a generic template.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BLOG ═══ -->
+<section class="blog-section">
+  <div class="section-header" style="max-width:1280px;margin:0 auto 0">
+    <div>
+      <div class="section-eyebrow">The Blog</div>
+      <h2 class="section-h2">Know yourself.<br/><em>Move forward.</em></h2>
+    </div>
+    <a href="/blog/" class="section-link">All articles →</a>
+  </div>
+  <div class="blog-grid">
+    <a href="/blog/you-are-not-lazy-you-are-afraid.html" class="bc">
+      <div class="bc-accent" style="background:var(--coral)"></div>
+      <div class="bc-body">
+        <div class="bc-cat" style="color:var(--coral)">Unstuck</div>
+        <div class="bc-title">You Are Not Lazy. You Are Afraid of Something Specific.</div>
+        <div class="bc-excerpt">The stuck feeling is almost never laziness. It is fear — and not the vague kind. Here is how to identify exactly what you are afraid of.</div>
+        <div class="bc-meta"><span class="bc-read">8 min read</span><span class="bc-arrow">→</span></div>
+      </div>
+    </a>
+    <a href="/blog/sanguine-temperament-meaning.html" class="bc">
+      <div class="bc-accent" style="background:var(--coral)"></div>
+      <div class="bc-body">
+        <div class="bc-cat" style="color:var(--coral)">Temperament</div>
+        <div class="bc-title">What a High Sanguine Score Really Means</div>
+        <div class="bc-excerpt">You lit up the room — but the score goes deeper than charisma. Here is what it reveals about your emotional patterns and your most important blind spot.</div>
+        <div class="bc-meta"><span class="bc-read">6 min read</span><span class="bc-arrow">→</span></div>
+      </div>
+    </a>
+    <a href="/blog/smart-people-wrong-jobs.html" class="bc">
+      <div class="bc-accent" style="background:var(--steel)"></div>
+      <div class="bc-body">
+        <div class="bc-cat" style="color:var(--steel3)">Unstuck</div>
+        <div class="bc-title">Why Smart People Stay in Wrong Jobs Longer Than Anyone Else</div>
+        <div class="bc-excerpt">Intelligent people are not immune to being stuck — they are more vulnerable to it. Here is the specific mechanism.</div>
+        <div class="bc-meta"><span class="bc-read">9 min read</span><span class="bc-arrow">→</span></div>
+      </div>
+    </a>
+    <a href="/blog/conviction-dimension-explained.html" class="bc">
+      <div class="bc-accent" style="background:#D4A853"></div>
+      <div class="bc-body">
+        <div class="bc-cat" style="color:#D4A853">Personality</div>
+        <div class="bc-title">The Conviction Dimension: The One Personality Factor Most Tests Miss</div>
+        <div class="bc-excerpt">Why we added a sixth dimension to the Big Five — and what Conviction actually measures that the standard model cannot capture.</div>
+        <div class="bc-meta"><span class="bc-read">9 min read</span><span class="bc-arrow">→</span></div>
+      </div>
+    </a>
+    <a href="/blog/anxious-attachment-score-meaning.html" class="bc">
+      <div class="bc-accent" style="background:#E8447A"></div>
+      <div class="bc-body">
+        <div class="bc-cat" style="color:#E8447A">Relationships</div>
+        <div class="bc-title">What a High Anxious Attachment Score Means — and How to Work With It</div>
+        <div class="bc-excerpt">The most common and most misunderstood relationship result. It does not mean you are too much.</div>
+        <div class="bc-meta"><span class="bc-read">9 min read</span><span class="bc-arrow">→</span></div>
+      </div>
+    </a>
+    <a href="/blog/what-is-a-good-eq-score.html" class="bc">
+      <div class="bc-accent" style="background:#52B788"></div>
+      <div class="bc-body">
+        <div class="bc-cat" style="color:#52B788">Emotional Intelligence</div>
+        <div class="bc-title">What Is a Good EQ Score? An Honest Interpretation Guide</div>
+        <div class="bc-excerpt">What does your number actually mean? A complete interpretation of score ranges, what they predict, and what to do with them.</div>
+        <div class="bc-meta"><span class="bc-read">7 min read</span><span class="bc-arrow">→</span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ EMAIL ═══ -->
+<section class="email-section">
+  <div class="email-inner">
+    <div class="email-eyebrow">Stay in the work</div>
+    <h2 class="email-h2">Weekly insights for people who want to<br/><em>know themselves.</em></h2>
+    <p class="email-p">One email per week. New assessment insights, blog articles, and growth practices — written for people who are serious about understanding themselves.</p>
+    <form class="email-form" onsubmit="handleEmail(event)">
+      <input id="email-input" class="email-input" type="email" placeholder="Your email address" required/>
+      <button type="submit" class="email-submit">Subscribe →</button>
+    </form>
+    <div class="email-note" id="email-note">No spam. Unsubscribe any time.</div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="f-logo">SIGNATURE<em>WITHIN</em></div>
+        <p>Self-discovery assessments for people who are serious about knowing themselves. Free to take. $14.99 for your full personalized AI report.</p>
+      </div>
+      <div>
+        <div class="f-col-title">Assessments</div>
+        <div class="f-links">
+          <a href="/temperament.html" class="f-link">Temperament Profile</a>
+          <a href="/knowthyself.html" class="f-link">Know Thy Self</a>
+          <a href="/eq.html" class="f-link">EQ Report</a>
+          <a href="/moneymindset.html" class="f-link">Money Mindset</a>
+          <a href="/relationshipstyle.html" class="f-link">Relationship Style</a>
+          <a href="/stress.html" class="f-link">Stress Pattern Analysis</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">More Tools</div>
+        <div class="f-links">
+          <a href="/leadership.html" class="f-link">Leadership Profile</a>
+          <a href="/career.html" class="f-link">Career Metrics</a>
+          <a href="/entrepreneur.html" class="f-link">Entrepreneur Metrics</a>
+          <a href="/ideas.html" class="f-link">Ideas Validator</a>
+          <a href="/marriage.html" class="f-link">Marriage Metrics</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title">Resources</div>
+        <div class="f-links">
+          <a href="/blog/" class="f-link">Blog</a>
+          <a href="/faq.html" class="f-link">FAQ</a>
+          <a href="/privacy.html" class="f-link">Privacy</a>
+          <a href="/terms.html" class="f-link">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="f-copy">© 2026 SIGNATUREWITHIN · signaturewithin.com</div>
+      <div class="f-legal">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+        <a href="/disclaimer.html">Disclaimer</a>
+        <a href="/affiliate.html">Affiliate</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Header scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Email capture
+function handleEmail(e){
+  e.preventDefault();
+  const email = document.getElementById('email-input').value;
+  const note = document.getElementById('email-note');
+  fetch('/api/capture',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,source:'homepage'})}).catch(()=>{});
+  document.getElementById('email-input').value='';
+  note.textContent='✓ You\'re in. First email coming soon.';
+  note.style.color='#5bc987';
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });
+});
+
+    // ── ASSESSMENT FINDER ──────────────────────────────
+    const AF_TOOLS = [
+      {id:'temperament',name:'Temperament Profile',tag:'Personality',
+       desc:'Discover your core temperament type and the unique blend that drives your behavior.',
+       color:'#FF9A3C',url:'/temperament.html',
+       keys:['personality','type','who am i','temperament','sanguine','choleric','melancholic','phlegmatic','character','nature','wiring']},
+      {id:'knowthyself',name:'Know Thy Self',tag:'Self-Discovery',
+       desc:'A deep 60-question profile of your identity, values, and how you show up in the world.',
+       color:'#D4A853',url:'/knowthyself.html',
+       keys:['know myself','self','identity','who am i','discover','understand myself','personal','values','purpose']},
+      {id:'eq',name:'EQ Report',tag:'Emotional Intelligence',
+       desc:'Measure your emotional intelligence across four key dimensions and see where growth lives.',
+       color:'#52B788',url:'/eq.html',
+       keys:['emotion','emotional','feelings','empathy','self-awareness','relationships','anger','react','eq','emotional intelligence']},
+      {id:'moneymindset',name:'Money Mindset',tag:'Financial Psychology',
+       desc:'Uncover your money archetype and the beliefs that are shaping your financial decisions.',
+       color:'#F5A623',url:'/moneymindset.html',
+       keys:['money','financial','wealth','spending','saving','debt','broke','rich','income','finance','afford','budget']},
+      {id:'relationshipstyle',name:'Relationship Style',tag:'Attachment & Connection',
+       desc:'Understand your attachment style and the patterns that show up in your closest relationships.',
+       color:'#E8447A',url:'/relationshipstyle.html',
+       keys:['relationship','attachment','anxious','avoidant','love','connection','partner','dating','trust','bond','lonely','intimacy']},
+      {id:'leadership',name:'Leadership Profile',tag:'Leadership',
+       desc:'Assess your leadership across 10 dimensions and identify exactly where you are holding your team back.',
+       color:'#C9933A',url:'/leadership.html',
+       keys:['lead','leadership','team','manager','boss','delegate','authority','influence','vision','direct','manage']},
+      {id:'career',name:'Career Metrics',tag:'Career Clarity',
+       desc:'Diagnose why you feel stuck and discover the specific path forward for your career.',
+       color:'#4ECDC4',url:'/career.html',
+       keys:['career','job','stuck','work','profession','calling','wrong job','change career','purpose','vocation','fired','quit','leave']},
+      {id:'entrepreneur',name:'Entrepreneur Metrics',tag:'Business Readiness',
+       desc:'Measure your entrepreneurial readiness across the dimensions that actually predict success.',
+       color:'#A8E063',url:'/entrepreneur.html',
+       keys:['business','entrepreneur','startup','idea','risk','self-employed','founder','company','venture','build']},
+      {id:'ideas',name:'Ideas Validator',tag:'Innovation',
+       desc:'Test whether your idea has the foundations needed to become something real.',
+       color:'#FFE66D',url:'/ideas.html',
+       keys:['idea','innovation','creative','invention','product','validate','startup idea','concept','build something']},
+      {id:'stress',name:'Stress Pattern Analysis',tag:'Wellbeing',
+       desc:'Identify your specific stress response pattern and the triggers that are costing you the most.',
+       color:'#FF6B6B',url:'/stress.html',
+       keys:['stress','anxiety','burnout','overwhelm','pressure','tired','exhausted','mental health','worry','fear','panic','cope']},
+      {id:'marriage',name:'Marriage Metrics',tag:'Marriage',
+       desc:'A comprehensive marriage health assessment with separate husband and wife versions.',
+       color:'#C77DFF',url:'/marriage.html',
+       keys:['marriage','married','husband','wife','spouse','couple','divorce','relationship','family','communication','intimacy','conflict']},
+    ];
+
+    function afSet(text){
+      document.getElementById('af-input').value=text;
+      afFind();
+    }
+
+    function afFind(){
+      const q=document.getElementById('af-input').value.trim().toLowerCase();
+      const res=document.getElementById('af-result');
+      if(!q){res.innerHTML='';return;}
+
+      res.innerHTML='<div class="af-thinking">Finding your assessment...</div>';
+
+      // Score each tool
+      const scored = AF_TOOLS.map(t=>{
+        let score=0;
+        t.keys.forEach(k=>{
+          if(q.includes(k)) score+=k.length; // longer keyword match = more specific
+          if(k.includes(q)) score+=q.length*0.5;
+        });
+        // Also check name and tag
+        if(t.name.toLowerCase().includes(q)) score+=20;
+        if(t.tag.toLowerCase().includes(q)) score+=15;
+        return {...t,score};
+      });
+
+      const best=scored.sort((a,b)=>b.score-a.score)[0];
+
+      setTimeout(()=>{
+        if(best.score===0){
+          // No match — show Know Thy Self as default
+          showResult(AF_TOOLS[1]);
+        } else {
+          showResult(best);
+        }
+      },400);
+    }
+
+    function showResult(tool){
+      const res=document.getElementById('af-result');
+      res.innerHTML=`
+        <div class="af-card">
+          <div class="af-card-icon" style="background:${tool.color}18;border:1px solid ${tool.color}30">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" style="color:${tool.color}">
+              <!-- small icon placeholder -->
+              <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5"/>
+              <circle cx="24" cy="24" r="6" fill="currentColor" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="af-card-body">
+            <div class="af-card-tag" style="color:${tool.color}">${tool.tag}</div>
+            <div class="af-card-name">${tool.name}</div>
+            <div class="af-card-desc">${tool.desc}</div>
+          </div>
+          <a href="${tool.url}" class="af-card-btn" style="background:${tool.color};color:#0a2e1a">
+            Take Free →
+          </a>
+        </div>
+      `;
+    }
+
+    </script>
+</body>
+</html>

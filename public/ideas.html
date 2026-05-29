@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ideas Validator | SIGNATUREWITHIN</title>
+  <meta name="description" content="A 50-question idea validation assessment across 10 dimensions. Score your business idea honestly before you invest months or years building something the market may not want."/>
+  <link rel="canonical" href="https://signaturewithin.com/ideas.html"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#0a2e1a;color:#f5ece0;font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}
+    header{background:rgba(13,5,0,0.95);border-bottom:1px solid rgba(255,255,255,0.07);height:64px;display:flex;align-items:center;position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px)}
+    .hi{max-width:1200px;margin:0 auto;padding:0 48px;width:100%;display:flex;align-items:center;justify-content:space-between}
+    #test-section{display:none;min-height:100vh;padding-top:64px;transition:background 0.8s ease}
+    #results-section{display:none;min-height:100vh;padding-top:64px;background:#0a2e1a}
+    .ldot{width:8px;height:8px;border-radius:50%;background:#00E676;animation:lp 1.2s infinite}
+    .ldot:nth-child(2){animation-delay:0.2s}.ldot:nth-child(3){animation-delay:0.4s}
+    @keyframes lp{0%,100%{opacity:0.2;transform:scale(0.8)}50%{opacity:1;transform:scale(1)}}
+    @keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    .fade-up{animation:fu 0.5s ease forwards}
+    @media(max-width:768px){.hi{padding:0 20px}.hero-grid{grid-template-columns:1fr!important}.steps-grid{grid-template-columns:1fr 1fr!important}.result-grid{grid-template-columns:1fr!important}.unlock-grid{grid-template-columns:1fr!important}}
+  </style>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="hi">
+    <a href="/" style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:#fff;text-decoration:none">SIGNATURE<em style="color:#00E676;font-style:italic">WITHIN</em></a>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#4a7a4a;letter-spacing:1px">Free · $14.99 Full Report</div>
+    <a href="/" style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:#4a7a4a;text-decoration:none">← Back</a>
+  </div>
+</header>
+
+<!-- ═══ LANDING ═══ -->
+<div id="landing" style="min-height:100vh;background:linear-gradient(135deg,#0a2e1a 0%,#002508 100%);position:relative;overflow:hidden;display:flex;flex-direction:column">
+  <div style="position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,#00E67608 0%,transparent 70%);pointer-events:none"></div>
+
+  <div class="hero-grid" style="position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:140px 48px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;flex:1">
+    <div class="fade-up">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:#00E67612;border:1px solid #00E67625;color:#00E676;font-size:12px;font-weight:600;letter-spacing:2px;padding:6px 16px;border-radius:100px;margin-bottom:28px;text-transform:uppercase;font-family:'DM Mono',monospace">Idea Validation · 50 Questions · 10 Dimensions</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-size:58px;font-weight:700;line-height:1.05;color:#fff;margin-bottom:20px;letter-spacing:-1px">Is your idea<br/><em style="font-style:italic;color:#00E676">worth building?</em></h1>
+      <p style="font-size:17px;color:#7a9a7a;line-height:1.7;margin-bottom:40px;font-weight:300;max-width:440px">A 50-question idea validation assessment across 10 dimensions. Score your business idea honestly before you invest months or years building something the market may not want.</p>
+      <div style="display:flex;gap:32px;margin-bottom:40px"><div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#fff;line-height:1">50</div><div style="font-size:11px;color:#3a6a3a;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;margin-top:4px">Questions</div></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#fff;line-height:1">10</div><div style="font-size:11px;color:#3a6a3a;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;margin-top:4px">Dimensions</div></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;color:#fff;line-height:1">4</div><div style="font-size:11px;color:#3a6a3a;font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;margin-top:4px">Idea Grades</div></div></div>
+      <button onclick="startTest()" style="background:#00E676;color:#0a2e1a;font-family:'DM Sans',sans-serif;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;font-style:italic;padding:20px 52px;border:none;border-radius:4px;cursor:pointer;letter-spacing:0.3px;transition:all 0.2s">Begin Assessment — Free →</button>
+    </div>
+    <div><div style="display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:10px"><span style="font-size:22px;flex-shrink:0">🔍</span><div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;margin-bottom:2px">Problem Clarity</div><div style="font-size:11px;color:#4a7a4a;font-family:'DM Mono',monospace">Is the problem real, specific, and urgent?</div></div></div><div style="display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:10px"><span style="font-size:22px;flex-shrink:0">📈</span><div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;margin-bottom:2px">Market Demand</div><div style="font-size:11px;color:#4a7a4a;font-family:'DM Mono',monospace">Is there proven, active demand for a solution?</div></div></div><div style="display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:10px"><span style="font-size:22px;flex-shrink:0">⚡</span><div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;margin-bottom:2px">Uniqueness & Edge</div><div style="font-size:11px;color:#4a7a4a;font-family:'DM Mono',monospace">Is your solution genuinely 10x better?</div></div></div><div style="display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:10px"><span style="font-size:22px;flex-shrink:0">🧠</span><div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;margin-bottom:2px">Founder-Idea Fit</div><div style="font-size:11px;color:#4a7a4a;font-family:'DM Mono',monospace">Are you the right person to build this?</div></div></div><div style="display:flex;align-items:center;gap:16px;padding:18px 22px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;margin-bottom:10px"><span style="font-size:22px;flex-shrink:0">✅</span><div><div style="font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:#fff;margin-bottom:2px">Early Validation</div><div style="font-size:11px;color:#4a7a4a;font-family:'DM Mono',monospace">Do you have real evidence beyond intuition?</div></div></div></div>
+  </div>
+
+  <div style="background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.06);padding:72px 48px">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:#3a6a3a;text-transform:uppercase;margin-bottom:40px">How It Works</div>
+      <div class="steps-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:40px"><div><div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:14px">01</div><div style="font-size:17px;font-weight:600;color:#fff;margin-bottom:8px">Answer 50 questions</div><div style="font-size:13px;color:#7a9a7a;line-height:1.6;font-weight:300">Honest, rigorous questions across 10 critical validation dimensions. ~10 minutes.</div></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:14px">02</div><div style="font-size:17px;font-weight:600;color:#fff;margin-bottom:8px">Score your idea</div><div style="font-size:13px;color:#7a9a7a;line-height:1.6;font-weight:300">Your Idea Validation Score reveals exactly how ready your idea is — and where the critical gaps are.</div></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:14px">03</div><div style="font-size:17px;font-weight:600;color:#fff;margin-bottom:8px">Unlock your report</div><div style="font-size:13px;color:#7a9a7a;line-height:1.6;font-weight:300">Pay $14.99 for your complete PDF with AI analysis, risk assessment, and a 90-day validation plan.</div></div><div><div style="font-family:'Cormorant Garamond',serif;font-size:52px;font-weight:400;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:14px">04</div><div style="font-size:17px;font-weight:600;color:#fff;margin-bottom:8px">Build with confidence</div><div style="font-size:13px;color:#7a9a7a;line-height:1.6;font-weight:300">Stop guessing whether your idea is worth building. Know it — before you invest months or years.</div></div></div>
+    </div>
+  </div>
+
+  <div style="padding:56px 48px;text-align:center;position:relative;z-index:5">
+    <button onclick="startTest()" style="background:#00E676;color:#0a2e1a;font-family:'DM Sans',sans-serif;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;font-style:italic;padding:20px 52px;border:none;border-radius:4px;cursor:pointer;letter-spacing:0.3px">Begin Assessment — Free →</button>
+  </div>
+
+  <footer style="border-top:1px solid rgba(255,255,255,0.06);padding:32px 48px">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:#fff;font-weight:600">SIGNATUREWITHIN</div>
+      <div style="display:flex;gap:24px"><a href="/privacy.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Privacy</a><a href="/terms.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Terms</a><a href="/disclaimer.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Disclaimer</a></div>
+      <div style="font-size:12px;color:#3a6a3a">© 2026 SIGNATUREWITHIN</div>
+    </div>
+  </footer>
+</div>
+
+<!-- ═══ NAME SCREEN ═══ -->
+<div id="name-screen" style="display:none;min-height:100vh;background:linear-gradient(135deg,#181200 0%,#251c00 50%,#181200 100%);align-items:center;justify-content:center;padding:48px 24px;flex-direction:column">
+  <div style="max-width:480px;width:100%;text-align:center">
+    <div style="margin-bottom:24px;color:#FFE66D;display:flex;align-items:center;justify-content:center;width:80px;height:80px;border-radius:50%;background:rgba(255,230,109,0.12);border:1px solid rgba(255,230,109,0.25);margin:0 auto 24px"><svg width="56" height="56" viewBox="0 0 48 48" fill="none">
+          <path d="M16 28 C12 24 12 16 16 12 C20 8 28 8 32 12 C36 16 36 24 32 28 L32 32 L16 32 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+          <line x1="16" y1="34" x2="32" y2="34" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="17" y1="37" x2="31" y2="37" stroke="currentColor" stroke-width="1.5" opacity="0.7"/>
+          <line x1="19" y1="40" x2="29" y2="40" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+          <path d="M20 28 L20 22 L24 18 L28 22 L28 28" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round" opacity="0.6"/>
+          <line x1="24" y1="6" x2="24" y2="8" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="16" y1="8" x2="18" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+          <line x1="32" y1="8" x2="30" y2="10" stroke="currentColor" stroke-width="1.2" opacity="0.6"/>
+        </svg></div>
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:#00E67688;text-transform:uppercase;margin-bottom:20px">Before We Begin</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-1px">What should we<br/>call you?</div>
+    <p style="font-size:15px;color:#7a9a7a;font-weight:300;line-height:1.6;margin-bottom:40px">Your name makes your report feel like yours — not a generic profile.</p>
+    <div style="background:#00E67608;border:1px solid #00E67620;border-radius:8px;padding:32px;margin-bottom:24px">
+      <input id="user-name-input" type="text" placeholder="Your first name"
+        style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:16px 20px;font-size:20px;color:#fff;font-family:'Cormorant Garamond',serif;outline:none;text-align:center;margin-bottom:8px;transition:border 0.2s"
+        onkeydown="if(event.key==='Enter'&&this.value.trim())beginAssessment()"
+        oninput="var v=this.value.trim();var b=document.getElementById('begin-btn');b.style.background=v?'#00E676':'rgba(255,255,255,0.08)';b.style.color=v?'#0a2e1a':'rgba(255,255,255,0.2)';b.style.cursor=v?'pointer':'not-allowed'"
+      />
+      <div style="font-size:11px;color:#3a6a3a;font-family:'DM Mono',monospace;letter-spacing:1px">First name only · No account needed</div>
+    </div>
+    <button id="begin-btn" onclick="if(document.getElementById('user-name-input').value.trim())beginAssessment()"
+      style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.2);border:none;padding:18px;border-radius:4px;font-size:16px;font-weight:700;cursor:not-allowed;font-family:'DM Sans',sans-serif;transition:all 0.2s;width:100%">Begin Assessment →</button>
+    <br/>
+    <button onclick="userName='';document.getElementById('name-screen').style.display='none';document.getElementById('test-section').style.display='block';renderQuestion()"
+      style="background:none;border:none;color:#3a6a3a;cursor:pointer;font-size:11px;font-family:'DM Mono',monospace;text-decoration:underline;margin-top:14px">Skip and begin →</button>
+  </div>
+</div>
+
+<!-- ═══ TEST SECTION ═══ -->
+<div id="test-section">
+  <div style="background:rgba(0,0,0,0.4);backdrop-filter:blur(20px);padding:16px 48px;position:sticky;top:64px;z-index:50;border-bottom:1px solid rgba(255,255,255,0.06)">
+    <div style="max-width:720px;margin:0 auto;display:flex;align-items:center;gap:20px">
+      <div id="test-category" style="font-family:'DM Mono',monospace;font-size:13px;letter-spacing:1.5px;color:rgba(255,255,255,0.6);text-transform:uppercase;white-space:nowrap;min-width:160px">Assessment</div>
+      <div style="flex:1;height:2px;background:rgba(255,255,255,0.1);border-radius:1px;overflow:hidden">
+        <div id="progress-fill" style="height:100%;background:#00E676;border-radius:1px;transition:width 0.4s ease;width:0%"></div>
+      </div>
+      <div id="progress-label" style="font-family:'DM Mono',monospace;font-size:13px;color:rgba(255,255,255,0.5);white-space:nowrap">1 / 50</div>
+    </div>
+  </div>
+  <div id="question-wrap" style="max-width:720px;margin:0 auto;padding:60px 48px"></div>
+</div>
+
+<!-- ═══ RESULTS SECTION ═══ -->
+<div id="results-section">
+  <div id="results-loading" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80vh;gap:20px;background:linear-gradient(135deg,#0a2e1a 0%,#002508 100%)">
+    <div style="display:flex;gap:8px"><div class="ldot"></div><div class="ldot"></div><div class="ldot"></div></div>
+    <div id="loading-title" style="font-family:'Cormorant Garamond',serif;font-size:32px;color:#fff;font-weight:700">Analyzing your results...</div>
+    <div style="font-size:12px;color:#7a9a7a;font-family:'DM Mono',monospace;letter-spacing:1px">Building your personalized report</div>
+  </div>
+  <div id="result-content" style="display:none"></div>
+</div>
+
+<script>
+// ═══ DATA ═══
+const DIMS = [{"id": "problem", "title": "Problem Clarity", "icon": "\ud83d\udd0d", "accent": "#00E676", "bg": "linear-gradient(135deg,#0a2e1a 0%,#003010 100%)"}, {"id": "demand", "title": "Market Demand", "icon": "\ud83d\udcc8", "accent": "#FFAB40", "bg": "linear-gradient(135deg,#1a0d00 0%,#301500 100%)"}, {"id": "uniqueness", "title": "Uniqueness & Edge", "icon": "\u26a1", "accent": "#4EE88A", "bg": "linear-gradient(135deg,#00101a 0%,#001825 100%)"}, {"id": "timing", "title": "Market Timing", "icon": "\u23f0", "accent": "#FF4081", "bg": "linear-gradient(135deg,#0a2e1a 0%,#2d0020 100%)"}, {"id": "founderfit", "title": "Founder-Idea Fit", "icon": "\ud83e\udde0", "accent": "#CE93D8", "bg": "linear-gradient(135deg,#0d0015 0%,#1a0025 100%)"}, {"id": "revenue", "title": "Revenue Model", "icon": "\ud83d\udcb0", "accent": "#A5D6A7", "bg": "linear-gradient(135deg,#0a2e1a 0%,#002d12 100%)"}, {"id": "feasibility", "title": "Technical Feasibility", "icon": "\ud83d\udee0\ufe0f", "accent": "#80DEEA", "bg": "linear-gradient(135deg,#00101a 0%,#001e2d 100%)"}, {"id": "competition", "title": "Competitive Landscape", "icon": "\ud83c\udfc6", "accent": "#FFCC02", "bg": "linear-gradient(135deg,#1a1500 0%,#2d2200 100%)"}, {"id": "validation", "title": "Early Validation", "icon": "\u2705", "accent": "#69F0AE", "bg": "linear-gradient(135deg,#001a0a 0%,#002d15 100%)"}, {"id": "commitment", "title": "Founder Commitment", "icon": "\ud83d\udd25", "accent": "#FF7043", "bg": "linear-gradient(135deg,#165c35 0%,#2d0a00 100%)"}];
+const QUESTIONS = [{"id": "pr1", "dim": "problem", "text": "I can describe the problem my idea solves in one single, clear, specific sentence."}, {"id": "pr2", "dim": "problem", "text": "I know specific, real, named people who experience this problem regularly \u2014 I have talked to them."}, {"id": "pr3", "dim": "problem", "text": "The problem I am solving causes genuine frustration, significant cost, or meaningful wasted time for those who have it."}, {"id": "pr4", "dim": "problem", "text": "I understand deeply why this problem exists and why it has not already been solved well."}, {"id": "pr5", "dim": "problem", "text": "People who have this problem are actively looking for a solution \u2014 not just vaguely aware it exists."}, {"id": "dm1", "dim": "demand", "text": "I have concrete evidence \u2014 not just intuition \u2014 that people genuinely want what I am building."}, {"id": "dm2", "dim": "demand", "text": "People in my target market are already spending money on partial, imperfect solutions to this problem."}, {"id": "dm3", "dim": "demand", "text": "The total addressable market for my idea is large enough to support a real, sustainable business."}, {"id": "dm4", "dim": "demand", "text": "I have run at least one real test \u2014 landing page, pre-sale, survey, or interview \u2014 that validated actual demand."}, {"id": "dm5", "dim": "demand", "text": "I have spoken directly with at least ten potential customers about this problem and their current solutions."}, {"id": "un1", "dim": "uniqueness", "text": "My solution is meaningfully and specifically different from every existing alternative in the market."}, {"id": "un2", "dim": "uniqueness", "text": "I can clearly articulate my unfair advantage \u2014 something I have that competitors cannot easily replicate."}, {"id": "un3", "dim": "uniqueness", "text": "Potential customers who hear about my solution respond with genuine curiosity or excitement \u2014 not indifference."}, {"id": "un4", "dim": "uniqueness", "text": "My idea solves the problem in a way that is 10x better, cheaper, or faster than the current best alternative."}, {"id": "un5", "dim": "uniqueness", "text": "I have a defensible moat \u2014 IP, network effects, proprietary data, or exclusive relationships \u2014 that protects my position."}, {"id": "ti1", "dim": "timing", "text": "The technology, infrastructure, or behavior changes needed for my idea to work exist right now."}, {"id": "ti2", "dim": "timing", "text": "There is a clear, specific reason why now is the right time for this idea \u2014 not two years ago, not two years from now."}, {"id": "ti3", "dim": "timing", "text": "The market trends I am counting on are already accelerating \u2014 not something I am hoping will happen."}, {"id": "ti4", "dim": "timing", "text": "My target customers are ready and financially able to adopt my solution right now."}, {"id": "ti5", "dim": "timing", "text": "I have researched whether this idea has been tried before and I understand why previous attempts succeeded or failed."}, {"id": "ff1", "dim": "founderfit", "text": "I have direct, relevant experience with this problem \u2014 I understand it from the inside, not just in theory."}, {"id": "ff2", "dim": "founderfit", "text": "I have the specific skills required to build the core of this solution, or I know exactly where to find them."}, {"id": "ff3", "dim": "founderfit", "text": "I am genuinely passionate about this problem \u2014 not just about the business opportunity it represents."}, {"id": "ff4", "dim": "founderfit", "text": "I have the credibility and access needed to reach my target customers and build trust with them quickly."}, {"id": "ff5", "dim": "founderfit", "text": "Even if this idea fails, the skills and knowledge I will gain from building it are genuinely worth the investment."}, {"id": "rv1", "dim": "revenue", "text": "I have a clear, specific revenue model \u2014 I know exactly how and from whom I will make money."}, {"id": "rv2", "dim": "revenue", "text": "My pricing has been validated \u2014 I have tested it with real potential customers and they confirmed willingness to pay."}, {"id": "rv3", "dim": "revenue", "text": "My unit economics make sense \u2014 I know my estimated cost of acquisition and lifetime value per customer."}, {"id": "rv4", "dim": "revenue", "text": "I have multiple potential revenue streams \u2014 not just one that everything depends on."}, {"id": "rv5", "dim": "revenue", "text": "I can reach profitability on a reasonable timeline without requiring massive amounts of outside capital."}, {"id": "fe1", "dim": "feasibility", "text": "I can build a working minimum viable product with the resources I currently have access to."}, {"id": "fe2", "dim": "feasibility", "text": "I have a realistic, detailed plan for how to get from idea to first paying customer \u2014 with timelines."}, {"id": "fe3", "dim": "feasibility", "text": "The technical, operational, and regulatory challenges I will face are surmountable \u2014 I have researched them."}, {"id": "fe4", "dim": "feasibility", "text": "I can launch and get meaningful user feedback within 90 days using what I have right now."}, {"id": "fe5", "dim": "feasibility", "text": "I know specifically what I need to learn or acquire to make this idea executable \u2014 and I have a plan for it."}, {"id": "co1", "dim": "competition", "text": "I have conducted a thorough, honest analysis of every significant competitor in this space."}, {"id": "co2", "dim": "competition", "text": "I understand clearly why customers would choose me over every existing alternative available to them."}, {"id": "co3", "dim": "competition", "text": "The competitive landscape is not so crowded that a new entrant cannot find a defensible, sustainable position."}, {"id": "co4", "dim": "competition", "text": "I can name the dominant player in this space and explain specifically how and where I will differentiate from them."}, {"id": "co5", "dim": "competition", "text": "If a large, well-funded competitor decided to build exactly what I am building, I have a strategy to survive and thrive."}, {"id": "va1", "dim": "validation", "text": "I have received genuine, unsolicited positive responses to this idea from people in my target market."}, {"id": "va2", "dim": "validation", "text": "At least one potential customer has given me their email, time, or money to be among the first to use my solution."}, {"id": "va3", "dim": "validation", "text": "I have tested my core assumptions \u2014 not just my product \u2014 and the results have confirmed my direction."}, {"id": "va4", "dim": "validation", "text": "I have received and genuinely incorporated critical, challenging feedback about this idea from objective sources."}, {"id": "va5", "dim": "validation", "text": "My validation evidence would convince a skeptical, intelligent outsider that this idea has real potential."}, {"id": "cm1", "dim": "commitment", "text": "I am prepared to work on this idea for three to five years, even through difficult seasons with no guarantee of success."}, {"id": "cm2", "dim": "commitment", "text": "I have calculated the real financial cost of pursuing this and I have a plan to sustain myself through the early stages."}, {"id": "cm3", "dim": "commitment", "text": "I am willing to pivot, rebuild, and completely rethink my approach if the market demands it."}, {"id": "cm4", "dim": "commitment", "text": "I have communicated this commitment honestly to the people most affected by it \u2014 family, partners, employers."}, {"id": "cm5", "dim": "commitment", "text": "I am pursuing this idea because it genuinely matters to me \u2014 not just because it might make money."}];
+const LABELS = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
+const LEVELS = [{"min": 80, "label": "A: Launch Ready", "desc": "Your idea has strong fundamentals across most critical dimensions. The validation evidence is solid. The biggest risk now is not building \u2014 it is moving too slowly. This idea deserves focused execution."}, {"min": 65, "label": "B: Nearly There", "desc": "Your idea has real potential with specific gaps that need addressing before full commitment. The foundations are strong. Close the gaps, run 2-3 more validation experiments, and revisit."}, {"min": 50, "label": "C: Needs Work", "desc": "Your idea has some genuine promise but significant validation gaps that pose real risk. Do not build yet. Run focused experiments on your lowest 3 dimensions first."}, {"min": 0, "label": "D: Back to Drawing Board", "desc": "Your idea needs substantial rethinking before it is ready to build. This is not a verdict on you \u2014 it is honest market intelligence. The best founders use this kind of feedback to build better."}];
+const PRIMARY = '#00E676';
+const TOOL_ID = 'ideas';
+const TOTAL_Q = QUESTIONS.length;
+
+// ═══ STATE ═══
+let cQ=0, answers={}, userName='', toolResult=null;
+
+// ═══ FLOW ═══
+function startTest(){document.getElementById('landing').style.display='none';document.getElementById('name-screen').style.display='flex';window.scrollTo(0,0);}
+
+function beginAssessment(){
+  const inp=document.getElementById('user-name-input');
+  userName=inp?inp.value.trim():'';
+  document.getElementById('name-screen').style.display='none';
+  document.getElementById('test-section').style.display='block';
+  window.scrollTo(0,0);
+  renderQuestion();
+}
+
+// ═══ RENDER QUESTION ═══
+function renderQuestion(){
+  const q=QUESTIONS[cQ];
+  const dim=DIMS.find(d=>d.id===q.dim);
+  const accent=dim?dim.accent:PRIMARY;
+  const bg=dim?dim.bg:'linear-gradient(135deg,#0a2e1a 0%,#002508 100%)';
+  const pct=(cQ/TOTAL_Q)*100;
+
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-label').textContent=(cQ+1)+' / '+TOTAL_Q;
+  document.getElementById('test-category').textContent=dim?dim.title:'Assessment';
+  document.getElementById('test-section').style.background=bg;
+
+  const sel=answers[q.id];
+  const opts=LABELS.map((lbl,i)=>{
+    const v=i+1, isSel=sel===v;
+    return `<button onclick="pick('${q.id}',${v})"
+      style="background:${isSel?accent+'15':'rgba(255,255,255,0.03)'};border:1px solid ${isSel?accent:'rgba(255,255,255,0.08)'};border-radius:8px;padding:14px 20px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:16px;width:100%;margin-bottom:10px;text-align:left">
+      <div style="width:32px;height:32px;border-radius:50%;background:${isSel?accent:'rgba(255,255,255,0.05)'};display:flex;align-items:center;justify-content:center;font-size:12px;color:${isSel?'#0a2e1a':'rgba(255,255,255,0.4)'};font-family:'DM Mono',monospace;flex-shrink:0;font-weight:600">${v}</div>
+      <div style="font-size:18px;color:rgba(255,255,255,0.9);font-family:'Cormorant Garamond',serif">${lbl}</div>
+    </button>`;
+  }).join('');
+
+  document.getElementById('question-wrap').innerHTML=`
+    <div class="fade-up">
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:32px">
+        <div style="width:48px;height:48px;border-radius:50%;background:${accent}18;border:1px solid ${accent}30;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">${dim?dim.icon:'📊'}</div>
+        <div>
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:${accent};text-transform:uppercase">${dim?dim.title:'Assessment'}</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.25);font-family:'DM Mono',monospace;margin-top:2px">Question ${cQ+1} of ${TOTAL_Q}</div>
+        </div>
+      </div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:30px;line-height:1.45;color:#fff;margin-bottom:10px;font-weight:600;font-style:italic">"${q.text}"</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.25);font-family:'DM Mono',monospace;letter-spacing:0.5px;margin-bottom:36px">Rate how true this is of you right now</div>
+      ${opts}
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.06)">
+        <button onclick="prevQ()" ${cQ===0?'style="visibility:hidden"':''} style="background:none;border:1px solid rgba(255,255,255,0.1);color:#7a9a7a;padding:12px 24px;border-radius:4px;cursor:pointer;font-size:13px;font-family:'DM Sans',sans-serif">← Back</button>
+        <button onclick="nextQ()" ${sel?'':'disabled'} style="background:${sel?accent:'rgba(255,255,255,0.08)'};color:${sel?'#0a2e1a':'rgba(255,255,255,0.2)'};border:none;padding:14px 36px;border-radius:4px;cursor:${sel?'pointer':'not-allowed'};font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;font-style:italic">${cQ===TOTAL_Q-1?'See My Results →':'Next →'}</button>
+      </div>
+    </div>`;
+}
+
+function pick(qId,v){answers[qId]=v;renderQuestion();}
+function nextQ(){if(!answers[QUESTIONS[cQ].id])return;if(cQ<TOTAL_Q-1){cQ++;window.scrollTo(0,0);renderQuestion();}else showResults();}
+function prevQ(){if(cQ>0){cQ--;window.scrollTo(0,0);renderQuestion();}}
+
+// ═══ SCORING ═══
+function calcScores(){
+  const ds={};
+  DIMS.forEach(d=>{
+    const qs=QUESTIONS.filter(q=>q.dim===d.id);
+    const vals=qs.map(q=>answers[q.id]||0);
+    ds[d.id]=vals.length?Math.round((vals.reduce((a,b)=>a+b,0)/(vals.length*5))*100):0;
+  });
+  const overall=Math.round(Object.values(ds).reduce((a,b)=>a+b,0)/Object.keys(ds).length);
+  return {ds,overall};
+}
+
+function getLevel(o){return LEVELS.find(l=>o>=l.min)||LEVELS[LEVELS.length-1];}
+
+// ═══ SHOW RESULTS ═══
+function showResults(){
+  document.getElementById('test-section').style.display='none';
+  document.getElementById('results-section').style.display='block';
+  document.getElementById('results-loading').style.display='flex';
+  document.getElementById('result-content').style.display='none';
+  window.scrollTo(0,0);
+  const {ds,overall}=calcScores();
+  const level=getLevel(overall);
+  toolResult={ds,overall,level,userName};
+  setTimeout(()=>{
+    document.getElementById('results-loading').style.display='none';
+    renderResults(toolResult);
+    document.getElementById('result-content').style.display='block';
+  },2200);
+}
+
+// ═══ RENDER RESULTS ═══
+function renderResults({ds,overall,level}){
+  const rows=Object.entries(ds).sort((a,b)=>b[1]-a[1]).map(([id,pct])=>{
+    const d=DIMS.find(d=>d.id===id);
+    return `<div style="margin-bottom:14px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:16px 20px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:#fff;display:flex;align-items:center;gap:10px"><span>${d?d.icon:''}</span>${d?d.title:id}</div>
+        <div style="font-family:'DM Mono',monospace;font-size:13px;color:${d?d.accent:PRIMARY}">${pct}%</div>
+      </div>
+      <div style="height:5px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden">
+        <div style="height:100%;border-radius:3px;background:${d?d.accent:PRIMARY};width:${pct}%;transition:width 1.4s ease"></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  const preview4=Object.entries(ds).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([id,pct])=>{
+    const d=DIMS.find(d=>d.id===id);
+    return `<div style="border:1px solid ${d?d.accent+'20':'rgba(255,255,255,0.08)'};border-radius:8px;padding:24px;background:rgba(255,255,255,0.02)">
+      <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;color:#3a6a3a;text-transform:uppercase;margin-bottom:8px">${d?d.icon:''} ${d?d.title:id} · ${pct}%</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;font-weight:700;margin-bottom:8px">${pct>=65?'A strength':'Growth area'}</div>
+      <div style="font-size:13px;color:#7a9a7a;line-height:1.5">Unlock for detailed insights and specific action steps.</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('result-content').innerHTML=`
+    <div style="background:linear-gradient(135deg,#0a2e1a 0%,#002508 100%);padding:80px 48px;position:relative;overflow:hidden">
+      <div style="position:absolute;inset:0;background:radial-gradient(circle at 70% 40%,#00E67606 0%,transparent 70%);pointer-events:none"></div>
+      <div class="result-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;position:relative;z-index:2">
+        <div class="fade-up">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:#7a9a7a;text-transform:uppercase;margin-bottom:16px">${userName?userName+"'s Results":'Your Results'}</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:80px;font-weight:700;color:#00E676;line-height:1;letter-spacing:-3px;margin-bottom:8px">${overall}</div>
+          <div style="font-family:'DM Mono',monospace;font-size:12px;color:#7a9a7a;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px">${level.label}</div>
+          <div style="font-size:16px;color:rgba(255,255,255,0.65);line-height:1.8;font-weight:300">${level.desc}</div>
+        </div>
+        <div>${rows}</div>
+      </div>
+    </div>
+
+    <div style="background:#0a2e1a;border-top:1px solid rgba(255,255,255,0.07);padding:60px 48px">
+      <div style="max-width:1200px;margin:0 auto">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:36px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">Your Report — <em style="font-style:italic;color:#00E676">Preview</em></div>
+        <p style="font-size:14px;color:#7a9a7a;margin-bottom:32px">Unlock the full PDF for your complete profile, AI-generated insights, and personalized action plan.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">${preview4}</div>
+      </div>
+    </div>
+
+    <div style="background:linear-gradient(135deg,#0a2e1a 0%,#002508 100%);padding:60px 48px">
+      <div class="unlock-grid" style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center">
+        <div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;font-weight:700;letter-spacing:-1px;margin-bottom:12px">Get Your Full Report</div>
+          <p style="font-size:15px;color:#7a9a7a;line-height:1.7;font-weight:300;margin-bottom:24px">A beautifully designed 10-page PDF — your complete profile, AI-generated insights, and a personalized 90-day growth plan.</p>
+          <div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>Your Idea Validation Score across all 10 dimensions</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>Your idea grade — what it means and what to do next</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>Your 3 strongest validation signals and why they matter</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>Your 3 critical gaps with specific action steps to close them</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>A 90-day validation roadmap — what to test, in what order</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>The single most important validation experiment for your next 7 days</div><div style="font-size:14px;color:#7a9a7a;display:flex;align-items:center;gap:10px;margin-bottom:8px"><span style="color:#3a6a3a;flex-shrink:0">—</span>Beautifully designed PDF in validation green and black</div></div>
+        </div>
+        <div style="text-align:center;background:#00E67608;border:1px solid #00E67625;border-radius:8px;padding:40px 32px;min-width:240px">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:56px;color:#00E676;letter-spacing:-2px;line-height:1;font-weight:700">$14.99</div>
+          <div style="font-size:11px;color:#3a6a3a;font-family:'DM Mono',monospace;letter-spacing:1px;margin-top:4px;margin-bottom:24px">One payment · Instant PDF</div>
+          <button id="unlock-btn" onclick="checkout()" style="background:#00E676;color:#0a2e1a;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;padding:18px 40px;border:none;border-radius:4px;cursor:pointer;width:100%;transition:all 0.2s">Unlock Full Report · $14.99</button>
+          <div style="font-size:11px;color:#3a6a3a;margin-top:10px;font-family:'DM Mono',monospace">Secure payment via Stripe</div>
+        </div>
+      </div>
+    </div>
+
+    <footer style="border-top:1px solid rgba(255,255,255,0.07);padding:32px 48px;background:#0a2e1a">
+      <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:16px;color:#fff;font-weight:600">SIGNATUREWITHIN</div>
+        <div style="display:flex;gap:24px"><a href="/privacy.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Privacy</a><a href="/terms.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Terms</a><a href="/disclaimer.html" style="font-size:12px;color:#3a6a3a;text-decoration:none">Disclaimer</a></div>
+        <div style="font-size:12px;color:#3a6a3a">© 2026 SIGNATUREWITHIN</div>
+      </div>
+    </footer>`;
+}
+
+// ═══ CHECKOUT ═══
+async function checkout(){
+  const btn=document.getElementById('unlock-btn');
+  btn.disabled=true;btn.textContent='Loading...';
+  if(toolResult)sessionStorage.setItem(TOOL_ID+'_r',JSON.stringify({...toolResult,userName}));
+  try{
+    const res=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({toolId:TOOL_ID})});
+    const data=await res.json();
+    if(data.url)window.location.href=data.url;
+    else{btn.disabled=false;btn.textContent='Unlock Full Report · $14.99';alert('Error. Please try again.');}
+  }catch(e){btn.disabled=false;btn.textContent='Unlock Full Report · $14.99';}
+}
+
+// ═══ RETURN FROM STRIPE ═══
+window.addEventListener('load',async()=>{
+  const p=new URLSearchParams(window.location.search);
+  if(p.get('success')==='true'&&p.get('tool')===TOOL_ID){
+    const saved=sessionStorage.getItem(TOOL_ID+'_r');
+    if(saved){
+      window.history.replaceState({},'','/ideas.html');
+      const r=JSON.parse(saved);
+      userName=r.userName||'';toolResult=r;
+      document.getElementById('landing').style.display='none';
+      document.getElementById('results-section').style.display='block';
+      document.getElementById('results-loading').style.display='flex';
+      document.getElementById('loading-title').textContent='Generating your report...';
+      await genPDF(r);
+    }
+  }
+});
+
+// ═══ PDF GENERATION ═══
+async function genPDF(result){
+  const {ds,overall,level,userName:name}=result;
+  let ins=null;
+  const prompt=`You are a venture capital analyst and startup advisor. Generate a personalized idea validation report for NAME. Idea Validation Score: OVERALL/100 — LEVEL_LABEL. LEVEL_DESC. Dimension scores: DIM_SCORES. Return ONLY valid JSON: {"opening":"A direct, analytically rigorous 2-sentence opening that immediately makes NAME feel accurately evaluated","overall_insight":"3 sentences interpreting what their validation score pattern reveals about the readiness and risk profile of their idea","problem_strength":"2 sentences if score >= 65","demand_strength":"2 sentences if score >= 65","uniqueness_strength":"2 sentences if score >= 65","timing_strength":"2 sentences if score >= 65","founderfit_strength":"2 sentences if score >= 65","revenue_strength":"2 sentences if score >= 65","feasibility_strength":"2 sentences if score >= 65","competition_strength":"2 sentences if score >= 65","validation_strength":"2 sentences if score >= 65","commitment_strength":"2 sentences if score >= 65","problem_growth":"2 sentences with one specific validation experiment if score < 65","demand_growth":"2 sentences with one specific validation experiment if score < 65","uniqueness_growth":"2 sentences with one specific validation experiment if score < 65","timing_growth":"2 sentences with one specific validation experiment if score < 65","founderfit_growth":"2 sentences with one specific validation experiment if score < 65","revenue_growth":"2 sentences with one specific validation experiment if score < 65","feasibility_growth":"2 sentences with one specific validation experiment if score < 65","competition_growth":"2 sentences with one specific validation experiment if score < 65","validation_growth":"2 sentences with one specific validation experiment if score < 65","commitment_growth":"2 sentences with one specific validation experiment if score < 65","month1":"Specific 30-day validation experiments targeting their 3 lowest dimensions","month2":"Specific 30-60 day deeper validation and early customer development actions","month3":"Specific 60-90 day plan to reach the next stage — launch decision or pivot","key_action":"The single most important validation action for NAME in the next 7 days — specific and testable","quote":"A powerful entrepreneurship or startup validation quote","quote_author":"Full name"}`.replace(/NAME/g,name||'the person').replace(/OVERALL/g,overall).replace(/LEVEL_LABEL/g,level.label).replace(/LEVEL_DESC/g,level.desc).replace(/DIM_SCORES/g,JSON.stringify(ds));
+  try{
+    const res=await fetch('/api/analyze',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({system:'You are a venture capital analyst and startup advisor. Return only valid JSON, no markdown.',messages:[{role:'user',content:prompt}]})
+    });
+    const data=await res.json();
+    ins=JSON.parse(data.content?.[0]?.text?.replace(/```json|```/g,'').trim()||'{}');
+  }catch(e){console.error('AI:',e);}
+  const html=buildPDF(result,ins);
+  const win=window.open('','_blank');
+  win.document.write(html);win.document.close();
+  document.getElementById('results-loading').style.display='none';
+  renderResults(result);document.getElementById('result-content').style.display='block';
+}
+
+// ═══ PDF BUILDER ═══
+function buildPDF(result,ins){
+  const {ds,overall,level,userName:name}=result;
+  const date=new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+
+  const scoreRows=Object.entries(ds).sort((a,b)=>b[1]-a[1]).map(([id,pct])=>{
+    const d=DIMS.find(d=>d.id===id);
+    return `<div style="margin-bottom:12px"><div style="display:flex;justify-content:space-between;margin-bottom:5px"><span style="font-size:14px;color:rgba(255,255,255,0.85);font-family:'Cormorant Garamond',serif;font-weight:600">${d?d.icon:''} ${d?d.title:id}</span><span style="font-family:'DM Mono',monospace;font-size:12px;color:${d?d.accent:'#00E676'}">${pct}%</span></div><div style="height:5px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden"><div style="height:100%;border-radius:3px;background:${d?d.accent:'#00E676'};width:${pct}%"></div></div></div>`;
+  }).join('');
+
+  const topRows=Object.entries(ds).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([id,pct])=>{
+    const d=DIMS.find(d=>d.id===id);
+    const key=id.replace(/-/g,'_');
+    const txt=ins?.[key+'_strength']||`Your score of ${pct}% in ${d?d.title:id} represents a genuine strength. Build on it with intention.`;
+    return `<div style="border-left:3px solid ${d?d.accent:'#00E676'};padding:14px 20px;margin-bottom:14px;background:rgba(255,255,255,0.02)"><div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:6px">${d?d.icon:''} ${d?d.title:id} · ${pct}%</div><div style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6">${txt}</div></div>`;
+  }).join('');
+
+  const growRows=Object.entries(ds).sort((a,b)=>a[1]-b[1]).slice(0,3).map(([id,pct])=>{
+    const d=DIMS.find(d=>d.id===id);
+    const key=id.replace(/-/g,'_');
+    const txt=ins?.[key+'_growth']||`Your score of ${pct}% in ${d?d.title:id} is your most significant growth opportunity. Focused effort here will create measurable change.`;
+    return `<div style="border-left:3px solid rgba(255,255,255,0.15);padding:14px 20px;margin-bottom:14px;background:rgba(255,255,255,0.02)"><div style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:6px">${d?d.icon:''} ${d?d.title:id} · ${pct}%</div><div style="font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6">${txt}</div></div>`;
+  }).join('');
+
+  return `<!DOCTYPE html><html><head><meta charset="UTF-8"/>
+<title>${name||'Your'} — Ideas Validator</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;color:#fff;background:#0a2e1a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{padding:60px;page-break-after:always;min-height:100vh;display:flex;flex-direction:column;background:#0a2e1a}
+.body-text{font-size:15px;color:rgba(255,255,255,0.65);line-height:1.8;font-weight:300}
+.sl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:12px;margin-top:24px}
+#dlbar{position:fixed;top:0;left:0;right:0;z-index:9999;background:#1a1a1a;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,0.5)}
+@media print{#dlbar{display:none!important}body{margin-top:0!important}}
+@media screen{body{margin-top:56px}}
+</style></head><body>
+
+<div id="dlbar">
+  <div style="font-family:sans-serif;font-size:14px;color:#fff;font-weight:500">Your report is ready — save it as a PDF</div>
+  <div style="display:flex;gap:12px;align-items:center">
+    <span style="font-family:monospace;font-size:12px;color:#888">File → Print → Save as PDF &nbsp;or&nbsp;</span>
+    <button onclick="window.print()" style="background:#fff;color:#1a1a1a;border:none;padding:10px 24px;border-radius:4px;font-size:14px;font-weight:700;cursor:pointer">⬇ Download PDF</button>
+  </div>
+</div>
+
+<div style="min-height:100vh;background:linear-gradient(135deg,#0a2e1a 0%,#002508 100%);display:flex;flex-direction:column;justify-content:space-between;padding:60px;page-break-after:always">
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase">${name||'Your'} Report · SIGNATUREWITHIN · ${date}</div>
+  <div>
+    <div style="font-size:60px;margin-bottom:20px"><span style="color:#00E676;display:inline-flex;align-items:center"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><path d="M16 28 C12 24 12 16 16 12 C20 8 28 8 32 12 C36 16 36 24 32 28 L32 32 L16 32 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="16" y1="34" x2="32" y2="34" stroke="currentColor" stroke-width="1.5"/><line x1="17" y1="37" x2="31" y2="37" stroke="currentColor" stroke-width="1.5" opacity="0.7"/><line x1="19" y1="40" x2="29" y2="40" stroke="currentColor" stroke-width="1.5" opacity="0.4"/><path d="M20 28 L20 22 L24 18 L28 22 L28 28" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round" opacity="0.6"/><line x1="24" y1="6" x2="24" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span></div>
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:#00E67688;letter-spacing:3px;text-transform:uppercase;margin-bottom:10px">Ideas Validator</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:700;color:#00E676;line-height:1;letter-spacing:-3px;margin-bottom:8px">${overall}</div>
+    <div style="font-family:'DM Mono',monospace;font-size:13px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px">${level.label}</div>
+    <div style="font-size:17px;color:rgba(255,255,255,0.65);line-height:1.7;font-weight:300;max-width:560px">${ins?.opening||level.desc}</div>
+  </div>
+  <div style="font-size:11px;color:rgba(255,255,255,0.15);font-family:'DM Mono',monospace;max-width:340px;line-height:1.5">Self-discovery tool. Not business, legal, or investment advice.</div>
+</div>
+
+<div class="page">
+  <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)">Your Complete Profile</div>
+  <div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">Your Scores<br/><em style="font-style:italic;color:#00E676">Across All Dimensions</em></div>
+  <div style="font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.7;margin-bottom:32px">Your scores reveal where you are strong and where your greatest opportunities for growth lie.</div>
+  ${scoreRows}
+  ${ins?.overall_insight?`<div class="sl">What This Means</div><div class="body-text">${ins.overall_insight}</div>`:''}
+</div>
+
+<div class="page">
+  <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)">Your Strengths</div>
+  <div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">What You Do<br/><em style="font-style:italic;color:#00E676">Naturally Well</em></div>
+  <div style="font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.7;margin-bottom:32px">Your highest-scoring dimensions. Build on these with deliberate intention.</div>
+  ${topRows}
+</div>
+
+<div class="page">
+  <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)">Growth Areas</div>
+  <div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">Where to<br/><em style="font-style:italic;color:#00E676">Focus Next</em></div>
+  <div style="font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.7;margin-bottom:32px">Targeted, specific effort in these dimensions will create your greatest measurable change.</div>
+  ${growRows}
+</div>
+
+<div class="page">
+  <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)">Your Growth Plan</div>
+  <div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">Your Next<br/><em style="font-style:italic;color:#00E676">90 Days</em></div>
+  <div style="font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.7;margin-bottom:32px">Three intentional phases. One month each. Start Month 1 today.</div>
+  <div style="border-left:3px solid #00E676;padding:20px 24px;margin-bottom:16px;background:rgba(255,255,255,0.02)">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:#00E67688;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Month 1 — Awareness</div>
+    <div class="body-text">${ins?.month1||'Deep audit of your lowest 3 dimensions. Honest conversations with trusted people. Set a weekly review habit. Begin reading one relevant book.'}</div>
+  </div>
+  <div style="border-left:3px solid rgba(255,255,255,0.2);padding:20px 24px;margin-bottom:16px;background:rgba(255,255,255,0.02)">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Month 2 — Installation</div>
+    <div class="body-text">${ins?.month2||'Install one new habit per week targeting your gap areas. Practice deliberately. Journal what is working after each significant interaction.'}</div>
+  </div>
+  <div style="border-left:3px solid rgba(255,255,255,0.1);padding:20px 24px;margin-bottom:24px;background:rgba(255,255,255,0.02)">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Month 3 — Integration</div>
+    <div class="body-text">${ins?.month3||'Reassess your lowest dimensions. Measure your improvement. Set your next 90-day targets. Share your growth with someone who will hold you accountable.'}</div>
+  </div>
+  ${ins?.key_action?`<div class="sl">Your Single Most Important Action Right Now</div><div style="font-size:17px;color:#00E67688;border-left:3px solid #00E67640;padding-left:20px;font-style:italic;font-family:'Cormorant Garamond',serif;line-height:1.7">${ins.key_action}</div>`:''}
+</div>
+
+<div style="min-height:100vh;background:linear-gradient(135deg,#0a2e1a 0%,#002508 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px">
+  <div style="font-size:60px;margin-bottom:32px;opacity:0.8"><span style="color:#00E676;display:inline-flex;align-items:center"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><path d="M16 28 C12 24 12 16 16 12 C20 8 28 8 32 12 C36 16 36 24 32 28 L32 32 L16 32 Z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="16" y1="34" x2="32" y2="34" stroke="currentColor" stroke-width="1.5"/><line x1="17" y1="37" x2="31" y2="37" stroke="currentColor" stroke-width="1.5" opacity="0.7"/><line x1="19" y1="40" x2="29" y2="40" stroke="currentColor" stroke-width="1.5" opacity="0.4"/><path d="M20 28 L20 22 L24 18 L28 22 L28 28" stroke="currentColor" stroke-width="1" fill="none" stroke-linejoin="round" opacity="0.6"/><line x1="24" y1="6" x2="24" y2="8" stroke="currentColor" stroke-width="1.5"/></svg></span></div>
+  <div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-style:italic;line-height:1.4;margin-bottom:24px;max-width:600px;font-weight:600">"${ins?.quote||'Ideas are cheap. Execution is everything. But validation is what separates the two.'}"</div>
+  <div style="font-size:13px;color:rgba(255,255,255,0.35);font-family:'DM Mono',monospace;letter-spacing:1px">— ${ins?.quote_author||'Unknown'}</div>
+</div>
+
+</body></html>`;
+}
+</script>
+</body>
+</html>
