@@ -388,7 +388,7 @@ pintrk('page');
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>"/>
 </head>
 <body>
-<div id="email-gate">
+<div id="email-gate" class="hidden">
   <div class="eg-card">
     <div class="eg-badge">Free Assessment</div>
     <h2 class="eg-title">Before you begin</h2>
@@ -689,16 +689,12 @@ let tempResult = null;
 
 // ═══ NAVIGATION ═══
 function startTest() {
-  var g=document.getElementById('email-gate');if(g)g.classList.add('hidden');
-  
   document.getElementById('landing').style.display = 'none';
   document.getElementById('name-screen').style.display = 'flex';
   window.scrollTo(0, 0);
 }
 
 function beginAssessment() {
-  var g=document.getElementById('email-gate');if(g)g.classList.add('hidden');
-  
   const input = document.getElementById('user-name-input');
   userName = input ? input.value.trim() : '';
   document.getElementById('name-screen').style.display = 'none';
@@ -1176,6 +1172,15 @@ function skipGate(){
 }
 document.getElementById('eg-email').addEventListener('keydown',function(e){
   if(e.key==='Enter') submitEmail();
+});
+</script>
+<script>
+window.addEventListener('load', function(){
+  var gate = document.getElementById('email-gate');
+  var landing = document.getElementById('landing');
+  if(gate && landing){
+    setTimeout(function(){ gate.classList.remove('hidden'); }, 300);
+  }
 });
 </script>
 </body></html>`;
