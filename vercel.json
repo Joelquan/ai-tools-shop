@@ -32,6 +32,10 @@
     "api/publish-daily.js": {
       "memory": 128,
       "maxDuration": 10
+    },
+    "api/email-capture.js": {
+      "memory": 128,
+      "maxDuration": 10
     }
   },
   "routes": [

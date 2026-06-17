@@ -238,6 +238,114 @@
   .sticky-cta-text{display:none}
   .sticky-cta{justify-content:center}
 }
+
+#email-gate{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(5,12,5,0.92);
+  backdrop-filter:blur(16px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+#email-gate.hidden{display:none}
+.eg-card{
+  background:#0d1a0d;
+  border:1px solid rgba(78,232,138,0.15);
+  border-radius:8px;
+  padding:48px 40px;
+  max-width:440px;
+  width:100%;
+  text-align:center;
+}
+.eg-badge{
+  display:inline-block;
+  font-family:'DM Mono',monospace;
+  font-size:9px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#4EE88A;
+  border:1px solid #4EE88A;
+  padding:4px 12px;
+  border-radius:2px;
+  margin-bottom:24px;
+}
+.eg-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:32px;
+  font-weight:700;
+  color:#f5f0e8;
+  line-height:1.2;
+  margin-bottom:12px;
+}
+.eg-sub{
+  font-family:'DM Sans',sans-serif;
+  font-size:15px;
+  color:rgba(245,240,232,0.6);
+  line-height:1.6;
+  margin-bottom:32px;
+}
+.eg-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.eg-input{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:3px;
+  padding:14px 16px;
+  font-family:'DM Sans',sans-serif;
+  font-size:15px;
+  color:#f5f0e8;
+  outline:none;
+  width:100%;
+  box-sizing:border-box;
+  transition:border-color .2s;
+}
+.eg-input::placeholder{color:rgba(245,240,232,0.35)}
+.eg-input:focus{border-color:#4EE88A}
+.eg-btn{
+  background:#4EE88A;
+  color:#0a2e1a;
+  font-family:'DM Sans',sans-serif;
+  font-weight:700;
+  font-size:15px;
+  letter-spacing:.04em;
+  padding:15px 24px;
+  border:none;
+  border-radius:3px;
+  cursor:pointer;
+  transition:opacity .2s;
+}
+.eg-btn:hover{opacity:.88}
+.eg-btn:disabled{opacity:.5;cursor:not-allowed}
+.eg-skip{
+  font-family:'DM Sans',sans-serif;
+  font-size:12px;
+  color:rgba(245,240,232,0.3);
+  margin-top:16px;
+  cursor:pointer;
+  text-decoration:underline;
+  background:none;
+  border:none;
+  display:block;
+  width:100%;
+  text-align:center;
+}
+.eg-skip:hover{color:rgba(245,240,232,0.5)}
+.eg-error{
+  font-size:13px;
+  color:#ff6b6b;
+  font-family:'DM Sans',sans-serif;
+  display:none;
+}
+@media(max-width:480px){
+  .eg-card{padding:32px 24px}
+  .eg-title{font-size:26px}
+}
 </style>
   <script defer src="/_vercel/insights/script.js"></script>
 <!-- Pinterest Tag -->
@@ -280,6 +388,19 @@ pintrk('page');
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>"/>
 </head>
 <body>
+<div id="email-gate">
+  <div class="eg-card">
+    <div class="eg-badge">Free Assessment</div>
+    <h2 class="eg-title">Before you begin</h2>
+    <p class="eg-sub">Enter your email and we'll send your full results breakdown when you're done. No spam — ever.</p>
+    <div class="eg-form">
+      <input type="email" class="eg-input" id="eg-email" placeholder="your@email.com" autocomplete="email"/>
+      <p class="eg-error" id="eg-error">Please enter a valid email address.</p>
+      <button class="eg-btn" id="eg-submit" onclick="submitEmail()">Start Assessment →</button>
+    </div>
+    <button class="eg-skip" onclick="skipGate()">Skip — just take the assessment</button>
+  </div>
+</div>
 
 <header>
   <div class="header-inner">
@@ -1025,6 +1146,33 @@ body{font-family:'DM Sans',sans-serif;color:#fff;background:#0a2e1a;-webkit-prin
     });
   }
 })();
+</script>
+<script>
+function submitEmail(){
+  var email=document.getElementById('eg-email').value.trim();
+  var err=document.getElementById('eg-error');
+  var btn=document.getElementById('eg-submit');
+  if(!email||!email.includes('@')||!email.includes('.')){
+    err.style.display='block';
+    return;
+  }
+  err.style.display='none';
+  btn.disabled=true;
+  btn.textContent='Starting...';
+  fetch('/api/email-capture',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({email:email,source:'temperament'})
+  }).catch(function(){}).finally(function(){
+    document.getElementById('email-gate').classList.add('hidden');
+  });
+}
+function skipGate(){
+  document.getElementById('email-gate').classList.add('hidden');
+}
+document.getElementById('eg-email').addEventListener('keydown',function(e){
+  if(e.key==='Enter') submitEmail();
+});
 </script>
 </body></html>`;
 }
