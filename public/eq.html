@@ -20,7 +20,61 @@
     @keyframes fu{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
     .fade-up{animation:fu 0.5s ease forwards}
     @media(max-width:768px){.hi{padding:0 20px}.hg{grid-template-columns:1fr!important;gap:40px!important;padding:120px 20px 60px!important}.sg{grid-template-columns:1fr 1fr!important}.rg{grid-template-columns:1fr!important}.ug{grid-template-columns:1fr!important}.hs{padding:40px 20px!important}.qw{padding:40px 20px!important}}
-  </style>
+  
+.sticky-cta{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  z-index:500;
+  background:rgba(10,18,10,0.97);
+  backdrop-filter:blur(12px);
+  border-top:1px solid rgba(255,255,255,0.08);
+  padding:14px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  transform:translateY(100%);
+  transition:transform 0.3s ease;
+}
+.sticky-cta.visible{transform:translateY(0)}
+.sticky-cta-text{
+  font-family:'DM Sans',sans-serif;
+  font-size:14px;
+  color:rgba(255,255,255,0.7);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.sticky-cta-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 24px;
+  border-radius:3px;
+  font-family:'DM Sans',sans-serif;
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:.03em;
+  white-space:nowrap;
+  cursor:pointer;
+  border:none;
+  text-decoration:none;
+}
+.sticky-cta-close{
+  background:none;
+  border:none;
+  color:rgba(255,255,255,0.4);
+  font-size:20px;
+  cursor:pointer;
+  padding:4px;
+  line-height:1;
+  flex-shrink:0;
+}
+@media(max-width:600px){
+  .sticky-cta-text{display:none}
+  .sticky-cta{justify-content:center}
+}
+</style>
   <script defer src="/_vercel/insights/script.js"></script>
 <!-- Pinterest Tag -->
 <script>
@@ -284,6 +338,36 @@ function mkPDF(result,ins){
 <div class="pg"><div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.2);text-transform:uppercase;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,0.06)">Your Growth Plan</div><div style="font-family:'Cormorant Garamond',serif;font-size:40px;color:#fff;letter-spacing:-1px;margin-bottom:8px;font-weight:700">Your Next<br/><em style="font-style:italic;color:#2DC653">90 Days</em></div><div style="font-size:15px;color:rgba(255,255,255,0.4);font-weight:300;line-height:1.7;margin-bottom:32px">Three intentional phases. Start Month 1 today.</div><div style="border-left:3px solid #2DC653;padding:20px 24px;margin-bottom:16px;background:rgba(255,255,255,0.02)"><div style="font-family:'DM Mono',monospace;font-size:10px;color:#2DC65388;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Month 1 — Awareness</div><div class="bt">${ins?.month1||'Deep audit of your lowest 3 dimensions. Honest conversations. Set a weekly review habit.'}</div></div><div style="border-left:3px solid rgba(255,255,255,0.2);padding:20px 24px;margin-bottom:16px;background:rgba(255,255,255,0.02)"><div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Month 2 — Installation</div><div class="bt">${ins?.month2||'Install one new habit per week. Practice deliberately. Journal what is working.'}</div></div><div style="border-left:3px solid rgba(255,255,255,0.1);padding:20px 24px;margin-bottom:24px;background:rgba(255,255,255,0.02)"><div style="font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Month 3 — Integration</div><div class="bt">${ins?.month3||'Reassess your lowest dimensions. Measure improvement. Set your next 90-day targets.'}</div></div>${ins?.key_action?`<div class="sl">Your Single Most Important Action Right Now</div><div style="font-size:17px;color:#2DC65388;border-left:3px solid #2DC65340;padding-left:20px;font-style:italic;font-family:'Cormorant Garamond',serif;line-height:1.7">${ins.key_action}</div>`:''}
 </div>
 <div style="min-height:100vh;background:linear-gradient(135deg,#0a2e1a 0%,#001200 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px"><div style="font-size:60px;margin-bottom:32px"><span style="color:#2DC653;display:inline-flex;align-items:center"><svg width="52" height="52" viewBox="0 0 48 48" fill="none"><path d="M24 40 C24 40 6 28 6 18 C6 11 11 8 16 8 C19 8 22 10 24 13 C26 10 29 8 32 8 C37 8 42 11 42 18 C42 28 24 40 24 40Z" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M24 32 C24 32 12 24 12 18 C12 14 15 12 18 12 C20.5 12 22.5 13.5 24 15.5 C25.5 13.5 27.5 12 30 12 C33 12 36 14 36 18 C36 24 24 32 24 32Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.6"/><circle cx="24" cy="22" r="2.5" fill="currentColor" opacity="0.8"/></svg></span></div><div style="font-family:'Cormorant Garamond',serif;font-size:30px;font-style:italic;line-height:1.4;margin-bottom:24px;max-width:600px;font-weight:600">"${ins?.quote||'Anyone can become angry — that is easy. But to be angry with the right person, to the right degree, at the right time, for the right purpose — that is not easy.'}"</div><div style="font-size:13px;color:rgba(255,255,255,0.35);font-family:'DM Mono',monospace;letter-spacing:1px">— ${ins?.quote_author||'Unknown'}</div></div>
+
+<div class="sticky-cta" id="sticky-bar" role="complementary" aria-label="Start assessment">
+  <span class="sticky-cta-text">Ready to discover your results?</span>
+  <a href="#start" class="sticky-cta-btn" style="background:#2DC653;color:#001a0e;" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" aria-label="Begin EQ Assessment">Begin EQ Assessment →</a>
+  <button class="sticky-cta-close" aria-label="Dismiss">&times;</button>
+</div>
+<script>
+(function(){
+  var bar=document.querySelector('.sticky-cta');
+  var close=document.querySelector('.sticky-cta-close');
+  var dismissed=false;
+  function check(){
+    if(dismissed)return;
+    var scrolled=window.scrollY||document.documentElement.scrollTop;
+    var total=document.documentElement.scrollHeight-window.innerHeight;
+    if(scrolled>300&&scrolled<total-200){
+      bar.classList.add('visible');
+    } else {
+      bar.classList.remove('visible');
+    }
+  }
+  window.addEventListener('scroll',check,{passive:true});
+  if(close){
+    close.addEventListener('click',function(){
+      dismissed=true;
+      bar.classList.remove('visible');
+    });
+  }
+})();
+</script>
 </body></html>`;
 }
 </script>
