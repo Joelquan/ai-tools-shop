@@ -502,7 +502,9 @@ const W_QS=[
 // ═══ STATE ═══
 let cQ=0,ans={},uN='',spN='',gender='',QS=[],tR=null;
 
-function startTest(){document.getElementById('landing').style.display='none';document.getElementById('role-screen').style.display='flex';window.scrollTo(0,0);}
+function startTest(){
+  var g=document.getElementById('email-gate');if(g)g.classList.add('hidden');
+  document.getElementById('landing').style.display='none';document.getElementById('role-screen').style.display='flex';window.scrollTo(0,0);}
 
 function selectRole(g){
   gender=g;QS=g==='husband'?H_QS:W_QS;
@@ -524,6 +526,8 @@ function checkReady(){
 }
 
 function beginMarriage(){
+  var g=document.getElementById('email-gate');if(g)g.classList.add('hidden');
+  
   uN=document.getElementById('your-name').value.trim();
   spN=document.getElementById('spouse-name').value.trim();
   if(!uN||!gender)return;

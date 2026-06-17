@@ -335,7 +335,9 @@ const TID='relationshipstyle';
 const TQ=QS.length;
 let cQ=0,ans={},uN='',tR=null;
 
-function startTest(){document.getElementById('landing').style.display='none';document.getElementById('name-screen').style.display='flex';window.scrollTo(0,0);}
+function startTest(){
+  var g=document.getElementById('email-gate');if(g)g.classList.add('hidden');
+  document.getElementById('landing').style.display='none';document.getElementById('name-screen').style.display='flex';window.scrollTo(0,0);}
 function go(){uN=document.getElementById('uni').value.trim();document.getElementById('name-screen').style.display='none';document.getElementById('test-section').style.display='block';window.scrollTo(0,0);rQ();}
 
 function rQ(){
