@@ -1,0 +1,9 @@
+{
+  "name": "ai-tools-shop",
+  "version": "1.0.0",
+  "description": "AI Tools Shop — Pay as you go AI tools",
+  "private": true,
+  "dependencies": {
+    "stripe": "^14.25.0"
+  }
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — Understanding Your Results | SIGNATUREWITHIN</title>
+  <meta name="description" content="Deep interpretations of assessment results across temperament, personality, EQ, money mindset, relationships, leadership, and marriage. Understand what your scores mean."/>
+  <link rel="canonical" href="https://signaturewithin.com/blog/"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── PAPYRUS PALETTE ─────────────────────────────── */
+    :root {
+      --bg:      #F5F0E8;
+      --bg2:     #EDE8DC;
+      --bg3:     #E5DFD0;
+      --ink:     #1C1208;
+      --ink2:    #3D2E1A;
+      --muted:   #7A6A52;
+      --dim:     #B8A88A;
+      --border:  rgba(28,18,8,0.1);
+      --border2: rgba(28,18,8,0.18);
+      --coral:   #DC5D46;
+      --steel:   #4A7A99;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      background:var(--bg);
+      color:var(--ink);
+      font-family:'DM Sans',sans-serif;
+      -webkit-font-smoothing:antialiased;
+      line-height:1.7;
+    }
+    a{color:inherit;text-decoration:none}
+    /* subtle paper texture */
+    body::before{
+      content:'';position:fixed;inset:0;z-index:999;pointer-events:none;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity:0.5;
+    }
+    header{
+      background:rgba(245,240,232,0.95);
+      border-bottom:1px solid var(--border2);
+      height:68px;display:flex;align-items:center;
+      position:sticky;top:0;z-index:100;
+      backdrop-filter:blur(20px);
+    }
+    .hi{
+      max-width:1200px;margin:0 auto;
+      padding:0 48px;width:100%;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .logo{
+      font-family:'Cormorant Garamond',serif;
+      font-size:19px;font-weight:700;color:var(--ink);
+      text-decoration:none;
+    }
+    .logo em{color:var(--coral);font-style:italic}
+
+    /* HERO */
+    .hero{max-width:1200px;margin:0 auto;padding:100px 48px 64px;text-align:center}
+    .hero-tag{
+      display:inline-flex;
+      background:rgba(220,93,70,0.1);
+      border:1px solid rgba(220,93,70,0.25);
+      color:var(--coral);
+      font-size:10px;font-weight:600;letter-spacing:3px;
+      padding:6px 18px;border-radius:100px;
+      margin-bottom:28px;text-transform:uppercase;
+      font-family:'DM Mono',monospace;
+    }
+    .hero h1{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(44px,6vw,72px);
+      font-weight:700;line-height:1.05;
+      letter-spacing:-2px;color:var(--ink);
+      margin-bottom:20px;
+    }
+    .hero h1 em{font-style:italic;color:var(--coral)}
+    .hero p{
+      font-size:17px;color:var(--muted);
+      line-height:1.7;font-weight:300;
+      max-width:540px;margin:0 auto 48px;
+    }
+    /* CATEGORY FILTER */
+    .cats{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:64px}
+    .cat-btn{
+      font-family:'DM Mono',monospace;
+      font-size:10px;letter-spacing:2px;text-transform:uppercase;
+      padding:8px 16px;border-radius:100px;
+      border:1px solid var(--border2);
+      background:transparent;color:var(--muted);
+      cursor:pointer;transition:all 0.2s;
+    }
+    .cat-btn:hover,.cat-btn.active{
+      border-color:var(--coral);
+      color:var(--coral);
+      background:rgba(220,93,70,0.07);
+    }
+    /* POST GRID */
+    .posts-grid{
+      max-width:1200px;margin:0 auto;
+      padding:0 48px 100px;
+      display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+    }
+    .post-card{
+      border:1px solid var(--border);
+      border-radius:10px;overflow:hidden;
+      background:rgba(255,255,255,0.55);
+      transition:all 0.25s;
+      display:flex;flex-direction:column;cursor:pointer;
+      box-shadow:0 2px 12px rgba(28,18,8,0.06);
+    }
+    .post-card:hover{
+      border-color:rgba(220,93,70,0.3);
+      background:rgba(255,255,255,0.85);
+      transform:translateY(-3px);
+      box-shadow:0 8px 28px rgba(28,18,8,0.1);
+    }
+    .post-card.hidden{display:none}
+    .post-accent{height:3px}
+    .post-body{padding:28px 24px 24px;flex:1;display:flex;flex-direction:column}
+    .post-cat{
+      font-family:'DM Mono',monospace;font-size:9px;
+      letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px;
+    }
+    .post-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:22px;font-weight:700;line-height:1.25;
+      color:var(--ink);margin-bottom:10px;letter-spacing:-0.3px;
+    }
+    .post-excerpt{
+      font-size:13px;color:var(--muted);
+      line-height:1.65;font-weight:300;
+      flex:1;margin-bottom:20px;
+    }
+    .post-meta{
+      display:flex;align-items:center;justify-content:space-between;
+      padding-top:16px;border-top:1px solid var(--border);
+    }
+    .post-read{
+      font-family:'DM Mono',monospace;font-size:9px;
+      letter-spacing:1.5px;text-transform:uppercase;color:var(--dim);
+    }
+    .post-link{
+      font-family:'Cormorant Garamond',serif;
+      font-size:15px;font-weight:600;font-style:italic;
+    }
+    footer{
+      border-top:1px solid var(--border);
+      padding:40px 48px;
+      background:var(--bg2);
+    }
+    .fi{
+      max-width:1200px;margin:0 auto;
+      display:flex;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;gap:16px;
+    }
+    @media(max-width:900px){.posts-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){
+      .posts-grid{grid-template-columns:1fr}
+      .hi,.posts-grid,.hero{padding-left:20px;padding-right:20px}
+      .cats{padding:0 20px}
+    }
+</style>
+  <script defer src="/_vercel/insights/script.js"></script>
+<!-- Pinterest Tag -->
+<script>
+!function(e){if(!window.pintrk){window.pintrk = function () {
+window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+  n=window.pintrk;n.queue=[],n.version="3.0";var
+  t=document.createElement("script");t.async=!0,t.src=e;var
+  r=document.getElementsByTagName("script")[0];
+  r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+pintrk('load', '2614458878085');
+pintrk('page');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt=""
+  src="https://ct.pinterest.com/v3/?event=init&tid=2614458878085&noscript=1" />
+</noscript>
+<!-- end Pinterest Tag -->
+</head>
+<body>
+
+<header>
+  <div class="hi">
+    <a href="/" class="logo">SIGNATURE<em>WITHIN</em></a>
+    <a href="/" style="font-size:13px;color:#4a7a4a">← All Tools</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">Results · Interpretation · Growth</div>
+  <h1>What Your<br/><em>Results Mean</em></h1>
+  <p>Deep dives into every dimension, type, and archetype across all 11 assessments. Written to help you understand not just your score — but what to do with it.</p>
+</div>
+
+<div class="cats">
+  <button class="cat-btn active" onclick="filter('all')">All</button>
+  <button class="cat-btn" onclick="filter('unstuck')">Unstuck</button>
+  <button class="cat-btn" onclick="filter('temperament')">Temperament</button>
+  <button class="cat-btn" onclick="filter('personality')">Personality</button>
+  <button class="cat-btn" onclick="filter('eq')">Emotional Intelligence</button>
+  <button class="cat-btn" onclick="filter('money')">Money Mindset</button>
+  <button class="cat-btn" onclick="filter('relationships')">Relationships</button>
+  <button class="cat-btn" onclick="filter('leadership')">Leadership & Career</button>
+  <button class="cat-btn" onclick="filter('marriage')">Marriage</button>
+</div>
+
+<div class="posts-grid" id="grid"></div>
+
+<footer>
+  <div class="fi">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--ink);font-weight:700">SIGNATURE<em style="color:#4EE88A;font-style:italic">WITHIN</em></div>
+    <div style="font-size:12px;color:var(--muted)">© 2026 SIGNATUREWITHIN · Self-Discovery Platform</div>
+  </div>
+</footer>
+
+<script>
+const POSTS = [
+
+
+  // ── SEO TARGETED ──────────────────────────────────────────────
+  {cat:'unstuck',color:'#FF6B6B',slug:'stuck-in-wrong-job',title:'Stuck in the Wrong Job: What Is Actually Keeping You There',excerpt:'You already know the job is wrong. The question is why that knowledge has not produced movement. Here is the honest diagnostic — no listicle, no tips, just the specific mechanism.',read:'9 min'},
+  {cat:'temperament',color:'#4EE88A',slug:'temperament-test-free',title:'Temperament Test Free: What You Will Actually Learn (And What Most Tests Miss)',excerpt:'Most free temperament tests give you a type name and a paragraph. Here is what a properly interpreted assessment actually reveals — and how to use your results.',read:'8 min'},
+  {cat:'eq',color:'#2DC653',slug:'emotional-intelligence-test-free',title:'Emotional Intelligence Test Free: What the Four Dimensions Actually Measure',excerpt:'Before you take an EQ test, understand what you are actually measuring. Here is what the four dimensions predict — and what a score means for your relationships and career.',read:'9 min'},
+
+  // ── UNSTUCK ─────────────────────────────────────────────────────────
+  {cat:'unstuck',color:'#FF6B6B',slug:'you-are-not-lazy-you-are-afraid',title:'You Are Not Lazy. You Are Afraid of Something Specific.',excerpt:'The stuck feeling in your job is almost never laziness. It is fear — and not the vague kind. Here is how to identify exactly what you are afraid of and what to do with it.',read:'8 min'},
+  {cat:'unstuck',color:'#FF6B6B',slug:'smart-people-wrong-jobs',title:'Why Smart People Stay in Wrong Jobs Longer Than Anyone Else',excerpt:'Intelligent people are not immune to being stuck — they are more vulnerable to it. Here is the specific mechanism that keeps capable people trapped in roles that do not fit them.',read:'9 min'},
+  {cat:'unstuck',color:'#FF6B6B',slug:'the-job-is-not-the-problem',title:'The Moment You Realize the Job Is Not the Problem',excerpt:'Some people change jobs and find the same dissatisfaction waiting. That is not bad luck — it is information. Here is what it means when the job is not actually what needs to change.',read:'8 min'},
+  {cat:'unstuck',color:'#FF6B6B',slug:'fear-of-starting-over',title:'What the Fear of Starting Over Is Actually Protecting You From',excerpt:'The fear of starting over is not irrational. It is protecting something real. Here is what it is actually guarding — and whether that thing is worth the cost of staying stuck.',read:'7 min'},
+  {cat:'unstuck',color:'#FF6B6B',slug:'you-have-been-meaning-to-leave',title:'You Have Been Meaning to Leave for Two Years. Here Is Why You Have Not.',excerpt:'Two years of meaning to leave is not circumstance. There is a specific mechanism operating. Here is what it is — and the one thing that actually interrupts it.',read:'8 min'},
+
+  // ── TEMPERAMENT ──────────────────────────────────────────────────
+  {cat:'temperament',color:'#4EE88A',slug:'sanguine-temperament-meaning',title:'What a High Sanguine Score Really Means',excerpt:'You lit up the room — but the score goes deeper than charisma. Here\'s what scoring high Sanguine reveals about your emotional patterns, your relationships, and your most important blind spot.',read:'6 min'},
+  {cat:'temperament',color:'#4EE88A',slug:'choleric-temperament-guide',title:'The Choleric Temperament: Strengths, Shadows, and What to Do With Both',excerpt:'High Choleric scores correlate strongly with leadership — and with the most common leadership failure modes. Understanding both sides is the whole point.',read:'7 min'},
+  {cat:'temperament',color:'#4EE88A',slug:'melancholic-temperament-explained',title:'What Scoring High Melancholic Actually Means (It\'s Not What You Think)',excerpt:'Most people misread the Melancholic score as sadness or negativity. It isn\'t. It is depth, precision, and a standard of excellence that most people cannot sustain. Here\'s what it actually means.',read:'8 min'},
+  {cat:'temperament',color:'#4EE88A',slug:'phlegmatic-temperament-hidden-strength',title:'The Phlegmatic\'s Hidden Strength — And the Voice They Keep Losing',excerpt:'Phlegmatics are the most underestimated temperament. Their calm is not weakness. But there is something they consistently sacrifice that this article is written to name.',read:'6 min'},
+  {cat:'temperament',color:'#4EE88A',slug:'sanguine-choleric-blend',title:'The Sanguine-Choleric Blend: The Most Naturally Persuasive Combination',excerpt:'SC blends are magnetic and decisive — the combination that fills rooms and moves people. But there is a shadow side that every SC person needs to understand before it costs them something important.',read:'7 min'},
+  {cat:'temperament',color:'#4EE88A',slug:'melancholic-phlegmatic-blend',title:'The Melancholic-Phlegmatic Blend: Quiet Depth, Hidden Wisdom',excerpt:'MP blends carry the most profound inner life of any temperament combination. They also carry the greatest risk of never being fully known by anyone — including themselves.',read:'8 min'},
+
+  // ── PERSONALITY ──────────────────────────────────────────────────
+  {cat:'personality',color:'#4EE88A',slug:'high-openness-score-meaning',title:'What a High Openness Score Means — and What It Costs You',excerpt:'High Openness correlates with creativity, curiosity, and a perpetual dissatisfaction with the ordinary. Here\'s what the research says about what it means to score high — and the shadow that comes with it.',read:'7 min'},
+  {cat:'personality',color:'#4EE88A',slug:'low-conscientiousness-score',title:'Low Conscientiousness Score: What It Means and How to Work With It',excerpt:'A low Conscientiousness score is not a character verdict. It is information about how you are currently wired — and a roadmap for the specific kind of structure that will actually work for you.',read:'6 min'},
+  {cat:'personality',color:'#4EE88A',slug:'conviction-dimension-explained',title:'The Conviction Dimension: The One Personality Factor Most Tests Miss',excerpt:'Why did we add a sixth dimension to the standard Big Five model? Because every major study of personality has found that values and moral orientation shape behavior in ways that Openness, Agreeableness, and the rest cannot fully capture.',read:'9 min'},
+  {cat:'personality',color:'#4EE88A',slug:'high-neuroticism-low-emotional-stability',title:'High Neuroticism: What It Actually Means When Your Emotional Stability Score Is Low',excerpt:'High Neuroticism scores are among the most misunderstood results in all of personality psychology. Here\'s what the research actually shows — and why it is not the sentence most people think it is.',read:'8 min'},
+  {cat:'personality',color:'#4EE88A',slug:'introvert-extravert-score-nuance',title:'Your Extraversion Score Is Not a Binary — Here\'s Why the Middle Matters',excerpt:'Most people expect to land solidly introvert or extravert. But the most interesting — and most misunderstood — scores are the ones in the middle. Here\'s what ambiverts actually experience.',read:'5 min'},
+
+  // ── EQ ──────────────────────────────────────────────────────────
+  {cat:'eq',color:'#2DC653',slug:'what-is-a-good-eq-score',title:'What Is a Good EQ Score? An Honest Interpretation Guide',excerpt:'What does 72 out of 100 actually mean? Here\'s a complete breakdown of EQ score ranges, what they indicate in practice, and — more importantly — what they predict about your relationships and leadership.',read:'7 min'},
+  {cat:'eq',color:'#2DC653',slug:'low-self-awareness-score',title:'Low Self-Awareness Score: What It Reveals and the One Practice That Changes It',excerpt:'A low Self-Awareness score is the most actionable EQ result you can get — because it is the root. Fix self-awareness and every other EQ dimension improves with it. Here\'s where to start.',read:'8 min'},
+  {cat:'eq',color:'#2DC653',slug:'self-regulation-eq-score',title:'What a Low Self-Regulation Score Is Really Telling You',excerpt:'Self-Regulation is the EQ dimension most closely linked to career derailment, relationship breakdown, and chronic stress. If yours scored low, this is the most important article you will read today.',read:'7 min'},
+  {cat:'eq',color:'#2DC653',slug:'high-empathy-low-boundaries',title:'High Empathy Score With Poor Boundaries: The Most Exhausting Combination',excerpt:'High Empathy is a genuine gift. But without strong Self-Regulation and clear limits, it becomes a chronic energy drain. Here\'s the pattern — and what emotionally intelligent empaths actually do differently.',read:'8 min'},
+  {cat:'eq',color:'#2DC653',slug:'eq-in-leadership',title:'Your EQ Score and Leadership: The Research Is Unambiguous',excerpt:'After 30 years of research, the finding is clear: technical skill gets you to a leadership role; EQ determines whether you stay and whether your team thrives. Here\'s what your score means for your leadership.',read:'9 min'},
+
+  // ── MONEY ────────────────────────────────────────────────────────
+  {cat:'money',color:'#F5A623',slug:'builder-money-archetype',title:'The Builder Money Archetype: Wired to Multiply',excerpt:'If you scored high Builder, money is not the goal — it is the tool. But Builder archetypes carry a specific shadow pattern around risk, control, and what happens when the building stalls.',read:'7 min'},
+  {cat:'money',color:'#F5A623',slug:'guardian-money-archetype',title:'The Guardian Money Archetype: The Strength and the Scarcity Pattern',excerpt:'Guardians build real financial security — often more than any other archetype. But they also carry the money belief most likely to keep them from building genuine wealth. Here\'s what it is.',read:'7 min'},
+  {cat:'money',color:'#F5A623',slug:'visionary-money-archetype',title:'The Visionary Money Archetype: Big Dreams, Real Financial Danger',excerpt:'Visionaries see possibilities no one else sees — and this creates both their greatest financial strength and their most persistent financial pattern. Here\'s what your Visionary score is telling you.',read:'8 min'},
+  {cat:'money',color:'#F5A623',slug:'money-mindset-score-interpretation',title:'How to Interpret Your Money Mindset Score: A Complete Guide',excerpt:'Your Money Mindset score is not about how much money you have. It is about the beliefs, patterns, and emotional triggers that shape every financial decision you make. Here\'s how to read it.',read:'6 min'},
+  {cat:'money',color:'#F5A623',slug:'receiver-money-archetype',title:'The Receiver Archetype: When Your Money Story Is Written Around Lack',excerpt:'Receivers often have a complicated relationship with asking for money, charging what they\'re worth, and believing they deserve abundance. Here\'s what the pattern looks like — and where it comes from.',read:'8 min'},
+
+  // ── RELATIONSHIPS ────────────────────────────────────────────────
+  {cat:'relationships',color:'#E8447A',slug:'anxious-attachment-score-meaning',title:'What a High Anxious Attachment Score Means — and How to Work With It',excerpt:'Anxious attachment is the most common attachment pattern and the most misunderstood. It does not mean you are too much. It means your nervous system learned a specific lesson early. Here\'s what to do with that.',read:'9 min'},
+  {cat:'relationships',color:'#E8447A',slug:'avoidant-attachment-score',title:'The Avoidant Attachment Score: Why You Pull Away and What It\'s Protecting',excerpt:'Avoidant scores are the hardest to self-identify — because the pattern that creates distance also creates a convincing story about why that distance is reasonable. Here\'s the honest interpretation.',read:'9 min'},
+  {cat:'relationships',color:'#E8447A',slug:'love-language-score-guide',title:'Your Love Language Score: What It Reveals Beyond "I Need Words of Affirmation"',excerpt:'Most people know their love language. Fewer understand how it interacts with their attachment style to create the specific ways they feel loved — and the specific ways they feel invisible.',read:'7 min'},
+  {cat:'relationships',color:'#E8447A',slug:'conflict-style-score',title:'Your Conflict Style Score: The Pattern You Repeat in Every Hard Conversation',excerpt:'Your conflict style was mostly learned before you were old enough to choose it. Here\'s what each conflict style pattern looks like in practice — and what the most relationally mature version of each style actually does.',read:'8 min'},
+  {cat:'relationships',color:'#E8447A',slug:'relationship-score-low',title:'Low Overall Relationship Score: What It Means and Where to Begin',excerpt:'A low overall relationship score is one of the most uncomfortable results to sit with. Here\'s how to read it honestly — without it becoming a verdict about who you are or whether you can love well.',read:'7 min'},
+
+  // ── LEADERSHIP & CAREER ──────────────────────────────────────────
+  {cat:'leadership',color:'#38d474',slug:'leadership-score-interpretation',title:'How to Read Your Leadership Score: A Dimension-by-Dimension Guide',excerpt:'A score of 68 in Vision means something very different from a score of 68 in Delegation. Here\'s how to read every dimension of your Leadership Profile and what each number is actually telling you.',read:'8 min'},
+  {cat:'leadership',color:'#38d474',slug:'low-delegation-score',title:'Low Delegation Score: Why Leaders Who Do Everything Build Nothing That Lasts',excerpt:'The inability to delegate is the most common ceiling in leadership development. Here\'s what a low Delegation score reveals, why it is so hard to change, and the one practice that actually shifts it.',read:'8 min'},
+  {cat:'leadership',color:'#38d474',slug:'career-clarity-score-low',title:'Low Career Clarity Score: You Are Not Lost — You Are Undecided',excerpt:'There is a difference between lost and undecided. One is a crisis. The other is a choice waiting to be made with better information. Here\'s what a low Career Clarity score is actually signaling.',read:'7 min'},
+  {cat:'leadership',color:'#38d474',slug:'entrepreneur-score-interpretation',title:'How to Read Your Entrepreneur Score — Honestly',excerpt:'An Entrepreneur Score is not a judgment on whether you should start a business. It is a map of where your business instincts are sharp and where the gaps are silently costing you. Here\'s how to read it.',read:'8 min'},
+  {cat:'leadership',color:'#38d474',slug:'ideas-validator-score-guide',title:'Your Idea Validation Score: What Grade A, B, C, and D Actually Mean',excerpt:'Getting a C on your idea is not failure — it is information. Here\'s a complete breakdown of what each validation grade means, what it predicts, and the exact experiments to run next.',read:'9 min'},
+  {cat:'leadership',color:'#38d474',slug:'career-courage-score',title:'Low Career Courage Score: The Gap Between What You Want and What You Actually Pursue',excerpt:'Career Courage is the dimension most correlated with career regret. Here\'s what a low score is telling you — and the specific pattern most people fall into when they let fear make their career decisions.',read:'7 min'},
+
+  // ── MARRIAGE ────────────────────────────────────────────────────
+  {cat:'marriage',color:'#E63946',slug:'marriage-score-interpretation',title:'How to Interpret Your Marriage Score — Without It Becoming a Weapon',excerpt:'A marriage score should never be used to prove a point to your spouse. Here\'s how to read yours honestly, understand what each dimension is measuring, and what to do with the results.',read:'7 min'},
+  {cat:'marriage',color:'#E63946',slug:'low-emotional-connection-marriage',title:'Low Emotional Connection Score: What Your Marriage Is Missing and How to Rebuild It',excerpt:'Emotional connection is the foundation that every other dimension of marriage is built on. A low score here is the most important result to take seriously — and the most possible to change.',read:'9 min'},
+  {cat:'marriage',color:'#E63946',slug:'husband-low-communication-score',title:'Husband: What a Low Communication Score Means and What Your Wife Actually Needs',excerpt:'Most husbands who score low in Communication are not bad communicators in general — they are communicating about the wrong things. Here\'s what wives actually need from a husband who communicates well.',read:'8 min'},
+  {cat:'marriage',color:'#E63946',slug:'wife-low-communication-score',title:'Wife: What a Low Communication Score Is Really Pointing To',excerpt:'For wives, a low Communication score often has a different root than for husbands. Here\'s what it typically reveals, why it develops, and the one conversation that changes the pattern.',read:'8 min'},
+  {cat:'marriage',color:'#E63946',slug:'marriage-trust-score-low',title:'Low Trust & Security Score in Marriage: The Most Painful Result to See',excerpt:'A low Trust score is painful to look at — whether you are reading your own or thinking about your spouse\'s. Here\'s how to interpret it without it becoming a crisis, and what rebuilding actually requires.',read:'9 min'},
+  {cat:'marriage',color:'#E63946',slug:'marriage-spiritual-alignment-score',title:'Spiritual Alignment in Marriage: Why This Dimension Predicts More Than You Expect',excerpt:'Research consistently shows that spiritual alignment is one of the strongest predictors of marriage satisfaction and longevity. Here\'s what your score in this dimension is actually measuring — and what a low score means for your marriage.',read:'7 min'},
+];
+
+function filter(cat) {
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.toggle('active', b.textContent.toLowerCase().includes(cat) || cat === 'all'));
+  document.querySelectorAll('.post-card').forEach(c => {
+    c.classList.toggle('hidden', cat !== 'all' && c.dataset.cat !== cat);
+  });
+}
+
+function renderPosts() {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = POSTS.map(p => `
+    <article class="post-card" data-cat="${p.cat}" onclick="window.location.href='${p.slug}.html'">
+      <div class="post-accent" style="background:${p.color}"></div>
+      <div class="post-body">
+        <div class="post-cat" style="color:${p.color}">${p.cat === 'eq' ? 'Emotional Intelligence' : p.cat === 'money' ? 'Money Mindset' : p.cat === 'unstuck' ? 'Unstuck' : p.cat === 'relationships' ? 'Relationships' : p.cat === 'leadership' ? 'Leadership & Career' : p.cat.charAt(0).toUpperCase()+p.cat.slice(1)}</div>
+        <div class="post-title">${p.title}</div>
+        <div class="post-excerpt">${p.excerpt}</div>
+        <div class="post-meta">
+          <span class="post-read">${p.read} read</span>
+          <span class="post-link">Read →</span>
+        </div>
+      </div>
+    </article>`).join('');
+}
+
+renderPosts();
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Access Granted — AI Tools Shop</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #080808; color: #e5e0d8;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  }
+  .card {
+    background: #0f0f0f; border: 1px solid #1a1a1a;
+    border-radius: 8px; padding: 52px 48px; text-align: center;
+    max-width: 480px; width: 90%;
+  }
+  .card.success { border-color: #166534; }
+  .card.error { border-color: #991b1b; }
+  .icon { font-size: 52px; margin-bottom: 20px; }
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; font-weight: 900; margin-bottom: 12px;
+  }
+  .title.success { color: #4ade80; }
+  .title.error { color: #f87171; }
+  .sub { font-size: 14px; color: #888; line-height: 1.6; margin-bottom: 32px; }
+  .timer {
+    background: #0d2e1a; border: 1px solid #166534;
+    border-radius: 4px; padding: 14px 20px; margin-bottom: 28px;
+    font-family: 'DM Mono', monospace; font-size: 13px; color: #4ade80; letter-spacing: 1px;
+  }
+  .btn {
+    display: inline-block; padding: 14px 32px; border-radius: 4px;
+    font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 2px;
+    font-weight: 700; cursor: pointer; text-decoration: none;
+    background: #c9a84c; color: #080808; border: none;
+    transition: background 0.2s;
+  }
+  .btn:hover { background: #e0b85a; }
+  .btn-back {
+    display: inline-block; margin-top: 16px; padding: 10px 20px;
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 2px;
+    color: #555; text-decoration: none; border: 1px solid #222;
+    border-radius: 4px; transition: color 0.2s;
+  }
+  .btn-back:hover { color: #888; }
+  .loading { color: #555; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 2px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spinner {
+    width: 32px; height: 32px; border: 2px solid #1a1a1a;
+    border-top-color: #c9a84c; border-radius: 50%;
+    animation: spin 0.8s linear infinite; margin: 0 auto 20px;
+  }
+</style>
+  <script defer src="/_vercel/insights/script.js"></script>
+<!-- Pinterest Tag -->
+<script>
+!function(e){if(!window.pintrk){window.pintrk = function () {
+window.pintrk.queue.push(Array.prototype.slice.call(arguments))};var
+  n=window.pintrk;n.queue=[],n.version="3.0";var
+  t=document.createElement("script");t.async=!0,t.src=e;var
+  r=document.getElementsByTagName("script")[0];
+  r.parentNode.insertBefore(t,r)}}("https://s.pinimg.com/ct/core.js");
+pintrk('load', '2614458878085');
+pintrk('page');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt=""
+  src="https://ct.pinterest.com/v3/?event=init&tid=2614458878085&noscript=1" />
+</noscript>
+<!-- end Pinterest Tag -->
+</head>
+<body>
+<div class="card" id="card">
+  <div class="spinner"></div>
+  <div class="loading">VERIFYING PAYMENT...</div>
+</div>
+
+<script>
+const TOOL_URLS = {
+  temperament:     '/temperament.html',
+  knowthyself:     '/knowthyself.html',
+  eq:              '/eq.html',
+  moneymindset:    '/moneymindset.html',
+  relationshipstyle: '/relationshipstyle.html',
+  leadership:      '/leadership.html',
+  career:          '/career.html',
+  entrepreneur:    '/entrepreneur.html',
+  ideas:           '/ideas.html',
+  stress:          '/stress.html',
+  marriage:        '/marriage.html',
+};
+
+async function verify() {
+  const params = new URLSearchParams(window.location.search);
+  const sessionId = params.get('session_id');
+  const toolId = params.get('tool');
+  const card = document.getElementById('card');
+
+  if (!sessionId || !toolId) {
+    card.className = 'card error';
+    card.innerHTML = `
+      <div class="icon">⚠️</div>
+      <div class="title error">Invalid Link</div>
+      <div class="sub">This link is missing required parameters.</div>
+      <a href="/" class="btn-back">← BACK TO SHOP</a>
+    `;
+    return;
+  }
+
+  try {
+    const res = await fetch('/api/verify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sessionId, toolId }),
+    });
+    const data = await res.json();
+
+    if (!res.ok) throw new Error(data.error);
+
+    // Store token in localStorage
+    localStorage.setItem(`access_${toolId}`, JSON.stringify({
+      token: data.token,
+      expiresAt: data.expiresAt,
+    }));
+
+    const toolUrl = TOOL_URLS[toolId] || '/';
+    const expiresDate = new Date(data.expiresAt);
+    const expiresStr = expiresDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    const toolName = toolId.toUpperCase();
+
+    card.className = 'card success';
+    card.innerHTML = `
+      <div class="icon">✅</div>
+      <div class="title success">Access Granted</div>
+      <div class="sub">Your 24-hour access to <strong>${toolName}</strong> is now active. You can close and reopen the tool anytime within your access window.</div>
+      <div class="timer">⏱ ACCESS EXPIRES AT ${expiresStr} TOMORROW</div>
+      <a href="${toolUrl}" class="btn">OPEN ${toolName} →</a>
+      <br/>
+      <a href="/" class="btn-back">← BACK TO SHOP</a>
+    `;
+  } catch (err) {
+    card.className = 'card error';
+    card.innerHTML = `
+      <div class="icon">❌</div>
+      <div class="title error">Verification Failed</div>
+      <div class="sub">${err.message || 'Could not verify your payment. Please contact support.'}</div>
+      <a href="/" class="btn-back">← BACK TO SHOP</a>
+    `;
+  }
+}
+
+verify();
+</script>
+</body>
+</html>
