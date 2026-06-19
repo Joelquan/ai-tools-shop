@@ -524,6 +524,7 @@ function checkReady(){
 }
 
 function beginMarriage(){
+  var g=document.getElementById('email-gate');if(g)g.classList.add('hidden');
   uN=document.getElementById('your-name').value.trim();
   spN=document.getElementById('spouse-name').value.trim();
   if(!uN||!gender)return;
