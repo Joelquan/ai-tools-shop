@@ -1122,7 +1122,7 @@ body{font-family:'DM Sans',sans-serif;color:#fff;background:#0a2e1a;-webkit-prin
 
 <div class="sticky-cta" id="sticky-bar" role="complementary" aria-label="Start assessment">
   <span class="sticky-cta-text">Ready to discover your results?</span>
-  <a href="#" class="sticky-cta-btn"onclick="startTest();return false;" aria-label="Begin Temperament Assessment">Begin Temperament Assessment →</a>
+  <a href="#" class="sticky-cta-btn" onclick="startTest();return false;" aria-label="Begin Temperament Assessment">Begin Temperament Assessment →</a>
   <button class="sticky-cta-close" aria-label="Dismiss">&times;</button>
 </div>
 <script>
@@ -1167,10 +1167,12 @@ function submitEmail(){
     body:JSON.stringify({email:email,source:'temperament'})
   }).catch(function(){}).finally(function(){
     document.getElementById('email-gate').classList.add('hidden');
+    if (typeof startTest === 'function') startTest();
   });
 }
 function skipGate(){
   document.getElementById('email-gate').classList.add('hidden');
+  if (typeof startTest === 'function') startTest();
 }
 document.getElementById('eg-email').addEventListener('keydown',function(e){
   if(e.key==='Enter') submitEmail();
