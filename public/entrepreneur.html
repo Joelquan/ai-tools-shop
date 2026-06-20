@@ -337,6 +337,7 @@ pintrk('page');
     <div style="font-size:12px;color:#7a9a7a;font-family:'DM Mono',monospace;letter-spacing:1px">Building your personalized report</div>
   </div>
   <div id="result-content" style="display:none"></div>
+  <div id="result-email-panel" style="display:none;background:#071f12;border-top:1px solid rgba(255,255,255,0.08);padding:34px 24px;text-align:center"><div style="max-width:620px;margin:0 auto"><div style="font-family:'Cormorant Garamond',serif;font-size:30px;color:#fff;font-weight:700;margin-bottom:8px">Email my results</div><p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#7a9a7a;line-height:1.6;margin-bottom:18px">Enter your email after the test and we will send your free summary. If you unlock the paid report, we will use this email for that too.</p><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><input id="result-email" type="email" placeholder="your@email.com" style="min-width:260px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:4px;padding:14px 16px;color:#fff;font-size:15px"><button onclick="captureResultEmail()" style="background:#4EE88A;color:#0a2e1a;border:none;border-radius:4px;padding:14px 22px;font-weight:700;cursor:pointer">Send My Results</button></div><div id="result-email-msg" style="font-family:'DM Sans',sans-serif;font-size:13px;color:#7a9a7a;margin-top:12px"></div></div></div>
 </div>
 
 <script>
@@ -438,7 +439,7 @@ function showResults(){
   setTimeout(()=>{
     document.getElementById('results-loading').style.display='none';
     renderResults(toolResult);
-    document.getElementById('result-content').style.display='block';
+    document.getElementById('result-content').style.display='block';showResultEmailPanel();
   },2200);
 }
 
@@ -519,7 +520,7 @@ async function checkout(){
   btn.disabled=true;btn.textContent='Loading...';
   if(toolResult)sessionStorage.setItem(TOOL_ID+'_r',JSON.stringify({...toolResult,userName}));
   try{
-    const res=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({toolId:TOOL_ID})});
+    const res=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({toolId:TOOL_ID,email:getResultEmail()})});
     const data=await res.json();
     if(data.url)window.location.href=data.url;
     else{btn.disabled=false;btn.textContent='Unlock Full Report · $14.99';alert('Error. Please try again.');}
@@ -561,7 +562,7 @@ async function genPDF(result){
   const win=window.open('','_blank');
   win.document.write(html);win.document.close();
   document.getElementById('results-loading').style.display='none';
-  renderResults(result);document.getElementById('result-content').style.display='block';
+  renderResults(result);document.getElementById('result-content').style.display='block';showResultEmailPanel();
 }
 
 // ═══ PDF BUILDER ═══
@@ -700,6 +701,10 @@ body{font-family:'DM Sans',sans-serif;color:#fff;background:#0a2e1a;-webkit-prin
 })();
 </script>
 <script>
+function currentAssessmentId(){return typeof TOOL_ID!=="undefined"?TOOL_ID:(typeof TID!=="undefined"?TID:"assessment");}
+function getResultEmail(){var id=currentAssessmentId();return sessionStorage.getItem(id+"_email")||sessionStorage.getItem("assessment_email")||"";}
+function showResultEmailPanel(){var panel=document.getElementById("result-email-panel");if(panel)panel.style.display="block";}
+function captureResultEmail(){var input=document.getElementById("result-email");var msg=document.getElementById("result-email-msg");var email=input?input.value.trim():"";if(!email||!email.includes("@")||!email.includes(".")){if(msg)msg.textContent="Please enter a valid email address.";return;}var id=currentAssessmentId();sessionStorage.setItem(id+"_email",email);sessionStorage.setItem("assessment_email",email);if(msg)msg.textContent="Saving your email...";fetch("/api/email-capture",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:email,source:id+"-results"})}).catch(function(){}).finally(function(){if(msg)msg.textContent="Done. We will use this email for your summary and paid report.";});}
 function submitEmail(){
   var email=document.getElementById('eg-email').value.trim();
   var err=document.getElementById('eg-error');
@@ -733,7 +738,7 @@ window.addEventListener('load', function(){
   var gate = document.getElementById('email-gate');
   var landing = document.getElementById('landing');
   if(gate && landing){
-    setTimeout(function(){ gate.classList.remove('hidden'); }, 300);
+    // Email is collected after results, not before the test.
   }
 });
 </script>

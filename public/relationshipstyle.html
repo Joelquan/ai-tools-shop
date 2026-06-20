@@ -323,6 +323,7 @@ pintrk('page');
     <div style="font-size:12px;color:#7a9a7a;font-family:'DM Mono',monospace;letter-spacing:1px">Building your personalized report</div>
   </div>
   <div id="rc" style="display:none"></div>
+  <div id="result-email-panel" style="display:none;background:#071f12;border-top:1px solid rgba(255,255,255,0.08);padding:34px 24px;text-align:center"><div style="max-width:620px;margin:0 auto"><div style="font-family:'Cormorant Garamond',serif;font-size:30px;color:#fff;font-weight:700;margin-bottom:8px">Email my results</div><p style="font-family:'DM Sans',sans-serif;font-size:14px;color:#7a9a7a;line-height:1.6;margin-bottom:18px">Enter your email after the test and we will send your free summary. If you unlock the paid report, we will use this email for that too.</p><div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><input id="result-email" type="email" placeholder="your@email.com" style="min-width:260px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:4px;padding:14px 16px;color:#fff;font-size:15px"><button onclick="captureResultEmail()" style="background:#4EE88A;color:#0a2e1a;border:none;border-radius:4px;padding:14px 22px;font-weight:700;cursor:pointer">Send My Results</button></div><div id="result-email-msg" style="font-family:'DM Sans',sans-serif;font-size:13px;color:#7a9a7a;margin-top:12px"></div></div></div>
 </div>
 
 <script>
@@ -370,7 +371,7 @@ function sR(){
   window.scrollTo(0,0);
   const{ds,overall}=calcS();const level=gL(overall);
   tR={ds,overall,level,uN};
-  setTimeout(()=>{document.getElementById('rl').style.display='none';rRs(tR);document.getElementById('rc').style.display='block';},2200);
+  setTimeout(()=>{document.getElementById('rl').style.display='none';rRs(tR);document.getElementById('rc').style.display='block';showResultEmailPanel();},2200);
 }
 
 function rRs({ds,overall,level}){
@@ -425,7 +426,7 @@ function rRs({ds,overall,level}){
 async function buy(){
   const b=document.getElementById('ub');b.disabled=true;b.textContent='Loading...';
   if(tR)sessionStorage.setItem(TID+'_r',JSON.stringify({...tR,uN}));
-  try{const r=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({toolId:TID})});const d=await r.json();if(d.url)window.location.href=d.url;else{b.disabled=false;b.textContent='Unlock Full Report · $14.99';alert('Error. Try again.');}}catch(e){b.disabled=false;b.textContent='Unlock Full Report · $14.99';}
+  try{const r=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({toolId:TID,email:getResultEmail()})});const d=await r.json();if(d.url)window.location.href=d.url;else{b.disabled=false;b.textContent='Unlock Full Report · $14.99';alert('Error. Try again.');}}catch(e){b.disabled=false;b.textContent='Unlock Full Report · $14.99';}
 }
 
 window.addEventListener('load',async()=>{
@@ -441,7 +442,7 @@ async function genPDF(result){
   const prompt=`You are a relationship psychologist and attachment researcher. Generate a personalized relationship blueprint report for NAME. Score: OVERALL/100 — LEVEL_LABEL. LEVEL_DESC. Dimension scores: DIM_SCORES. Return ONLY valid JSON: {"opening":"Warm, compassionate 2-sentence opening making NAME feel deeply seen in their relationship patterns","overall_insight":"3 sentences on their relationship blueprint pattern","ll_strength":"if >=65","at_strength":"if >=65","cs_strength":"if >=65","cn_strength":"if >=65","ll_growth":"specific practice if <65","at_growth":"specific practice if <65","cs_growth":"specific practice if <65","cn_growth":"specific practice if <65","month1":"30-day relationship awareness practices","month2":"30-60 day relational habit installation","month3":"60-90 day integration","key_action":"Single most important relationship action for NAME this week","quote":"Powerful love or relationship quote","quote_author":"Full name"}`.replace(/NAME/g,name||'the person').replace(/OVERALL/g,overall).replace(/LEVEL_LABEL/g,level.label).replace(/LEVEL_DESC/g,level.desc).replace(/DIM_SCORES/g,JSON.stringify(ds));
   try{const r=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({system:'You are a relationship psychologist and attachment researcher. Return only valid JSON, no markdown.',messages:[{role:'user',content:prompt}]})});const d=await r.json();ins=JSON.parse(d.content?.[0]?.text?.replace(/```json|```/g,'').trim()||'{}');}catch(e){console.error(e);}
   const html=mkPDF(result,ins);const w=window.open('','_blank');w.document.write(html);w.document.close();
-  document.getElementById('rl').style.display='none';rRs(result);document.getElementById('rc').style.display='block';
+  document.getElementById('rl').style.display='none';rRs(result);document.getElementById('rc').style.display='block';showResultEmailPanel();
 }
 
 function mkPDF(result,ins){
@@ -490,6 +491,10 @@ function mkPDF(result,ins){
 })();
 </script>
 <script>
+function currentAssessmentId(){return typeof TOOL_ID!=="undefined"?TOOL_ID:(typeof TID!=="undefined"?TID:"assessment");}
+function getResultEmail(){var id=currentAssessmentId();return sessionStorage.getItem(id+"_email")||sessionStorage.getItem("assessment_email")||"";}
+function showResultEmailPanel(){var panel=document.getElementById("result-email-panel");if(panel)panel.style.display="block";}
+function captureResultEmail(){var input=document.getElementById("result-email");var msg=document.getElementById("result-email-msg");var email=input?input.value.trim():"";if(!email||!email.includes("@")||!email.includes(".")){if(msg)msg.textContent="Please enter a valid email address.";return;}var id=currentAssessmentId();sessionStorage.setItem(id+"_email",email);sessionStorage.setItem("assessment_email",email);if(msg)msg.textContent="Saving your email...";fetch("/api/email-capture",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:email,source:id+"-results"})}).catch(function(){}).finally(function(){if(msg)msg.textContent="Done. We will use this email for your summary and paid report.";});}
 function submitEmail(){
   var email=document.getElementById('eg-email').value.trim();
   var err=document.getElementById('eg-error');
@@ -523,7 +528,7 @@ window.addEventListener('load', function(){
   var gate = document.getElementById('email-gate');
   var landing = document.getElementById('landing');
   if(gate && landing){
-    setTimeout(function(){ gate.classList.remove('hidden'); }, 300);
+    // Email is collected after results, not before the test.
   }
 });
 </script>

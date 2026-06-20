@@ -8,7 +8,7 @@ module.exports = async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { toolId } = req.body;
+  const { toolId, email } = req.body;
 
   const TOOLS = {
     knowthyself: {
@@ -94,7 +94,8 @@ module.exports = async function handler(req, res) {
       mode: 'payment',
       success_url: `${origin}/?tool=${toolId}&session_id={CHECKOUT_SESSION_ID}&success=true`,
       cancel_url: `${origin}/?cancelled=true`,
-      metadata: { toolId },
+      customer_email: email || undefined,
+      metadata: { toolId, email: email || "" },
     });
 
     return res.status(200).json({ url: session.url });
