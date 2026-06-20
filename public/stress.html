@@ -353,7 +353,7 @@ const TOTAL_Q = QUESTIONS.length;
 let cQ=0, answers={}, userName='', toolResult=null;
 
 // ═══ FLOW ═══
-function startTest(){document.getElementById('landing').style.display='none';document.getElementById('name-screen').style.display='flex';window.scrollTo(0,0);}
+function startTest(){var g=document.getElementById('email-gate');if(g)g.classList.add('hidden');var l=document.getElementById('landing');if(l)l.style.display='none';var n=document.getElementById('name-screen');if(n)n.style.display='none';var t=document.getElementById('test-section');if(t)t.style.display='block';window.scrollTo(0,0);if(typeof renderQuestion==='function')renderQuestion();else if(typeof rQ==='function')rQ();}
 
 function beginAssessment(){
   var g=document.getElementById('email-gate');if(g)g.classList.add('hidden');
